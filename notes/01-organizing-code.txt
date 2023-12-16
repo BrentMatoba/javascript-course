@@ -10,3 +10,115 @@ ES6 Modules
 terms we will learn about:
 closure, prototypes, IIFEs.
 
+Review:
+The "Object Literal" syntax is preferred to the classical notation I learned with java
+const myObject = {
+  property: 'Value!',
+  otherProperty: 77,
+  "obnoxious property": function() {
+    // do stuff!
+  }}
+
+  or wait...I did this as well?
+
+
+  There are 2 ways to retrieve information out of an object.
+    Dot notation.
+    This is what I did with java: object.attribute
+
+    Bracket notation:
+    object["obnoxious property"]
+
+    Dot notation is cleaner and is usually preferred, but there are occasions where you are forced to use bracket notation. For instance,
+    if an attribute has a space in it, then it cannot be accessed using dot notation. 
+    Likewise, you cannot use variables in dot noation.
+
+    const variable = 'property';
+    myObject.variable; // this gives us 'undefined' because it's looking for a property named 'variable' in our object
+    myObject[variable]; // this is equivalent to myObject['property'] and returns 'Value!'
+
+
+
+Main Lesson overview:
+    How to write an object constructor and instantiate the object
+    Describe what a prototype is and how it can be used
+    Explain prototypal inheritance
+    Understand the do's and don'ts of prototypal inheritance
+    Explain what Object.create does
+    Explain what the this keyword is
+
+
+1. Objects as a design pattern.
+    One of the simplest was you can begin to organize your code is by simply grouping things into objects. 
+    // example one
+    const playerOneName = "tim";
+    const playerTwoName = "jenn";
+    const playerOneMarker = "X";
+    const playerTwoMarker = "O";
+
+    // example two
+    const playerOne = {
+    name: "tim",
+    marker: "X"
+    };
+
+    const playerTwo = {
+    name: "jenn",
+    marker: "O"
+    };
+
+    Creating objects is much more effecient than manually typing out every variable.
+    Unfortunately, it is equally as ineffecient to type out an object every time you need one, which leads us to...
+
+2. Object constructors:
+    Allows you to create objects very easily. This is exactly the same as java no surprises here
+        
+        function Player(name, marker) {
+        this.name = name;
+        this.marker = marker;
+        }
+
+    the new keyword is used in conjuction with the constructor method.    
+        const player = new Player('steve', 'X');
+        console.log(player.name); // 'steve'
+    
+3. The prototype:
+    This is new. All objects in javascript have a prototype. The prototype is another object that the original object inherits from.
+    The original object has access to all the prototypes methods and properties. 
+
+    breakdown:
+    a. All objects in javascript have a prototype.
+        Every object in javascript has a prototype. E.g. player1 and player2 objects created with Player(name, marker) also have a prototype
+        What does that mean? What even is a prototype?
+
+    b. Stated simply... the prototype is another object.
+        A prototype is just another object! The prototype object has its own properties and functions, just like Player objects have
+        properties like .name .marker .and functions like .sayName() attached to them.
+
+    c. that the original object inherits from, and has access to all of its prototype's methods and properties.
+        Here the original object refers to the player1 or player2. These objects inherit from the prototype. 
+        Prototypes act similarly to java's parent classes, in that both player1 and player2 could call a function
+        from a shared prototype(parent class). While they are similar in this instance, they are not exactly the same.
+
+    Accessing an object's prototype.
+        Object.getPrototypeOf(player1) === Player.prototype; // returns true
+        Object.getPrototypeOf(player2) === Player.prototype; // returns true
+
+        breakdown again:
+        a. All objects in javascript have a prototype:
+            You can check the object's prototype by using the Object.getPrototypeOf() function on the object, like
+            Object.getPrototypeOf(player1) === Player.prototype.
+
+        b. The prototype is just another object...
+            The value of the Object Constructor's .prototype property (i.e. Player.prototype) contains the prototype object.
+            The reference to this value of Player.prototype is stored in every player object, every tim e a player object is created.
+            Hence, you get a true value returned when you check the objects prototype.
+            -Object.getPrototypeOf(player1) === Player.prototype
+        
+        c. That the original object inherits from, and has access to all of its prototype's methods and properties.
+            Every player object has a value which refers to player.prototype. So: Object.getPrototypeOf(player1) === Object.getPrototypeOf(player2)
+            So, any properties defined on Player.prototype will be available to the created Player objects!
+
+            Ok this is literally just parent classes.
+
+            
