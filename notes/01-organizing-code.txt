@@ -1,0 +1,12 @@
+Unlike java, javascript is very forigiving with how you structure your files. While this great in the short term, in the long term it an result
+in incredibly messy code. To avoid this, dilligent organization of your code is required. 
+
+Common design patterns:
+Plain Old javascript objects and object constructors
+Factory Functions and the Module Pattern
+Classes
+ES6 Modules
+
+terms we will learn about:
+closure, prototypes, IIFEs.
+
