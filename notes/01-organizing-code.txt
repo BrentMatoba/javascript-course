@@ -121,4 +121,52 @@ Main Lesson overview:
 
             Ok this is literally just parent classes.
 
-            
+
+
+        Defining "on the prototype"
+        Player.prototype.sayHello = function() {
+        console.log("Hello, I'm a player!");
+            };
+
+        player1.sayHello(); // logs "Hello, I'm a player!"
+        player2.sayHello(); // logs "Hello, I'm a player!"
+
+
+        Here we defined the .sayHello function "on" the Objec.getPrototypeOf() to access an objects prototype, the same thing can be done using
+        the .__prototype__ property of the object. However, this is a non-standard way of doing so, and deprecated. Hence, it is not
+        recommended to access an oject's prototype by using this property. However, the same code can thus be rewritten to become:
+        // Don't do this!
+        player1.__proto__ === Player.prototype; // returns true
+        player2.__proto__ === Player.prototype; // returns true
+
+
+4. Prototypal Inheritance
+    What us is an object's prototype? What is the purpose of defining properties and function on the properties?
+    a. We can define properties and funcitons among all obejcts on the prototype to save memory.
+    Defining functions and properties on a centralized shared object which the objects have access to saves memory.
+
+    b. We can have objects inherit from the prototype.    
+
+    *note that an objects prototype itself inhertis from a general javascript prototype, meaning that all object prototypes have a default
+    list of attributes and functions to access.
+
+    *note: An object's Object.getPrototypeOf() value can only be ONE unique prototype object.
+
+    When a fuction is called and is not present within the currently defined object, javascript will travel upwards
+    through the superclasses until it finds the prototype that defines the function. If no such prototype exists, javascript
+    will return undefined.
+
+
+5. Recommended method for prototypal inheritance.
+
+    *TBH just read the odin page, theres a lot of code and I don't know if I understand it well enoough to summmarize. I don't really understand
+    how this is better than traditional class based inheritance this seems really similarly
+
+    note* Player.prototype = Person.prototype;
+    does NOT work, because it will directly refer to Personal.prototype and not an instance, which will cause cause problems if you edit something  
+    in the future.
+
+
+
+
+Article: 
