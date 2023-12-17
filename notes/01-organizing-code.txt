@@ -170,3 +170,18 @@ Main Lesson overview:
 
 
 Article: Understanding Prototypes and Inheritance in Javascript.
+    Javscript is a prototype based language, meaning object properties and methods can be shared through generalized objects that have the
+    ability to be cloned and extended. This is known as prototypical inhertiance and differs from class inheritance. Javascript is unique
+    from PHP, python, Java in using prototypes instead of classes.
+
+    1. Javascript Prototypes:
+        Every object in javascript has an internal property called [[Prototype]]
+            *The double square brackets [[]] signify that it is an internal property that cannot be accessed directly in code.
+
+        To find the [[Prototype]] of an object, us getPrototypeOf()
+        let x = {}; //instantiates an empty object called x
+        Object.getPrototypeOf(x); //accesses x's prototype
+
+        The output will consist of several built-in properties and functions:
+            Output
+            {construcotr: f, __defineGett__: f, __defineSetter__: f, ...}
