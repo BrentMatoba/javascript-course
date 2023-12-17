@@ -169,4 +169,4 @@ Main Lesson overview:
 
 
 
-Article: 
+Article: Understanding Prototypes and Inheritance in Javascript.
