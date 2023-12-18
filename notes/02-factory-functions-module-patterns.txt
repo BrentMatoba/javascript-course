@@ -1,0 +1,15 @@
+Factory Functions and the Module Pattern
+
+Why not constructors?
+    Object constructors are only one of many ways to organize your code. While they are common and are a fundamental building
+    block of javascript, they have their flaws.
+
+Lesson Overview:
+1. Describe the scope of a variable.
+2. Explore what closures are.
+3. Briefly consider the disadvantages of using constructors
+4. Discuss Factory functions with examples
+5. Discuss private variables and functions concerning factory functions
+6. Showcase object inheritance witht he help of factory functions.
+7. Describe what module pattern and IIFE's are
+8. Discuss encapsulation and how the module pattern helps with namespacing.
