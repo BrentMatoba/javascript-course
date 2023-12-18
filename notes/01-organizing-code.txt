@@ -244,6 +244,58 @@ Article: Understanding Prototypes and Inheritance in Javascript.
                 Object.setPrototypeOf(Healer.prototype, Hero.prototype);
 
     
-    Conclusion. Javascript is a prototype-based language, and functions differently than the traditional class-based paradigm that many other
-    object-oriented languages use.
-    
+        Conclusion. Javascript is a prototype-based language, and functions differently than the traditional class-based paradigm that many other
+        object-oriented languages use.
+
+
+
+    Article: Gentle Explanation of "this" in Javascript:
+        1. The mystery of this
+            From a background like java, PHP, or other STANDARD language, this is the instance of the current object in the class method.
+            this cannot be used outside the method and suc a simple approach does not create confusion.
+
+            In javascript, the situation is different. this is the context of a function invocation.  The language has 4 function invocation types.
+            function invocation: alert("Hello World!")
+            method invocation: console.log("Hello World)
+            constructor invocation: new RegExp("//d")
+            indirect invocation: alert.call(undefined, "Hello World!")
+
+            Each invocation type defines the context in its way, so "this" behaves differently than the developer expects.
+
+            "The key to understanding the "this" keyword is having a clear view of function invocation ahdow it impacts the context."
+            This article focuses on the invocation explanation, how the function invocation influences "this" and demonstrates the common
+            pitfalls of identifying the value of "this"
+
+            Before starting, lets familiarize with a couple of terms:
+                Invocation: The calling of a function.
+                Context of an invocation is the value of this within function body.
+                Scope of a function is the set of variabels and functions accessible within a function body.
+
+
+        2.Function Invocation:
+            Function Invocation is performed when an expression taht evalues to a function object is followed by an open parenthesis.
+            Function invocation is different from a method invocation. For isntance. obj.mlyFunc() is a method invocation, as it is acting upon an objectg.
+
+            2.1 "this" in a function invocation:
+                The global object is determined by the execution environment. In a broswer, the global object is window object.
+                In a function invocation, the execution object is the global object.
+            2.2 "this in a function invocation, strict mode:
+                "this is undefined in a fucntion invocation in strict mode"
+                strict mode is a restricted variant of Javascript. It provides better security and stronger error checking.
+                To enable the strict mode, place the direct "use st rict" at the top of a function body.
+            PITFALL: "this" in an inner function.
+                A common trap with the funciton invocation is thinking that "this" is the same in an inner function as in the otuer function.
+            
+            The context of the inner function (except for arrow functions) depends only on its own invocation type, but not on the touer function's context.
+            To make "this" have a desired value, modify the inner function's context with indirect invocation (using.call() or apply()) or create a bound function
+            using .bind()
+
+            arrow functions don't have a default "this" context, and use whatever the parent function has.
+
+        3. Method Invocation:
+            A method is a funciton stroed in a property of an object.
+            Method Invocation is performe when an expression in a form of property accessor that evalues ot a function object is followed by a open parenthesis
+            e.g. myObject.helloMethod()
+            
+            In Method Invocations, "this" refers to the object that owns the method in a method invocation.
+            Exactly like java
