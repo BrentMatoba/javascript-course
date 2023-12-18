@@ -185,3 +185,65 @@ Article: Understanding Prototypes and Inheritance in Javascript.
         The output will consist of several built-in properties and functions:
             Output
             {construcotr: f, __defineGett__: f, __defineSetter__: f, ...}
+    
+
+    2. Prototype Inheritance:
+        When searching for a property or method, javascript will check the initial instance of the object,
+        the its prototype, the its prototype's prototype, etc. Following the prototypal chain until a method is found.
+
+        Any attempt to search beyond the end of the chain results in null.
+
+        Javascript objects have a hidden internal [[Prototype]] property. OBjects can be extended and will
+        inherit the properties and methods on [[Prototype]] of their constructor. These prototypes can be chained
+        and each additional object will inherit everything throughout the chain.
+
+    3. Constructor Functions:
+        Constructors are functions that are use to construct new objects. The "new" operator is used to create new instances
+        of an object based off the constructor function. 
+        In javascript, we capitalize the first letter of a constructor function by convention
+
+        //initialize a constructor function for a new hero
+        function Hero(name, level){
+            this.name = name;
+            this.level = level;
+        }
+
+        let hero1 = new Hero("Bjorn", 1);
+        Hero.prototype.greeet = function(){
+            return "${this.name} says hello.";
+        }
+        hero1.greet();
+        Output: "Bjorn says hello."
+
+
+
+        The call() method can be used to copy over properties from one constructor into another constructor. 
+            // Initialize Warrior constructor
+            function Warrior(name, level, weapon) {
+            // Chain constructor with call
+            Hero.call(this, name, level);
+
+            // Add a new property
+            this.weapon = weapon;
+            }
+
+            // Initialize Healer constructor
+            function Healer(name, level, spell) {
+            Hero.call(this, name, level);
+
+            this.spell = spell;
+            }
+                *oooohhh I see, they're using the hero constructor within the new warrior and healer constructors,
+                but adding their own unique attributes as well. So they don't have to copy/paste code and hunt down
+                variations if they need to edit something.
+
+            *note: You need to manually link prototypes when using chain constructors.
+            If you use the Hero constructor within the warrior constructor. The warrior is not linked to the hero prototype by default
+            ...
+                Object.setPrototypeOf(Warrior.prototype, Hero.prototype);
+                Object.setPrototypeOf(Healer.prototype, Hero.prototype);
+
+    
+    Conclusion. Javascript is a prototype-based language, and functions differently than the traditional class-based paradigm that many other
+    object-oriented languages use.
+    
