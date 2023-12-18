@@ -299,3 +299,22 @@ Article: Understanding Prototypes and Inheritance in Javascript.
             
             In Method Invocations, "this" refers to the object that owns the method in a method invocation.
             Exactly like java
+        
+
+            3.2 PITFALL: Separating method from its object.
+                You can technically use the alone() method call an objects method without the actual object present. In this case, the "this" keyword will revert to a function invocation
+
+        4. Constructor invocation:
+            Constructor invocation is performed when the new keyword is follwoed by an expression that evalues to a function object, an open parenthesis.
+            (ITS WHEN YOU INSTANTIATE AN OBJECT)
+        
+            4.1 In Constructor invocation, "this" refers to the newly created object in a constructor invocation.
+                duh
+            4.2 PITFALL: Forgetting about new. Its technically possible to instantiate objects without the new keyword, but this should be avoided as there is 
+                important logic in the new keyword. The instantiated object may cause issues further down the line if not instantiated correctly.
+        5.Indirect invocation:
+            Is performed when a function is called using myFUn.call() or myFUn.apply() methods.
+        
+        6. Ok this is starting to seem really useless, if I need to use the "this" keyword in a bound or indirect function, i'll reread this section of the article
+        https://dmitripavlutin.com/gentle-explanation-of-this-in-javascript/
+        
