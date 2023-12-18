@@ -13,3 +13,57 @@ Lesson Overview:
 6. Showcase object inheritance witht he help of factory functions.
 7. Describe what module pattern and IIFE's are
 8. Discuss encapsulation and how the module pattern helps with namespacing.
+
+
+
+1. Spoonfuls of Scopes
+    Scoping essentially asks the question: "What variables are available to me?" it indicates the current context of a variable. When a variable is not declared within any
+    functions, it is said to exist within the global scope, meanign that they are available anywhere. If they are within {}, they are said to be locally scoped.
+    
+    closure: the combination of a function and the surroudning state within which a function was declared in. 
+    This surroudnign state, also called its lexical environment, consists of any local variables that were in scope at the time the closure was made.
+
+
+    1.1 Closures aren't scary
+        Closures are just the concept that if you call a funciton within a function, the inner function can access the variables of the outer function. yay!
+    
+    1.2 So whats wrong with constructors? 
+        One of the key arguements against constructors, is that they LOOK like regular Javascript functions, even thought they
+        do not behave like regular javascript functions. If you try to use a constructor function without the new keyword, not only does your program fail to work, but
+        also produces error messages that are harder to track down and understand.
+
+        Another issue is the way that instanceof works. It checks the prescence of a constructor's prototype in an object's ENTIRE prototype chain, which does nothing
+        to confirm if an object was made using that constructor since the constructor's prototype can be reassigned after the creation of an object.
+
+2. Factory Functions.
+    Very similar to constructors, but instead levy the power of closures. Instead of using the new keyword to create an object, factory functions simply set up and return
+    the new object when you call the function. They do not use the prototype, which incurs a performance penalty. But as a general rule, this performance penalty isn't
+    significant unless you're creating thousands of objects. 
+
+    const User = function (name) {
+        this.name = name;
+        this.discordName = "@" + name;
+    }
+    // hey, this is a constructor - 
+    // then this can be refactored into a factory!
+
+    function createUser (name) {
+        const discordName = "@" + name;
+        return { name, discordName };
+    }
+    // and that's very similar, except since it's just a function,
+    // we don't need a new keyword
+        *this honestly seems very silly but ok
+    
+3. Object shorthand notation:
+    const name = "Bob";
+    const age = 28;
+    const color = "red";
+
+    const thatObject = { name: name, age: age, color: color };
+
+    If we have a variable with the same name as that of the property to which we are assigning it, we can simply write it once!
+    const fancyExample = {name, age, color}
+
+4. Destructuring:
+    
