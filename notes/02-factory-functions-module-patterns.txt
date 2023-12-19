@@ -143,3 +143,37 @@ https://tsherif.wordpress.com/2013/08/04/constructors-are-bad-for-javascript/
     THe essence of the article is that constructors == bad, and were implemented in javascript because that was the convention of the time
     and there were no real alternatives. Prototypal inheritance and factory functions are viewed as a complete alternative method that should serve as Javascripts
     primary form of inheritance. To be HONEST I dont' care lol
+
+Article: Module pattern in Javascript:
+https://dev.to/tomekbuszewski/module-pattern-in-javascript-56jm
+
+    A module is a construct somewhat similar to a singleton class(?) It has only one instance aned exposes its members,
+    but it doesn't have any kind of internal state.
+
+    a.Defining a module:
+    A module is created as an Immediately Invoked Function Expression (IIFE) with a function inside.
+    const SomeModule = (function() {});
+
+    Everything within the body of said funciton is bound tot aht module and can be seen by each other. Modules emulate public and private methods
+    by creating mentioned earlier scope and exposing only those things that are declared. 
+        Private methods or functions are members of given entity that can be seen only within said entity.
+        Public ones can be accessed from the outside of given entity.
+
+    Acessing a module is actulaly accessing whatever it returns.
+
+    b. Exposing a module:
+        make a function exposed by returning the function.
+        const Formatter = (function() {
+            const log = (message) => console.log(`[${Date.now()}] Logger: ${message}`);
+
+            const makeUppercase = (text) => {
+                log("Making uppercase");
+                return text.toUpperCase();
+            };  
+
+            return {
+                makeUppercase,
+            }
+        })();
+
+        *Modules can house not only functions, but arrays, objects, and primitives as well.
