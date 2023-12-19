@@ -177,3 +177,10 @@ https://dev.to/tomekbuszewski/module-pattern-in-javascript-56jm
         })();
 
         *Modules can house not only functions, but arrays, objects, and primitives as well.
+
+
+    c. Declaring Module dependencies:
+        Treat modules as closed entities. Meaning, they reside within themselves and nothing more is needed for htem to exist.
+        But sometimes, you want to work with, for example, DOM or window global object.
+
+            TO achieve that, the module may have dependencies. 
