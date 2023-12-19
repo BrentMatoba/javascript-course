@@ -66,4 +66,42 @@ Lesson Overview:
     const fancyExample = {name, age, color}
 
 4. Destructuring:
-    
+    Unpacking
+
+5.  Private variables and functions. 
+        function createUser (name) {
+        const discordName = "@" + name;
+
+        let reputation = 0;
+        const getReputation = () => reputation;
+        const giveReputation = () => reputation++;
+
+        return { name, discordName, getReputation, giveReputation };
+        }
+
+        useful with factory functions, since the closures keep variables within private.
+        DOESN"T REASLLY EXPLAIN USE CASES
+
+
+6. Prototypal Inheritance with factories:
+        Hypothetical situation: we need to extend the user factory into a player factory that has more metrics
+        function createPlayer (name, level) {
+            const { discordName, getReputation } = createUser(name);
+
+            const increaseLevel = () => level++;
+            return { name, discordName, getReputation, increaseLevel };
+            }
+        
+        its just calling the user factory then adding some more things (like level up!) and sending it on its ways.
+        not actually complicated
+
+
+*Note: Javascript ES6 introduced modules, which are a set of syntax for importing and exporting code between different
+javascript files. "While they are important and powerful, they are covered a bit later in the curriculum. 
+We are not talking about them in this section."
+
+So this is the things I ACTUALLY NEED nice. 
+
+7. The module pattern - IIFE's.
+
+
