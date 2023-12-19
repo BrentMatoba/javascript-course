@@ -103,5 +103,43 @@ We are not talking about them in this section."
 So this is the things I ACTUALLY NEED nice. 
 
 7. The module pattern - IIFE's.
+    The "module pattern" is just using a factory function to group together code instead of spawning objects.
+    This is achieved by wrapping your factory function in  parenthesis and the immediately invoking it. Resulting
+    in the name of Immediately Invoked Function Expression, or IIFE. Wrapping a factory function inside an IIFE is called the module pattern.
+
+        const calculator = (function () {
+        const add = (a, b) => a + b;
+        const sub = (a, b) => a - b;
+        const mul = (a, b) => a * b;
+        const div = (a, b) => a / b;
+        return { add, sub, mul, div };
+        })();
+
+        calculator.add(3,5); // 8
+        calculator.sub(6,2); // 4
+        calculator.mul(14,5534); // 77476
+
+    The main function of grouping the code like this is encapsulation!!!. Doesn't have anythinng to do with memory effeciency or whatnot.
 
 
+Article: Closures
+ https://wesbos.com/javascript/03-the-tricky-bits/closures
+
+ Closure:The ability to access a parent level scope from a child scope, even after the parent function has been terminated.
+    This is usually used to hold on to pieces of data after the function has ended. Very useful in asynchronous programming as the timing of everything doesn'T
+    necessarily sync up. The advantage of Closures over storing info in broader scope variables is that it maintains encapsulation/private variables, and that 
+    the closure will be cleaned up by garbage collector sooner than the varible, resulting in more memory effecient code.
+
+    function outer(){
+        function inner(){
+            const innerVar = "Hey I am the inner variable"
+        }
+        console.log()
+    }
+
+Article; Constructors are Bad for Javascript:
+https://tsherif.wordpress.com/2013/08/04/constructors-are-bad-for-javascript/
+    Ok frankly this is a little over my head and it comes across as two guys arguing over things that don't matter for 99% of people.
+    THe essence of the article is that constructors == bad, and were implemented in javascript because that was the convention of the time
+    and there were no real alternatives. Prototypal inheritance and factory functions are viewed as a complete alternative method that should serve as Javascripts
+    primary form of inheritance. To be HONEST I dont' care lol
