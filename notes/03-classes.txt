@@ -24,9 +24,30 @@ Understand why composition is generally preferred to inheritance.
 
 1. Property getters and setters:
     There are two kinds of object properties.
-    a. data properties.
-        self explanatory
+        a. data properties.
+            self explanatory
 
-    b. accessor property:
-        Functions that execute on getting and setting a value, but look like regular properties to an external code.
-        
+        b. accessor property:
+            Functions that execute on getting and setting a value, but look like regular properties to an external code.
+
+            let obj = {
+                get propName(){
+                    //getter, the code executed on getting obj.propName
+                }
+                set propName(value){
+                    //setter, teh code executed on setting obj.propName = value;
+                }
+            }   
+
+    The getter works when obj.propName is read, the setter - when it is assigned.
+
+    For instance: We have a user with a first and last name, and we want to return the full name.
+    let user = {
+        name: "John",
+        surname: "Smith"
+    };
+
+      get fullName() {
+            return `${this.name} ${this.surname}`;
+    }
+
