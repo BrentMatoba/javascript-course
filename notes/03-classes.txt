@@ -1,0 +1,11 @@
+Classes in Javascript.
+
+So techncially Javascript does NOT have classes in the same way as Java or Ruby. However, ES6 did introduce syntax
+for object creation using the class keyword. On the surface, its the exact same as traditional Object Oriented Programming languages.
+However, its an important distinction that they are differet systems under the hood, and that there are potential problems
+that can arise from assuming that ES6 classes operate like traditional OOP classes. Opponents argue that the Javascript
+Es6 class system is syntactic sugar that can be potentially dangerous and misleading.
+
+Despite the controversy, classes are beginning to crop up in real code bases.
+THe people at the Odin Project approve of classes and think they are fine to use.
+However I SHOULD learn how to use prototypes as well, I can't use classes just because they're comfortable.
