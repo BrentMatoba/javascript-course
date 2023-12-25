@@ -233,3 +233,35 @@ Article: Building From the Inside Out
             rest of the game would run as intended.
 
 
+    4. Lets put the walls on!
+        Its now time to add the "view" aspect to our game. The only way the UI should need to interact with the core game code in order to play a round is through
+        the GameController.playRound() method. This is the "method to play should be simple to call and as restrictive as possible". The game is made to have a very
+        limited interace, and in doing so, made it easy to interact with from the "outside".
+
+        Another module called Screen controller is created. This module will leverage an updateScreen Pattern. THe purpose of this pattern is to 
+        take some data about our game, such as the state of the game board and which player's turn it is, and to update the screen each time a player
+        takes their turn.
+
+
+        a. ScreenController():
+            The first thing we do here is to pull our game module into the screen controller. We no longer need global access to the game object, since our players will be
+            interacting with the game through the DOM, not the console. Next, create some DOM references to our game baord and player turn display. These will be used
+            by our UpdateScreen and clickHandlerBoard Methods
+
+        b.updateScreen()
+            This is the meat and potatos of our screen controller.  Here is what the method does in order.
+            1. Clear the DOM of the current board display by simply setting the .board div's text content to an empty string.
+            2. Get the most up-to-date board form the game controller.
+            3. Get the most up-to-date active player from the game controller.
+            4. Render the player's turn in the .turn div.
+            5. Render each grid square on the DOM.
+                a. Make sure each cell a data-attribute of column and set that value to the index of the cell in its row, so that when we click them in the future.
+                we already have acess to what column that cell is in.
+                b. The cells are buttons, not divs. Why? In most cases, anything clickable should be a button or al ink. This enables those with accessiblity issues to
+                still be able to use our site easily by tabbing and selecting with their keyboard.
+            The purpose of this method is to refresh our screen whenever a change happens in our game. it will be called whenever the user intacters with the game,
+            like to play a round.
+
+        c. clickHandlerBoard()
+            The click handler, once it verifies that a vlid cell was clicked, will get the colum data-attribute value, pass that into our game controller's playRound method,
+            then run updateScreen to fresh the DOM. Just like that, we have a functiona, decoupled, and modularized Connect Four Game!.
