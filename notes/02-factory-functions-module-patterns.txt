@@ -265,3 +265,8 @@ Article: Building From the Inside Out
         c. clickHandlerBoard()
             The click handler, once it verifies that a vlid cell was clicked, will get the colum data-attribute value, pass that into our game controller's playRound method,
             then run updateScreen to fresh the DOM. Just like that, we have a functiona, decoupled, and modularized Connect Four Game!.
+    
+    5. Conclusion.
+        It should be easy to recognize that once the console version of the game was created. Implementing the user interface was incredibly simple. We limited the scope of
+        the DOM's interaction with our game to just 3 methods, and as a result did not need to worry about querying nodes for hteir text content or anything messy like that.
+        As a result, our code is significantly easier ot read, debug, and mroe performant than the spaghettified, DOM-coupled, alternative.
