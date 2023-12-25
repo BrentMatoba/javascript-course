@@ -184,3 +184,25 @@ https://dev.to/tomekbuszewski/module-pattern-in-javascript-56jm
         But sometimes, you want to work with, for example, DOM or window global object.
 
             TO achieve that, the module may have dependencies. 
+
+
+Article: Building From the Inside Out
+    Separating view from Data using Connect Four.
+    Thesis: Inexperienced Programmers tend to fall into the Anti-pattern of interacting with the
+    DOM too freely with their game logic.
+
+    Modern Applications are built in various ways depending on scale, scope, requirements, technological restrictions, etc.
+    This article is NOT intended to teach about application design. Nor to provide a one-size-fits-all methodology to building
+    any web app. Its intent is to teach good practices for separating state logic from the UI controls within the context of vanilla JS.
+
+    1. Imagine the outside.
+        Pretend that building an application is like building a dream house. Imagine what that dream house looks like in its final form.
+        Imagine decorations, the windows, the door, the front yard etc. But what about the structural elements? These are far more important
+        to the integrity of the house than any of the aesthetic choices. Behind each exterior element, there is an interior support structure.
+        In the same way, our application's user interface should be a visual representation of underlying application logic. In other words,
+        behind everything that looks and feels nice, there should be a visual representation of underlyihgn application logic.
+        In other words, behind everything that makes our game LOOK and FEEL nice, there should be solid, foundational code.
+
+        
+
+
