@@ -219,4 +219,17 @@ Article: Building From the Inside Out
         should be simple to call and as restrictive as possible (meaning it should NOT need to provide a multitude of arguments to do something).
         Conversely, the DOM probably doesn't need access to a way of changing which layer's turn it is. Instead, it should be able to READ whose
         turn it is. as it changes after every round. This is an important distinction.
+    
+    3. Foundation and Framing: Building Connect 4.
+        One great strategy to help keep game logic separate from your UI is to challenge yourself to build the game so that it can be played, in full, in the console.
+        By not needing to rely on the UI, you can be sure that your code has integrity and is not concerning itself with what the browser window is showing.
+        
+        Connect 4 Console only version
+        https://replit.com/@40percentzinc/ConnectFourConsole#script.js
+
+        b. Now that our house is framed...
+            The beauty of decoupled code is that changing the implementation of any of the sub modules will not require us to rewrite our whole program.
+            Say we wanted to create a version where the rows filled form the top-down. You would only need to change the Gameboard.droptoken() and the 
+            rest of the game would run as intended.
+
 
