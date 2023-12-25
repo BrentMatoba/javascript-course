@@ -203,6 +203,20 @@ Article: Building From the Inside Out
         behind everything that looks and feels nice, there should be a visual representation of underlyihgn application logic.
         In other words, behind everything that makes our game LOOK and FEEL nice, there should be solid, foundational code.
 
-        
+    2. Build from the inside.
+        Its easy to focus on the visual and interactable elements of a project, just like its easy to imagine how a house will look from the outside
+        when we dream of building one. But just like a builder would first consider the structural design and blueprints before beginning to imagine
+        walls, doors, and windows, we should begin to think how our application is going to function at its core before implementing details about
+        the surface.
 
+        Its never the duty of drywall to frame or support the house, nor by itself, create a strong barrier between rooms. In the same way, our DOM elements
+        and queries should not be responsibel for storing or handling the implementation details of how our application works. That is not their responsibility.
+        they shouldnt' be concerned with storing details on the state of our game, nor handling the logic our game requires to function correctly. 
+        Instead, the DOM should be responsible for READING and DISPLAYING the application state to the user and providing an easy-to-use gateway to interact with
+        the methods it needs to.
+
+        For example, if I am making a game, my UI should have access to a method it needs to use in order to play a round. This method
+        should be simple to call and as restrictive as possible (meaning it should NOT need to provide a multitude of arguments to do something).
+        Conversely, the DOM probably doesn't need access to a way of changing which layer's turn it is. Instead, it should be able to READ whose
+        turn it is. as it changes after every round. This is an important distinction.
 
