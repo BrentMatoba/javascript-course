@@ -140,3 +140,22 @@ Understand why composition is generally preferred to inheritance.
         1.A new object is created.
         2. The constructor runs with the given argument assigns it to this.name;
         then we can call object methods, such as user.sayHi();
+    
+
+
+    2. What is a class?
+        So what exactly is a class? there not an entirely new language-level entity, as one might think.
+        Lets unveil any magic and see what a class really is. That'll help in understanding many complex aspects. In jhavascript, a class is a kind of function.
+        class User{
+            constructor(name) {this.name = name;}
+            sayHi(){alert(this.name);}
+        }
+
+        alert(typeof User);
+
+        What class User {...} construct really does is:
+            a. Creates a function named User, that becomes the result of the class declaration. The function code is taken from the constructor method.
+            (assumed empty if we don't write such method.)
+            b. STores class methods, such as sayHi, in User.prototype.
+
+            After new User object is created, when we call its method, its taken from the prototype. So the object has access to class methods.
