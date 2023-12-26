@@ -75,6 +75,27 @@ Understand why composition is generally preferred to inheritance.
     the name directly by user._name. But there is a widely known convention that properties starting with an underscore _ are internal and
     should not be touched from outside the object.
 
-4.
+4. Using for compatibility:
+    One of the great uses of accessors is that they allow to take over a "regular" data property at any moment by replacing it
+    with a getter and a setter and tweak its behavior. Imagine we started implementing user objects using data properties name and age:
 
+    function User(name, age) {
+        this.name = name;
+        this.age = age;
+    }
 
+    let john = new User("John", 25);
+
+    alert( john.age ); // 25
+
+    but later, things change. Instead of age we want to store birthday, because its more precise and convenient.
+    function User(name, birthday) {
+        this.name = name;
+        this.birthday = birthday;
+        }
+
+    let john = new User("John", new Date(1992, 6, 1));
+
+    now what should we do wit the old code that still uses age property? We can try to find all such places and fix them, but that takes time and can be hard to do.
+    if that code is used by many other people. And beides, age is a nice thing to have in user, right?
+    lets keep it. Adding a getter for age solves the problem.
