@@ -99,3 +99,44 @@ Understand why composition is generally preferred to inheritance.
     now what should we do wit the old code that still uses age property? We can try to find all such places and fix them, but that takes time and can be hard to do.
     if that code is used by many other people. And beides, age is a nice thing to have in user, right?
     lets keep it. Adding a getter for age solves the problem.
+
+
+
+
+
+    Article: https://javascript.info/class
+    1. In practice, we often need to create many objects of the same kind, like users, or goods or whatever. The new function can help with that.
+    However, in modern Javascript, there's a more advanced "class" construct, that introduces great new features which are useful for object-oriented programming.
+
+    The "class" syntax
+    the basic syntax is:
+        class myCLass {
+            //class methods
+            constructor(){...}
+            method1(){...}
+            method2(){...}
+            method3(){...}
+            ...
+        }
+
+        then use new myClass() to creatge a new object with all the listed methods.
+        the constructor() method is called automatically by new, so we can initialize the object there.
+
+    For example:
+    class User{
+        constructor(name){
+            this.name = name;
+        }
+        sayHi(){
+            alert(this.name);
+        }
+    }    
+
+    //usage
+    let user = new User("John");
+    user.sayHi();
+
+    When new User("John") is called:
+        1.A new object is created.
+        2. The constructor runs with the given argument assigns it to this.name;
+        then we can call object methods, such as user.sayHi();
