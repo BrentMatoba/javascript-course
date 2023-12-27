@@ -234,3 +234,20 @@ class AnotherChildClass extends ModernClass {}
     mixins are essentially adding stuff to child classes on top of what they inherit from the parent class.
     You apply mixins to an objects prototype, so that all instances of the object inherit the mixin
 
+
+
+
+
+
+
+
+Article: https://rajaraodv.medium.com/is-class-in-es6-the-new-bad-part-6c4e6fe1ee65
+Is "Class" in ES6 the New "bad" part?
+The point of this article is to address arguments for and against the existence of classes in Javascript.
+
+Argument: Class in ES6 is a good thing.
+The first thing people elarn weh they study OO languages is the concept of Classes and how inheritance works and so on.
+In JS you could simulate a "class" and do OO programming since the beginning. However, there wasn't a class keyword and the code to set it up,
+creating sub classes and calling parent functions was weird and confusing.
+Most JS people want to do OOP and move on, but the current syntax is awkward
+Further, this is OPTIONAL, and does not prevent users from accessing more function factories and object literals.
