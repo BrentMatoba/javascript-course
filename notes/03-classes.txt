@@ -281,7 +281,7 @@ Composition vs Inheritance:
 inhertiance is when you design your types aroudn what they are
 Composition is whe you design your types around what they do.
 
-Inheritance:
+Inheritance: Designing types around what they are
     Class based inheritance has its limits, especially when it comes to flexiblility. For instance:
 
     Robot
@@ -300,5 +300,16 @@ Inheritance:
     If you need a murder-robot-dog? What happens?
     This object no longer clearly fits into the hierarchy.
     There ARE ways to solve this, but all inhertiance based solutions are awkward.
+
+Composition: Designing types around what they do
+    dog = pooper + barker
+    cat = pooper + meower
+    cleaningRobot = driver + cleaner
+    murderRobot = driver + Killer
+    murderRobotDog = driver + killer + barker
+
+
+    In practice:
+        
 
 
