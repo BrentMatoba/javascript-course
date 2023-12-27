@@ -271,4 +271,34 @@ b. Bad for Functional Programming.
     "inheritance over Composition".
         *Brent's note: This point seems fucking DUMB LOL. Maybe I'm missing something...? But Functional Programing is its own separate paradigm from OOP...
         Why would we optimize OOP for Functional Programming by limiting inheritance? Inheritance is one of OOP's pillars? Idk this seems troll.
-        
+
+
+
+
+
+Source: https://www.youtube.com/watch?v=wfMtDGfHWpA
+Composition vs Inheritance:
+inhertiance is when you design your types aroudn what they are
+Composition is whe you design your types around what they do.
+
+Inheritance:
+    Class based inheritance has its limits, especially when it comes to flexiblility. For instance:
+
+    Robot
+        CleaningRobot
+            .clean()
+        MurderRobot
+            .kill()
+
+    Animal
+    .poop()
+        Dog
+            .bark()
+        Cat
+            .meow()
+    
+    If you need a murder-robot-dog? What happens?
+    This object no longer clearly fits into the hierarchy.
+    There ARE ways to solve this, but all inhertiance based solutions are awkward.
+
+
