@@ -246,8 +246,29 @@ Is "Class" in ES6 the New "bad" part?
 The point of this article is to address arguments for and against the existence of classes in Javascript.
 
 Argument: Class in ES6 is a good thing.
-The first thing people elarn weh they study OO languages is the concept of Classes and how inheritance works and so on.
+a.The first thing people elarn weh they study OO languages is the concept of Classes and how inheritance works and so on.
 In JS you could simulate a "class" and do OO programming since the beginning. However, there wasn't a class keyword and the code to set it up,
 creating sub classes and calling parent functions was weird and confusing.
 Most JS people want to do OOP and move on, but the current syntax is awkward
 Further, this is OPTIONAL, and does not prevent users from accessing more function factories and object literals.
+
+Argument: Class in ES6 is a bad thing.
+a.Conceptually, there is no class in javascript.
+Objects are created without classes! The best way to explain this is to use a real-wordl analogy of "living things" vs "Non-living things"
+
+    In java, Object s need a blueprint or DNA to exists called Classes. Its similar to "living things" needing "DNA" to exist.
+
+    In Javascript, objects jsut shows up without the need for "Classes" (DNA). They are simliar to non-living things that can be created or invented. But
+    they come with a plug/socket mechanism called a "prototype" that can be used to wire up different objects.
+
+
+In Javascript, there is no overhead and constraints of needing a class to use objects. Further "prototype"-chain based inheritance can wire up
+any object to any other object that may not be releated. So its very flexible compared to Classes.
+
+b. Bad for Functional Programming.
+    In Javascript, functions are first-class citizens Functional Programming is all about using functions to their fullest extent.
+    There is a notation called "Favor composition over Inheritance" and here we are going in the opposite direction because "class" notation favors
+    "inheritance over Composition".
+        *Brent's note: This point seems fucking DUMB LOL. Maybe I'm missing something...? But Functional Programing is its own separate paradigm from OOP...
+        Why would we optimize OOP for Functional Programming by limiting inheritance? Inheritance is one of OOP's pillars? Idk this seems troll.
+        
