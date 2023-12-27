@@ -196,3 +196,41 @@ Understand why composition is generally preferred to inheritance.
 
             3. Class always use strict. All code inside the class construct is automatically in strict method.
             Besides, class syntax brings many other features that we'll explore later.
+
+
+
+
+
+Article: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/extends
+1.Extends Syntax:
+    The extends keyword is used in class declarations or class expressions to create a class thatis a child of another class.
+
+    Syntax:
+        class ChildClass extends ParentClass {...}
+    
+    ParentClass: an expression that evaluates to a constructor function(including a class) or null.
+2. Description:
+    The extends keyword can be used to subclass custom classes as well as built-in objects.
+
+    Any constructor that can be called with new has the prototype property can be the candidate for the parent class.
+    The two conditions must both hold. For example, bound functions and Proxy can be constructed, but they don't have the prototype property,
+    so they cannot be subclassed.
+
+    function OldStyleClass() {
+    this.someProperty = 1;
+    }
+    OldStyleClass.prototype.someMethod = function () {};
+
+    class ChildClass extends OldStyleClass {}
+
+    class ModernClass {
+        someProperty = 1;
+        someMethod() {}
+}
+class AnotherChildClass extends ModernClass {}
+
+
+    ****IMPORTANT
+    mixins are essentially adding stuff to child classes on top of what they inherit from the parent class.
+    You apply mixins to an objects prototype, so that all instances of the object inherit the mixin
+
