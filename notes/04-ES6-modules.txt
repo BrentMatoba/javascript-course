@@ -1,0 +1,25 @@
+First off, Modules are NOT the same thing as the module pattern we previously discussed.
+ES6 Modules are basically the import/export functions from other languages. Its exaclty what you would expect.
+
+
+Before we can REALLY use modules, we're going to have to learn about NPM and webpack, which are both topics that are VERY useful
+to you even beyond this lesson. In the end, the modules themselves are simple to implement, so we're going to take this ch ance to learn
+about a few other things.
+
+
+Lesson Overview:
+    This section contains a general overview of topics that you will learn in this lesson.
+    
+    Explain what NPM is and where itw as commonly used before being adopted in the frontend.
+    Describe what npm init and what package.json is
+    Know how to install packages using npm
+    describe what a javascripot module bunder like webpack is.
+    Explain what the concepts "entry" and "output" mean in relation to webpack.
+    Briefly explain what a development dependency is.
+    Explain what "transpiling code" means and how it relates to front-end web development.
+    Briefly describe what a task runner is and how its used in front end development.
+    Describe how to write an npm automation script.
+    Explain one of the main benefits of writing code in modules.
+    Explain "named" exports and "default" exports.
+
+    
