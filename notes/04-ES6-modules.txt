@@ -22,4 +22,13 @@ Lesson Overview:
     Explain one of the main benefits of writing code in modules.
     Explain "named" exports and "default" exports.
 
-    
+
+This history of Javascript.
+    Why do we even need or want htis stuff? what do you gain from all this added complexity?  These are good questions...with good answers.
+    Using a javascript package manager (npm)
+        Starting around 2010, several competing javascript package managers emerged to hlep automate the process of downloading and upgrading libraries from
+        a central repository. Bower was arguably the most popular in 2013, but eventually was overtaken by npm aroudn 2015.
+        (its worth noting that starting around late 2016, yarn has picked up a lot of traction as an alternative to npm's interface, but it still uses npm packages under the hood)
+
+        Note that npm was originally a package manager made specifically for node.js, a javascript runtime designed to run ont he server, not the frontend. So that
+        makes it a pretty weird choice for a frontend javascript package manager for libraries meant to run in a browser.
