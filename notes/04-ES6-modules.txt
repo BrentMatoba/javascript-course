@@ -32,3 +32,21 @@ This history of Javascript.
 
         Note that npm was originally a package manager made specifically for node.js, a javascript runtime designed to run ont he server, not the frontend. So that
         makes it a pretty weird choice for a frontend javascript package manager for libraries meant to run in a browser.
+
+
+    Using a javascript module bundler(webpack)
+        Most programming languages provide a way to import code from one file into another. Javaascript wasn't originally designed
+        with this feature, because javascript was designed to only run in the browser, with no access to the file system of the client's computer.(for security reasons)
+        So for the longest time, organizing javascript code in multiple files required you to load each file with variables shared globally.
+
+        This is actually what we'r edoing with the above moment.js example. The entire moment.min.js file is loaded in the HTML, which defines a global variable "moment",
+        which is then available to any file loaded after moment.min.js (regardless of whether or not it needs access to it.)
+
+        In 2009, a project nammed CommonJS was started witht he goal of specifying an ecosystem for JavaScript outsdie the browser. A big part of CommonJS was its specification
+        for modules, which would finally allow Javascript to import and export code across files like most programming languages, without resorting to global variables.
+        THis most well-known of implementation of CommonJS modules is node.js
+
+
+
+        Node.js is a tool for running JavaScript code outside of a web browser. It lets you build things like websites and apps using JavaScript. Node.js is popular because it's fast
+         and can handle lots of users at the same time. It works well for online games, chat applications, and other interactive websites.
