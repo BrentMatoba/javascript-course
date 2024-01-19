@@ -23,7 +23,7 @@ Lesson Overview:
     Explain "named" exports and "default" exports.
 
 
-This history of Javascript.
+This history of Javascript. https://peterxjang.com/blog/modern-javascript-explained-for-dinosaurs.html
     Why do we even need or want htis stuff? what do you gain from all this added complexity?  These are good questions...with good answers.
     Using a javascript package manager (npm)
         Starting around 2010, several competing javascript package managers emerged to hlep automate the process of downloading and upgrading libraries from
@@ -50,3 +50,22 @@ This history of Javascript.
 
         Node.js is a tool for running JavaScript code outside of a web browser. It lets you build things like websites and apps using JavaScript. Node.js is popular because it's fast
          and can handle lots of users at the same time. It works well for online games, chat applications, and other interactive websites.
+
+
+
+NPM
+    What is NPM?
+    Node Package Manger is a command-line tool that gives you access to a gigantic repository of plugins, libraries, and tools. 
+
+    NPM consists of three distinct components:
+        The websites
+        The command line interface(CLI)
+        The registry
+
+        Use the WEBSITE to discover packages, set up profiles, and manage other asepcts of your npm experience.
+         For example, you can set up organizations to manage access to public or private packages.
+         The CLI runs from a terminal, and is how most developers interact with npm.
+         the REGISTRY is a large public database of javascript software and the meta-information surrounding it.
+
+         Use NPM to:
+            1. Adapt packages of code for your apps, or incorporate packages as they are.
