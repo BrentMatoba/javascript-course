@@ -85,3 +85,6 @@ Package.json files
     (other code it needs to run), scripts, and more. This file helps others understand your project and lets you easily manage what code your project needs to run.
 
 Demystifyign Devdependencies and dependencies https://dev.to/mshertzberg/demystifying-devdependencies-and-dependencies-5ege
+    If you aren't familiar, devDependencies and dependencies are two properties that are added to package.json when a package is installed as a developmental dependency or a production dependency, respectively.
+    In the NPM ecosystem, packages are installed and consumed by requiruing them or importing them in files, or ru in the command-line as binaries. When an application is fed into a module bundler,
+    like webpack or rollup, all required dependencies are pulled together and bundled (as the naem suggests) you should ensure that these packages are present in dependencies, as they're needed at runtime.
