@@ -88,3 +88,11 @@ Demystifyign Devdependencies and dependencies https://dev.to/mshertzberg/demysti
     If you aren't familiar, devDependencies and dependencies are two properties that are added to package.json when a package is installed as a developmental dependency or a production dependency, respectively.
     In the NPM ecosystem, packages are installed and consumed by requiruing them or importing them in files, or ru in the command-line as binaries. When an application is fed into a module bundler,
     like webpack or rollup, all required dependencies are pulled together and bundled (as the naem suggests) you should ensure that these packages are present in dependencies, as they're needed at runtime.
+
+    Development Dependencies, or devDependencies are packages that are consumed by requiring them in files or runas binaries, during the development phase. THese are packages that are only necessary during development
+    and not necesary for the production build. Some examples of packages hatwould only be required during development are babel plugins and presets, test runners, and linter packages.
+
+    Alternatively, there is a dependency that is necessary in both production adn development. In this case, it can be added to depdencies, since dependencies are available in both production and developemnt.
+
+
+In a package.json file for Node.js projects, "dependencies" are the packages your project needs to run, like libraries or frameworks. "devDependencies" are packages used only during development, like testing tools or compilers, and aren't needed for the project to run after it's built.
