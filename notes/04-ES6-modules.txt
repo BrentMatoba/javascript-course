@@ -103,3 +103,11 @@ In a package.json file for Node.js projects, "dependencies" are the packages you
 Yarn:
     At some pinot, you will probably run into Yarn, a replacement for hte default npm. for the most part, it does the same things, though it does have a few more features. Recent versions of npm have incorporated some of the best features of Yarn,
     so using it won't off you any real advantages at thsi point in your carrer. It is a fine package manager however, and may be worht your consideration in teh future.
+
+
+Webpack and bundlers
+    Sofar your projects have had relativey basic file structures. As project complexity grows, so too will the benefits of well-organized code. A project consisteing of a single, long file with lots of code can be made
+    easier to navigate and maintain by being broken down into multiple smaller files (modules) Futher benefits of writing code in modules will come below when we introduce Es6 modules.
+
+    But theres a problem! THe browser would need to maek a separate HTTP request for each file. The more files you ahve, the more costly this becomes, particularly on slower networks and would only increase if you also imported third-party libraries into your app.
+    What if we had a wayt ow rite multiple files ande/or import multiiple third-party libraries but eventually combine them all into fewer fiels at the end os that broswer did not have ot maek so many requests?
