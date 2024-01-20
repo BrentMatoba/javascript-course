@@ -79,3 +79,9 @@ NPM
             9. Update applications easily when underlying code is updated.
             10. Discover multiple ways to solve the same puzzle.
             11. Find other deevelopers who are working on similar problems and projects.
+
+Package.json files
+    A package.json file is used in Node.js projects to manage project settings. It's a simple file in JSON format that contains information like the project's name, version, dependencies 
+    (other code it needs to run), scripts, and more. This file helps others understand your project and lets you easily manage what code your project needs to run.
+
+Demystifyign Devdependencies and dependencies https://dev.to/mshertzberg/demystifying-devdependencies-and-dependencies-5ege
