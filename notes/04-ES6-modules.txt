@@ -111,3 +111,5 @@ Webpack and bundlers
 
     But theres a problem! THe browser would need to maek a separate HTTP request for each file. The more files you ahve, the more costly this becomes, particularly on slower networks and would only increase if you also imported third-party libraries into your app.
     What if we had a wayt ow rite multiple files ande/or import multiiple third-party libraries but eventually combine them all into fewer fiels at the end os that broswer did not have ot maek so many requests?
+
+    Enter bundlers. Give a bundler a starting file (an entry point) and it will build a dependency graph of the modules and dependencies starting from that file, then combine them into a single output file. Provide entry points and it willl do the same for each separately.
