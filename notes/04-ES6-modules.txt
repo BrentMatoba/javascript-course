@@ -122,3 +122,16 @@ Webpack and bundlers
     Let us revisit two key words mentioned ealrier, entry adn output. Int he above link's example, we coud ahve rearranged teh files into a src and dist folder. Technically, we coudl ahve called those folders anything, but those names are typical. src is our SOURCE directory.
     In other words, src is where we write all of the code that webpack is going to bundle up for us. When webpack runs, it goes through all of our files starting at any code we need to run our site into a single filew per entry point inside of the dist folder.
     (short for distribution) In this example, we have a single entry point - /src/index.js The output file is the compiled version. /dist/main.js
+
+
+    I asked chatgpt why is is cool and this is what we said
+    User:
+        so what is the implication of this? I can write code was a programmer that is separated into multiple files for my ease of use/organization, but at runtime I get the speed benefit of one file?
+    ChatGPT:
+        Exactly! Webpack lets you organize your code in multiple files for better management and readability while you're developing. Then, when your website goes live, Webpack bundles these files into fewer files. This gives you two main benefits:
+
+        Ease of Development: You can write and maintain your code in separate files, which makes it easier to manage, especially for large projects.
+
+        Improved Performance: When your website is accessed by users, the bundled files (usually fewer and larger) load faster in the browser compared to loading many small files. This improves the user's experience with faster loading times.
+
+        So, you get the best of both worlds: convenient organization for development and optimized performance for users.
