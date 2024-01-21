@@ -113,3 +113,7 @@ Webpack and bundlers
     What if we had a wayt ow rite multiple files ande/or import multiiple third-party libraries but eventually combine them all into fewer fiels at the end os that broswer did not have ot maek so many requests?
 
     Enter bundlers. Give a bundler a starting file (an entry point) and it will build a dependency graph of the modules and dependencies starting from that file, then combine them into a single output file. Provide entry points and it willl do the same for each separately.
+    Webpack is one such tool for bundling modules. There is a lot of talk across the net about how difficult and complex it is to set up and use, but at the moment our needs are few tand the setup is basic enough.
+
+    Webpack is a VERY powerufl tool, and with that power comes a decent amount of complexity (responsibility?) The basic configuration is not difficult and proficiency with webpack looks AMAZING on resumes.  
+    
