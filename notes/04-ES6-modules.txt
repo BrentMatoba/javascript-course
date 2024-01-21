@@ -135,3 +135,28 @@ Webpack and bundlers
         Improved Performance: When your website is accessed by users, the bundled files (usually fewer and larger) load faster in the browser compared to loading many small files. This improves the user's experience with faster loading times.
 
         So, you get the best of both worlds: convenient organization for development and optimized performance for users.
+
+
+
+    
+
+    ES6 modules (finally!)
+    Now that we sorta udnerstand what webpack is doing its time to discuss the module syntax .Thjere are only 2 components to it, import and export.
+    The import statement is the same thing that you used during the webpack tutorial so it shoudl be fimliar by now.
+    // a file called functionOne.js
+        const functionOne = () => console.log('FUNCTION ONE!');
+
+        export { functionOne };
+
+    // another JS file
+        import { functionOne } from './functionOne';
+
+        functionOne(); // this should work as expected!
+
+
+    You have to specify what commands can be exported. This seems dumb.,
+
+    There are MANY benefits to writing your code in modules. One of the most compelling is code reuse. If, for isntance, you ahve writtens ome functions that manipulate the DOM in a specific way, putting all of those into their own file as a module means that you
+    can copy taht file and reuse it very easily.
+
+    
