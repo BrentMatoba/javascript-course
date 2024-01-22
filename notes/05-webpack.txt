@@ -6,3 +6,25 @@ In our last lesson, we covered the first half o what webpack can do for you : bu
 Another amazing feature is webpack's ability ot process and manipulate your as it bundlies it. So for example, if you would like to use Sass or PostCSS to write your CSS,
 webpack can allow you to do that. Webpack can manage your images and compress and optimize them for use on the web.
 Webpack can minify and uglify your code. There are TONS of things webpack can do, but to access these fucntions we need to lear n more about loaders and plugins.
+
+Lesson Overview:
+    This section contains a general overview of topics that you will learn in this lesson.
+        Use webpack by following its documetnation
+        Load assets with webpack.
+        Manage output with webpack and HTML webpack plugins
+        Configure webpack with useufl features for developmetn.
+
+Bundling:
+    As briefly introduced in the previous lesson, if you give webpack a file as an entry point, it will build a dependency graph based on all th eimport-exports starting there,
+    before bundling everything into a single.js file in dist. If for whatever reason you needed it to output multiple bundlers(e.g. you have multiple html pages that each need shteir own),
+    then each entry point you give webpack will produce its own output bundle.
+
+    If you are only dealing with bundling javascript then this is fairly straightforward. But what if your project also includes CSS or assets like images or fonts?
+     for CSS, you can import you .css file driectly into your javasccript and for assets like images, you might be used inside your css or imported icrectly into your javascript. When you tell webpack to bundle your files,
+     it will come accross these files and try to bundle them together or process any assets like images and copy them into dist.
+
+     Since these sorts of files are not javascript, however, webpack will not know how to process them unless you tell it how to by including the correct loaders and rules. If you really watned to, with the right loaders/plugins/rules,
+     you could even do things wsuch as image optimization when you build your projec tinto dist. In the assigbnment links below, you wilil get to see how you can install and configure these loaders and rules for CSs and assets.
+
+     
+
