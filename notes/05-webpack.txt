@@ -26,5 +26,9 @@ Bundling:
      Since these sorts of files are not javascript, however, webpack will not know how to process them unless you tell it how to by including the correct loaders and rules. If you really watned to, with the right loaders/plugins/rules,
      you could even do things wsuch as image optimization when you build your projec tinto dist. In the assigbnment links below, you wilil get to see how you can install and configure these loaders and rules for CSs and assets.
 
-     
 
+
+HTML-webpack-plugin.
+ Since we would like to keep all of our development work within src adn elave dist for the production build what baout handling html files?
+ Similalrly to how we will need laoders and rules for CSS and assets, we can use a plugin called html-webpack-plugin which will automatically build an HTML file in dist for us when we build our project.
+ It will also then automatically add certian things tot he HTML like our output bundle in a <script> tag, or the code to use a gavicon if we configured it to use one.
