@@ -163,3 +163,17 @@ Webpack and bundlers
     WIth the introduciton of ES6 modules, them odule pattern is not needed anymore, though you might still encounter them in the wild. Whe not using RS6 modules, only what is exported can be accessed in other modules by importing.
     Additionally, any declarations made in a module are not automatically added to the global scope. By using es6 modules, you can keep different parts of your code cleanly separated, which makes writing and maintaining your code muche asier less- erorr-prone.
     Keep in minnd that you DEFINITELY export constructors, classes, and factory functions from your modules.
+
+
+    To pull it all togher, lets write a module and then include in inour code. WE are going to continue from where the webpack tutorial left off. Before beginnign, your file directory shoul dlook something like this
+    ├── dist
+    │   ├── main.js
+    │   └── index.html
+    ├── src
+    │   └── index.js
+    ├── package-lock.json
+    ├── package.json
+    └── webpack.config.js
+
+
+    In addition, you should be able to bundle and run webpack by typing npx webpack in the terminal
