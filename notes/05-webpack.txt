@@ -1,0 +1,8 @@
+Introduction:
+We've already introduced webpack in a previous lesson. It is the go-to tool accross the web fro bundling and compiling javascript code. There ARE other options out
+there, but at this time none of them are as popular or widely used as webpack.
+
+In our last lesson, we covered the first half o what webpack can do for you : bundling your modules.
+Another amazing feature is webpack's ability ot process and manipulate your as it bundlies it. So for example, if you would like to use Sass or PostCSS to write your CSS,
+webpack can allow you to do that. Webpack can manage your images and compress and optimize them for use on the web.
+Webpack can minify and uglify your code. There are TONS of things webpack can do, but to access these fucntions we need to lear n more about loaders and plugins.
