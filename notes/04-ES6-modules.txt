@@ -159,4 +159,7 @@ Webpack and bundlers
     There are MANY benefits to writing your code in modules. One of the most compelling is code reuse. If, for isntance, you ahve writtens ome functions that manipulate the DOM in a specific way, putting all of those into their own file as a module means that you
     can copy taht file and reuse it very easily.
 
-    
+    There are also the same benefits as when using factory functions or the module pattern (the module pattern and ES6 modules are not hte same things, this naming convention is frustrating)
+    WIth the introduciton of ES6 modules, them odule pattern is not needed anymore, though you might still encounter them in the wild. Whe not using RS6 modules, only what is exported can be accessed in other modules by importing.
+    Additionally, any declarations made in a module are not automatically added to the global scope. By using es6 modules, you can keep different parts of your code cleanly separated, which makes writing and maintaining your code muche asier less- erorr-prone.
+    Keep in minnd that you DEFINITELY export constructors, classes, and factory functions from your modules.
