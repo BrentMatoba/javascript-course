@@ -9,3 +9,9 @@ Javascript Object notation (JSON) is a standard text-based format for represetni
 (e.g. sending some data form the server tot he client, so it can be displayed on a web page, or vice versa) You'll come across it quite often, so int his article,
 we give you all you need tow ork with JSON using javascript, including parsing JSON so you can access data within it, and creating JSON.
 
+No really, what is JSON?
+    JSON is a text-based data format following javascript object syntax, which was popularized by douglas crockford. Even though it closely resembels
+    javascript object literal sytnax, it can be used independently fomr javascript, and many programming environments feature the ability to read  (prse)
+    and generate JSON.
+
+    JSON exists as a string, useful when youw ant to transmit data accross a netowrk. It needs to be converted to a native javascript objec twhen you want to access the data. This is not a big issue. Javascript provides a global JSON objec tthat has methods available for converting between the two.
