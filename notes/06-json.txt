@@ -14,4 +14,46 @@ No really, what is JSON?
     javascript object literal sytnax, it can be used independently fomr javascript, and many programming environments feature the ability to read  (prse)
     and generate JSON.
 
-    JSON exists as a string, useful when youw ant to transmit data accross a netowrk. It needs to be converted to a native javascript objec twhen you want to access the data. This is not a big issue. Javascript provides a global JSON objec tthat has methods available for converting between the two.
+    JSON exists as a string, useful when youw ant to transmit data accross a netowrk. It needs to be converted to a native javascript objec twhen you want to access the data. This is not a big issue. Javascript provides a global JSON objec tthat has methods available for converting between the two. 
+
+JSON Structure:
+    As descirbed above, json is a string whose format very much resembles javascript objet literal format. You can include the same basic data types inside JSON as you can in a standard javascript object
+    strings, numbers, array, booleans, and other object literals. Thi sallows you to construct a data hierarchy, like so:
+
+    {
+  "squadName": "Super hero squad",
+  "homeTown": "Metro City",
+  "formed": 2016,
+  "secretBase": "Super tower",
+  "active": true,
+  "members": [
+    {
+      "name": "Molecule Man",
+      "age": 29,
+      "secretIdentity": "Dan Jukes",
+      "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
+    },
+    {
+      "name": "Madame Uppercut",
+      "age": 39,
+      "secretIdentity": "Jane Wilson",
+      "powers": [
+        "Million tonne punch",
+        "Damage resistance",
+        "Superhuman reflexes"
+      ]
+    },
+    {
+      "name": "Eternal Flame",
+      "age": 1000000,
+      "secretIdentity": "Unknown",
+      "powers": [
+        "Immortality",
+        "Heat Immunity",
+        "Inferno",
+        "Teleportation",
+        "Interdimensional travel"
+      ]
+    }
+  ]
+}
