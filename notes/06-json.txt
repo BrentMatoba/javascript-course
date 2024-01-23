@@ -1,0 +1,5 @@
+JSON (Javascript object notation) is a staandardized format for structuring data. It is heavily absed on the syntax for javascript objects.
+You will often encounter JSON formatted data when working with external servers or APIs.
+It is essentially the universal format for transmitting data on the web.
+
+Fortunately there isn't much to learn here. We're only including a lesson on it because some formatting rules can cause confusion if you aren't aware of them.
