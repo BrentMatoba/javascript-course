@@ -124,3 +124,15 @@ Storing Data:
     document.getElementById("demo").innerHTML = obj.name;
 
 
+Stringify Dates:
+  IN JSON Date objects are NOT allowed. The JSON.stringify() function will convert any dates into strings.
+    const obj = {name: "John", today: new Date(), city : "New York"};
+    const myJSON = JSON.stringify(obj);
+
+  
+Stringify Functions:
+  In JSON, functions are not allwoed as obejct values.
+  The JSON.stringify() funciton will remove any functions from a javascript objects, both the key and the value:
+    const obj = {name: "John", age: function () {return 30;}, city: "New York"};
+    const myJSON = JSON.stringify(obj);
+
