@@ -107,3 +107,20 @@ const arr = ["John", "Peter", "Sally", "Jane"];
 Use the javascript function JSON.stringify() to convert it into a string.
 const myJSON = JSON.stringify(arr);
 myJSON is now a string, and ready to be sent to a server:
+
+
+Storing Data:
+  When storing data, the data has to be a certain format, and regardless of where you choose to store it, text is always one o the legal formats.
+  JSON makes itp ossible tos tore javascript objects as text.
+
+  // Storing data:
+    const myObj = {name: "John", age: 31, city: "New York"};
+    const myJSON = JSON.stringify(myObj);
+    localStorage.setItem("testJSON", myJSON);
+
+// Retrieving data:
+    let text = localStorage.getItem("testJSON");
+    let obj = JSON.parse(text);
+    document.getElementById("demo").innerHTML = obj.name;
+
+
