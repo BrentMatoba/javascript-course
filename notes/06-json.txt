@@ -68,3 +68,22 @@ superHeroes.homeTown:
 superHeroes["active"];
 
 To accesss data further down the hierarchy, you ahve to chain the required property names and array indexes together. For example, to acces teh third superpower of the second hero listed in the memebrns list, you'd do this.
+
+
+
+JSON.parse()
+A common use of JSON is to exchange data to/from a webserver.
+When receiving data from a web server, the data is always a string.
+Parse the data with JSON. parse(), and the data becomes a javascript object.
+
+Example: PARSING JSON:
+  Imagine we received this text from a web server:
+  '{"name":"John", "age":30, "city":"New York"}'
+
+Use the javascript function JSON.parse() to convert text into a javascript object:
+const obj = JSON.parse('{"name":"John", "age":30, "city":"New York"}');
+
+
+
+Array as JSON:
+  When using the JSON.parse() on a JSON derived from an array, the method will return a javascript array, instead ofa javascript obejct.
