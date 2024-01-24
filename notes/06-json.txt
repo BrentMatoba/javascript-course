@@ -87,3 +87,16 @@ const obj = JSON.parse('{"name":"John", "age":30, "city":"New York"}');
 
 Array as JSON:
   When using the JSON.parse() on a JSON derived from an array, the method will return a javascript array, instead ofa javascript obejct.
+
+
+JSON.stringify()
+A common use of JSON is to exchange data to/from a web server.
+When sending data to a web server, the data has to be a string.
+
+Convert a javascript object into a string with JSON.stringify()
+
+Stringify a javascript object
+const obj = {name: "John", age: 30, city: "New York"};
+
+Use the javascript function JSON.strigify() to convert it into a string:
+const myJSON = JSON.stringify(obj);
