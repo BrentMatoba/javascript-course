@@ -100,3 +100,10 @@ const obj = {name: "John", age: 30, city: "New York"};
 
 Use the javascript function JSON.strigify() to convert it into a string:
 const myJSON = JSON.stringify(obj);
+
+
+Stringify a javascript array:
+const arr = ["John", "Peter", "Sally", "Jane"];
+Use the javascript function JSON.stringify() to convert it into a string.
+const myJSON = JSON.stringify(arr);
+myJSON is now a string, and ready to be sent to a server:
