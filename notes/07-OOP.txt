@@ -21,4 +21,9 @@ Single Responsibility:
     but it does mean that everything an object does should be part of one responsibility.
 
     Here's a really common example. Most of our code has funcitons to update write things to the dom in addition to ouur aplication logic. its a REALLY good idea to separate your dom stuff form the applciation logic.
-    
+
+
+    The second issue remaining ist hat the isGFameOVer funtion should only be responsible for checking if the gameOver condtiion is met. based on isGameOver return value, th function taht handles the game lopo shoud be repsonsible fgor deciding whether to call DOMstuff.gameOver(This.winner) or not.
+    Another way to think about single repsonsibilty is that a given method/class/component shoud have a single reasont o change. Otherwise, if an object ist rying to have multiple responsibilties, changing one aspect might affect another.
+
+    The single responsibilty principle is the first of a commonly found set of five design principles called the SOLID principles. you wwill read ;more about these priniciples in the assignment articles below.
