@@ -15,4 +15,10 @@ Lesson Overview:
     Keep in mind there is not usually a very clear answer to your application design questions. Some patterns and ideas are obviously better htan others, but there is oftens ome trade-off when deciidng wher top ut as pecific fuciton.
     these principles are not rules, they're helpful guidelines
 
+
+Single Responsibility:
+    As you craft your obejcts, one of the most important things to remember ist he single responsibility principle which states taht a class (or object or module) should only ahve ONE responsibility. This doesn't meant hat an object can only do one thing,
+    but it does mean that everything an object does should be part of one responsibility.
+
+    Here's a really common example. Most of our code has funcitons to update write things to the dom in addition to ouur aplication logic. its a REALLY good idea to separate your dom stuff form the applciation logic.
     
