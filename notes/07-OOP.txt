@@ -27,3 +27,9 @@ Single Responsibility:
     Another way to think about single repsonsibilty is that a given method/class/component shoud have a single reasont o change. Otherwise, if an object ist rying to have multiple responsibilties, changing one aspect might affect another.
 
     The single responsibilty principle is the first of a commonly found set of five design principles called the SOLID principles. you wwill read ;more about these priniciples in the assignment articles below.
+
+Loosely coupled Objects:
+    Obviously, all of our objects are intended to work together to form our final aplication. You should take care, however, to make sure that yoru individual objects can stgand alone as much as possible. Tightly coupled objects are objects taht rely so heavily on each otehr that removing or changing one willm
+    mean that you ahve to complet ely change another one - a real bumme.re
+    
+    This one is related pretty strongly to "single responsibitly" but takes a different angle. As ane xapmle, if we were writing a game and wante4d to completely chagne how the user interface worked, we should be ablet o do that without copmletel reworking the game loc. So we should be able tos tart off writing our game using primarily console.logs()s an then add in a bunch of dom funcitons later without touching the game logic.
