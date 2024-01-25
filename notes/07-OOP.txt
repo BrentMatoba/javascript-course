@@ -1,0 +1,7 @@
+Introduction:
+By this poitn you will hav elearned and had a chance to practice the most common object-creation and organization patterns in ajvascript. But this si jstu the TIP of the iceberg.
+More important than learning the syntax for factory functions or modules is figuring out how to use them effectively.
+
+This whole series of lessons ahs been about the "
+object oriented prgoramming paradigm (OP) The basics of creating objects adnc lasses are relatively straightforward, but iti s not stgraightforward to decide what top ut in each object, or whet o make a new object, or when to let an object inhertit from another one.
+
