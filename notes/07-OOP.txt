@@ -5,3 +5,14 @@ More important than learning the syntax for factory functions or modules is figu
 This whole series of lessons ahs been about the "
 object oriented prgoramming paradigm (OP) The basics of creating objects adnc lasses are relatively straightforward, but iti s not stgraightforward to decide what top ut in each object, or whet o make a new object, or when to let an object inhertit from another one.
 
+Lesson Overview:
+    This section contains a general overview of topics that you will learn in this lesson.
+        Explain the single responsibiltiy principle
+        Briefly explain the additional solid principles
+        eXplain waht tightly coupled objects are and why we want to avoid them.
+
+    Luckily there are several concepts and principles that can guide us int making good decisions when it comes to our object. This lesson is an introduciton toht emost importnat of those concepts.
+    Keep in mind there is not usually a very clear answer to your application design questions. Some patterns and ideas are obviously better htan others, but there is oftens ome trade-off when deciidng wher top ut as pecific fuciton.
+    these principles are not rules, they're helpful guidelines
+
+    
