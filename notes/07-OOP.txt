@@ -62,3 +62,8 @@ class Car {
     }
 }
 
+
+This violates the single responsibility principle, ebcause the logic for loggin ght einformation should not be a repsonsibility of the car class.
+There are a number of readibility and code management isuses that are caused by this, but the easiest issue to describe is actually refactoring.
+Letes say your logger logs to a file, adn this works great for several motnhs. Suddenly , an update occurs on the unerlying system that the car class is runing on, and you need to change thte way you write to files. Suddnely, you now
+nee to update every file writing instance of ever class you've ever implemented a logger inside of, that ttask would be huge!
