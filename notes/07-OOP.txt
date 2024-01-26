@@ -33,3 +33,32 @@ Loosely coupled Objects:
     mean that you ahve to complet ely change another one - a real bumme.re
     
     This one is related pretty strongly to "single responsibitly" but takes a different angle. As ane xapmle, if we were writing a game and wante4d to completely chagne how the user interface worked, we should be ablet o do that without copmletel reworking the game loc. So we should be able tos tart off writing our game using primarily console.logs()s an then add in a bunch of dom funcitons later without touching the game logic.
+
+
+
+SOLID principle #1:
+Single Responsibility
+The single responsibility principle says that a class or module shoudl ahve only a single purpouse. For example, if you ahve a walle tclass, that class should only implement
+wallet funcitonality. Its fine to call other funcitonalit, butit shoudln't be written there.
+
+Bad Example:
+class Car {
+    constructor(make, model) {
+        this.make = make;
+        this.model = model;
+    }
+
+    start() {
+        if (...) { // Logic to determine whether or not the car should start
+            this.errorLog(`The car ${this.make} ${this.model} started.`);
+            return true;
+        }
+        this.errorLog(`The car ${this.make} ${this.model} failed to start.`);
+        return false;
+    }
+
+    errorLog(message) {
+        console.log(message);
+    }
+}
+
