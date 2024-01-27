@@ -195,3 +195,30 @@ then we would expect all of the functionality held within the animal class to be
 A classic example of a liskov substitution violation is the "square and rectangle problem" in this problem, it is posed that square class can inherit from a rectangle class. On the face of it, this makes sense; both shapes have two
 sides, and both calculate tgheir area byu multiplying their side sby each other.
 
+class Rectangle {
+    constructor(height, width) {
+        this.height = height;
+        this.width = width;
+    }
+
+    setHeight(newHeight) {
+        this.height = newHeight;
+    }
+}
+
+class Square extends Rectangle {}
+
+const rectangle = new Rectangle(4, 5);
+const square = new Square(4, 4);
+
+console.log(`Height: ${rectangle.height}, Width: ${rectangle.width}`); // Outputs 'Height: 4, Width: 5' (correct)
+console.log(`Height: ${square.height}, Width: ${square.width}`); // Outputs 'Height: 4, Width: 4' (correct)
+
+square.setHeight(5);
+console.log(`Height: ${square.height}, Width: ${square.width}`); // Outputs 'Height: 5, Width: 4' (wrong)
+
+
+In this example, we initialize a rectangle and squrae, and output their dimensions. WE then call the  rectangle.setHeight() on the square object, and output its dimensiosn again.
+What we find is that the square now has a differnt height than its lenght, which of course makess for an invalid square.
+
+This can be solved, using polymorphism, an if statement in the rectanglee class, or a veriety of other methods. But the real cause of the issue is that square is not a good child class of rectangle, and that in reality, perhaps both shapes should inherit form a shape class instead.
