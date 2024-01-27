@@ -155,3 +155,35 @@ console.log(hybridVehicle.getRange()); // Outputs '200'
 
 This violates the open-clsoed prnciple, because whiel adding our new hybridveh8icle class we have had to go back and modify the code of our vehicle class in order to make it work. Going forward, every time we add a new typ eof vehicle that might have different parameteres for its range,
 we'll ahve to continulaly modify that existing getRange function.
+
+
+
+Instead what we could do, is to override the getRange method in the HybridVehicle class, giving the correct output for both vehicle types, without every modifyign the original code:
+
+class Vehicle {
+    constructor(fuelCapacity, fuelEfficiency) {
+        this.fuelCapacity = fuelCapacity;
+        this.fuelEfficiency = fuelEfficiency;
+    }
+
+    getRange() {
+        return this.fuelCapacity * this.fuelEfficiency;
+    }
+}
+
+class HybridVehicle extends Vehicle {
+    constructor(fuelCapacity, fuelEfficiency, electricRange) {
+        super(fuelCapacity, fuelEfficiency);
+        this.electricRange = electricRange;
+    }
+
+    getRange() {
+        return (this.fuelCapacity * this.fuelEfficiency) + this.electricRange;
+    }
+}
+
+const standardVehicle = new Vehicle(10, 15);
+const hybridVehicle = new HybridVehicle(10, 15, 50);
+
+console.log(standardVehicle.getRange()); // Outputs '150'
+console.log(hybridVehicle.getRange()); // Outputs '200'
