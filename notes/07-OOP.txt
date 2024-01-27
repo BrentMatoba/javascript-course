@@ -222,3 +222,35 @@ In this example, we initialize a rectangle and squrae, and output their dimensio
 What we find is that the square now has a differnt height than its lenght, which of course makess for an invalid square.
 
 This can be solved, using polymorphism, an if statement in the rectanglee class, or a veriety of other methods. But the real cause of the issue is that square is not a good child class of rectangle, and that in reality, perhaps both shapes should inherit form a shape class instead.
+
+
+
+
+
+
+
+#3 Interface Segregation
+The interface segregation principle states that an entity should never be force to implement an interface that contains elements which it will never use.
+For example, a penguin shoudl never be forced to implement a bird interface if that bird interface includes funcitonality relating to fying, as penguins (spoiler alert) cannot fly.
+
+Now this functionality is al ittle more difficult to demonstrate using javascript, due to its lack of interfaces. However, we can demonstrate it by using composition.
+Composition is a s ubject all by itself, but i'll give a very high level introduciton: instead of inherting an entire class, w can instead add chunks of functionality to a class. Here's an example that actually addresses the interface segregation principle:
+
+
+class Penguin {}
+
+class Bird {}
+
+const flyer = {
+    fly() {
+        console.log(`Flap flap, I'm flying!`);
+    },
+};
+
+Object.assign(Bird.prototype, flyer);
+
+const bird = new Bird();
+bird.fly(); // Outputs 'Flap flap, I'm flying!'
+
+const penguin = new Penguin();
+penguin.fly(); // 'Error: penguin.fly is not a function'
