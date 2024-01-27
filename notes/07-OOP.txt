@@ -254,3 +254,8 @@ bird.fly(); // Outputs 'Flap flap, I'm flying!'
 
 const penguin = new Penguin();
 penguin.fly(); // 'Error: penguin.fly is not a function'
+
+
+What this example does is to add the lfyihng funcitonality (or interface) onyl to the classes that require it. This means that penguins won't be given the baliity to fly, hwereas birds will.
+
+THi sis one method of adhering tot he interface segregation principle, but it is a fairly rough exapmle ( as once again, javascript doens't play well with interfaces)
