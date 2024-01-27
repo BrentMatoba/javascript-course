@@ -187,3 +187,11 @@ const hybridVehicle = new HybridVehicle(10, 15, 50);
 
 console.log(standardVehicle.getRange()); // Outputs '150'
 console.log(hybridVehicle.getRange()); // Outputs '200'
+
+
+Liskov substitution principle states that any class should be substitutable for its parent class without unexpected consequences. In others words, if the classes cat and dog extend the class animal,
+then we would expect all of the functionality held within the animal class to behave normally for a cat and dog object.
+
+A classic example of a liskov substitution violation is the "square and rectangle problem" in this problem, it is posed that square class can inherit from a rectangle class. On the face of it, this makes sense; both shapes have two
+sides, and both calculate tgheir area byu multiplying their side sby each other.
+
