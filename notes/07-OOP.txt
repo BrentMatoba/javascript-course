@@ -290,3 +290,33 @@ class PurchaseHandler {
 The problem here is that if we change from paypal to square (anothe rpayment processor) in 6 motnhs time, this code breaks. We need to go back and swap out our
 paypal api calls for square api calls. Bu tin addition, what if the square api wants different types of data? or perhaps it want sus to "stage" a payment first, then to process it once staging has completed?
 
+Thats bad, and so we need to asbtract the funcitonality out intead.
+
+Rather than directly call the PayPal API form our payment page, we'll isntead create nother class called payment handler. The interface for htis class wil remain the statementno matter what underlying payment system we use, even i the two systems
+are completey differen.t We'll st ill need to make changes to the payment handler interface if we change payment processor, but our higher level interface remains unchanged.
+
+
+class PurchaseHandler {
+    processPayment(paymentDetails, amount) {
+        const paymentSuccess = PaymentHandler.requestPayment(
+            paymentDetails,
+            amount
+        );
+
+        if (paymentSuccess) {
+            // Do something
+            return true;
+        }
+
+        // Do something
+        return false;
+    }
+}
+
+class PaymentHandler {
+    requestPayment(paymentDetails, amount) {
+        // Complicated, PayPal specific logic goes here
+        return PayPal.requestPayment(paymentDetails, amount);
+    }
+}
+view raw
