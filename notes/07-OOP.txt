@@ -267,3 +267,26 @@ THi sis one method of adhering tot he interface segregation principle, but it is
     Not following? YES
 
     Lets say we ahve a pieve of fsoftware that runs an online store, adn within that software one of the clases (purchasehanlder) handles the final purchase. This class is capaable of charging the user's credit card, and does so using a PAYPAL api.
+
+
+
+
+class PurchaseHandler {
+    processPayment(paymentDetails, amount) {
+        // Complicated, PayPal specific logic goes here
+        const paymentSuccess = PayPal.requestPayment(paymentDetails, amount);
+
+        if (paymentSuccess) {
+            // Do something
+            return true;
+        }
+
+        // Do something
+        return false;
+    }
+}
+
+
+The problem here is that if we change from paypal to square (anothe rpayment processor) in 6 motnhs time, this code breaks. We need to go back and swap out our
+paypal api calls for square api calls. Bu tin addition, what if the square api wants different types of data? or perhaps it want sus to "stage" a payment first, then to process it once staging has completed?
+
