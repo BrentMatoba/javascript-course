@@ -319,4 +319,7 @@ class PaymentHandler {
         return PayPal.requestPayment(paymentDetails, amount);
     }
 }
-view raw
+
+
+Now you may be looking at this and thinking "but wait, that's WAY more code" and you'd be right. Like many oft he SOLID principles and indeed OOP principles in general, th eobject is less about writing less code or writing it quicker, and more about writing BETTER code. The above change will save yoiu days
+or maybe even weeks further down the line, i nexchagne for spending a few hours on it now.
