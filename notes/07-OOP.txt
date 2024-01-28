@@ -323,3 +323,23 @@ class PaymentHandler {
 
 Now you may be looking at this and thinking "but wait, that's WAY more code" and you'd be right. Like many oft he SOLID principles and indeed OOP principles in general, th eobject is less about writing less code or writing it quicker, and more about writing BETTER code. The above change will save yoiu days
 or maybe even weeks further down the line, i nexchagne for spending a few hours on it now.
+
+
+
+
+
+
+https://web.archive.org/web/20200810210808/https://medium.com/@alexcastrounis/how-to-write-highly-scalable-and-maintainable-javascript-coupling-c860787dbdd4
+
+How to write highly scalable and maintainable javascript: coupling
+Introduction:
+    In the previous chapter of this series, we discussed modular javascript. we looked at native pattersna dn some of the prominent modular specifications and formats such as AMD, CommonJS, etc.
+
+    In this final chpater, we'll examine ways to reduce coupling between javascript modules.
+
+
+Coupling:
+    Coupling between modules occurs when on emodule directly refrences another module. in other words, one more "knows" about anothe rmodule.
+
+    For this chapter, assume that we are building a web application that allwos people to place food leivery orfder. Each time the user places an order, the app creates the order and sends a confrimation to the user
+    that includes the estimated time of delivery. The user can check the status, or cancel the order at any time.
