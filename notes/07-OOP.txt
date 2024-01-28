@@ -229,7 +229,7 @@ This can be solved, using polymorphism, an if statement in the rectanglee class,
 
 
 
-#3 Interface Segregation
+#4 Interface Segregation
 The interface segregation principle states that an entity should never be force to implement an interface that contains elements which it will never use.
 For example, a penguin shoudl never be forced to implement a bird interface if that bird interface includes funcitonality relating to fying, as penguins (spoiler alert) cannot fly.
 
@@ -259,3 +259,11 @@ penguin.fly(); // 'Error: penguin.fly is not a function'
 What this example does is to add the lfyihng funcitonality (or interface) onyl to the classes that require it. This means that penguins won't be given the baliity to fly, hwereas birds will.
 
 THi sis one method of adhering tot he interface segregation principle, but it is a fairly rough exapmle ( as once again, javascript doens't play well with interfaces)
+
+
+#5 Dependency Inversion:
+    The dependency injetion principle states that high level cdoe should never depend on low level interfaces, and should isntead use abstractions. Its all about decoupilng code.
+
+    Not following? YES
+
+    Lets say we ahve a pieve of fsoftware that runs an online store, adn within that software one of the clases (purchasehanlder) handles the final purchase. This class is capaable of charging the user's credit card, and does so using a PAYPAL api.
