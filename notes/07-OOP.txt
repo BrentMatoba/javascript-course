@@ -382,4 +382,12 @@ Patterns to reduce Coupling
     Tightly copuled modules have a variety of disadvantages as noted. Luckily there are ways we can reduce coupling, which includes manyp atterns used to achieve loose coupling between modules. These patterns are often a variation of the so-called observer pattern. One such variation is referred to as the pub/sub or publish/subscribe pattern.
 
     In some cases, the observer registeres itself iwt h thte evvent emitter direclty in order ot be notified whenever a certain event occurs. The downside to this approach ist hat an observer "knows" about the event emitter objct and what observables or events to observee through the registration process.
+
+
+    We can do better. There are many versions of the pub/sub pattern that invovlve a mediator object, which help[s to further minniize coupling between modules. A meditationr object is an
+    objectg that isolates the publisher from the subscirber.]
+
+    Addy osmani made an excellent analogy when he related the mediator to a flight control tower in airplane communciations.
+    Airplanes never communicated didrectly with each other. Airplanes instead only provide information to and receive information from the tower, and
+    therefore do not "know" about one anothe rwithout information from the tower.
     
