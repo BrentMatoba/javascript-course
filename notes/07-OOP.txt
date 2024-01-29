@@ -343,3 +343,8 @@ Coupling:
 
     For this chapter, assume that we are building a web application that allwos people to place food leivery orfder. Each time the user places an order, the app creates the order and sends a confrimation to the user
     that includes the estimated time of delivery. The user can check the status, or cancel the order at any time.
+
+    One modular approach to implement this is to create a module that handles orders anotehr that handles delivers. The ordering module may have functions to create, read, update, and delte ordres (I.E. CRUD) while the deliers module may have functions
+    to estimate delivery time, being delivery, complete delivery, and so on.
+
+    Lets look at an example implementation. Note that the code in this post is ritten primarily for clarity
