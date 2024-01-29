@@ -348,3 +348,26 @@ Coupling:
     to estimate delivery time, being delivery, complete delivery, and so on.
 
     Lets look at an example implementation. Note that the code in this post is ritten primarily for clarity
+
+
+    // Order module definition
+var orderModule = (function() {
+    var module = {},
+        deliveries = myApp.deliveryModule;
+
+    module.createOrder = function(orderData) {
+        var orderResult;
+
+        orderResult = // Code to actually create the order
+        orderResult.estimatedDeliveryTime =    deliveries.getDeliveryTime(orderData);
+
+        return orderResult;
+    };
+
+    return module;
+})();
+
+
+Thr order and delivery modules shown are tightly coupled. For the order module to get the estimated delivery time, it has to "know" about the 
+deliveyr module, and call the appropriate module's API.
+
