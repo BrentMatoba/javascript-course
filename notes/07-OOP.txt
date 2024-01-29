@@ -378,3 +378,8 @@ Ideally, we would like to maximize code reuse and the ability to test modules in
 Anohter goal was there should not be a single point of failure anywhere ni the applicaiton. Suppose that something wen t wrong in our call to get the estimated ddelivery time, this may break the entire application, or at least the successful completion of the ordering process.
 WE should prefer that the ordre is still placed and the application continues to operate, even if we are temporarily  unable to provide a delivery time estimate to the customer.
 
+Patterns to reduce Coupling
+    Tightly copuled modules have a variety of disadvantages as noted. Luckily there are ways we can reduce coupling, which includes manyp atterns used to achieve loose coupling between modules. These patterns are often a variation of the so-called observer pattern. One such variation is referred to as the pub/sub or publish/subscribe pattern.
+
+    In some cases, the observer registeres itself iwt h thte evvent emitter direclty in order ot be notified whenever a certain event occurs. The downside to this approach ist hat an observer "knows" about the event emitter objct and what observables or events to observee through the registration process.
+    
