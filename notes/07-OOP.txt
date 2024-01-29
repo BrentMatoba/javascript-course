@@ -371,3 +371,10 @@ var orderModule = (function() {
 Thr order and delivery modules shown are tightly coupled. For the order module to get the estimated delivery time, it has to "know" about the 
 deliveyr module, and call the appropriate module's API.
 
+There are many reasons to avoid tightly coupling your modules. We dicussed some of these in tehf irst chapter of this series. Recall that one of the goal hwen creating highly scalable and maintainable javascirpt applications
+is taht any module can be easily swapped out t any time for aq different module> Reusability is also a major reason to mnimize coupling.
+Ideally, we would like to maximize code reuse and the ability to test modules independently..
+
+Anohter goal was there should not be a single point of failure anywhere ni the applicaiton. Suppose that something wen t wrong in our call to get the estimated ddelivery time, this may break the entire application, or at least the successful completion of the ordering process.
+WE should prefer that the ordre is still placed and the application continues to operate, even if we are temporarily  unable to provide a delivery time estimate to the customer.
+
