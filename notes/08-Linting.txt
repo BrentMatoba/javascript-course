@@ -17,3 +17,13 @@ Linting The style guides we mentioned above are full of really hlepful advice fo
 But there are a LOT of rules, it can be difficult to internalizew them all. Linters are toolst hat wil scan your code with a set of style rulesand will rereport any errors to you that
 they find. In some cases, they can even auto-fix the erros! The following articles explain in more detail the benefits of using a linter while you code.
 
+JAVSCRIPT linters:
+Javascrip tlinters are tools that you can use to help you debug yoru code.
+They scan your scripts for common issues and errors, and giv eyou back a report with line numbers that you can use to fix things.
+In addition to actual bugs and erors, theyalso check for subjective, stylistic prefernces as well.
+Did you include a space between the funciton name and parenthesis? Did you use single or double quotes around Stings? Thing slike taht.
+
+Linting Tools:
+JSLIN: Highly opinionated and based on douglas crockford's javascrip: the good parts, it does not allow for much configuration:
+JSHINT Comes loded with sensible defaults, but allows for a lot  more configuration than JSLINT
+ESLINT: An extremely configurable linter taht also supportrs JSX adn CAN autoformat scripts to match your preffered code formatting styles.
