@@ -4,3 +4,10 @@ Doing this now ill make thigsn much easier for you going forward. This lesson wi
 and then give you some tools to help you maintain consistent code-style throughout your projects. In some cases,
 it can even helkp adjust things like indentation for you~
 We will also introduce template repositoriies which can save you tgime setting up projects that shrae a lot of configuration with other projects.
+
+
+Style uides:
+Code Style is important! Having a consistent set of style rules for things such as indentation or
+prefereed quote style makes your code more maintainable and easier to read. There are several popular javascrip wstylte guiedes on the net that
+set standards for htes etypes of things, and al ittle time spent reading htem WILL make you a better developer.
+
