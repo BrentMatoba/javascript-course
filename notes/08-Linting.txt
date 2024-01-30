@@ -11,3 +11,9 @@ Code Style is important! Having a consistent set of style rules for things such 
 prefereed quote style makes your code more maintainable and easier to read. There are several popular javascrip wstylte guiedes on the net that
 set standards for htes etypes of things, and al ittle time spent reading htem WILL make you a better developer.
 
+
+Lesson Overview:
+Linting The style guides we mentioned above are full of really hlepful advice for formatting, organizing adn composing your code.
+But there are a LOT of rules, it can be difficult to internalizew them all. Linters are toolst hat wil scan your code with a set of style rulesand will rereport any errors to you that
+they find. In some cases, they can even auto-fix the erros! The following articles explain in more detail the benefits of using a linter while you code.
+
