@@ -14,3 +14,9 @@ slides down nicely. As mentioned previously, you alrdy know everything you need 
     You can do this either by adding a class (visibile or something) or by manually setting the styl ein JS.
     3. Make sure the javascrip tcode is reuseable. You should be able to creat em ultiple drop-downs using HTML and reuse the javascript logic to hide/reveal them.
     4. If you bundl eyour ocde into a module you can publish it to NPM and then isntall and use it anytme you lie! Nothjing like publishing yhour own modules to make you feel ike a pro
+
+
+Mobile Menus. 
+    Movile versions of your sites are almost definitely gong to need their own menu implementation. Depending on how you decided to implement your drop down,
+    you COULD reuse it here, but th ere are tons of more inventine options out there.
+    
