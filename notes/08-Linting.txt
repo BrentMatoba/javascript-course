@@ -27,3 +27,12 @@ Linting Tools:
 JSLIN: Highly opinionated and based on douglas crockford's javascrip: the good parts, it does not allow for much configuration:
 JSHINT Comes loded with sensible defaults, but allows for a lot  more configuration than JSLINT
 ESLINT: An extremely configurable linter taht also supportrs JSX adn CAN autoformat scripts to match your preffered code formatting styles.
+
+
+Which linter should you use?
+This is entirely subjective, but I use adn recommend JSHINT.
+JSLINT is super easy to start using, but does not provide enough cusomization for my needs. ESLINT on the other hand, provides too MUUCH customization. It does a
+lot, but this makes it harder t opick up and start using.
+
+JSHINT mprodiesw the prefect blend of ease and functionality for my needs.
+THat siad, one of theo thers might be a better fit for your personal neesd.
