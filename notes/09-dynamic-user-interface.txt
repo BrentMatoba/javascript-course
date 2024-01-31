@@ -1,0 +1,6 @@
+Introduction:
+Javascript is a very powerful language. It is capable for creating complex
+web applications that owrk EVERYWHERE. but it is just as often used on a smlaller scale.
+Javascript is the glue that holds even less flashy websites togheter- it makes drop dowens drop down and image sliders slide.
+
+Fortunately at this point, you already have all the tools you need to make these items without resorting to using a bloated framework like bootstop.
