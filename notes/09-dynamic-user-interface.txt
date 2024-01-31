@@ -4,3 +4,13 @@ web applications that owrk EVERYWHERE. but it is just as often used on a smlalle
 Javascript is the glue that holds even less flashy websites togheter- it makes drop dowens drop down and image sliders slide.
 
 Fortunately at this point, you already have all the tools you need to make these items without resorting to using a bloated framework like bootstop.
+
+Drop-down menus
+You know what we're talking about here. Pictuer a nav-bar or a button and when you click it on the menus
+slides down nicely. As mentioned previously, you alrdy know everything you need to create this elemetn.
+
+    1. YOu can allow the menu to show up either on click or on hover.
+    2. You shoudl ahrd-code the menu items into your HTML but hide/reveal them using ajvascript.
+    You can do this either by adding a class (visibile or something) or by manually setting the styl ein JS.
+    3. Make sure the javascrip tcode is reuseable. You should be able to creat em ultiple drop-downs using HTML and reuse the javascript logic to hide/reveal them.
+    4. If you bundl eyour ocde into a module you can publish it to NPM and then isntall and use it anytme you lie! Nothjing like publishing yhour own modules to make you feel ike a pro
