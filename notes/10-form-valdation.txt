@@ -28,3 +28,14 @@ you don't enter your data in the format they are expecting.
 This is called FORM VALIDATION. When you enter data, then the browser and/or the web serverwill check
 to see that the dat is in the correct format and within the constraints set by the application. GValidation done in the broswer is called client-side valition,
 while validation done on the sever is called server side validation in this chapter we are focusing on the licent side vladiation.
+
+
+If the information is correctly formatted, the application allow sthe data to be submitted to the server and usualy save din a database, if the information isn't corerclry formatted,
+, it gives the user an error message explaining what needs to be correctred and lets them try agian.
+
+W wnt to make filling out web forms as easy as possible. So why do we insist on validating our forms? There are three main reasons:
+We want to get teh right data, in the righ tofmrat. Our applications won't work porperly if our uses data is stored in teh wrong format is incorrect or isommitedd altoghetr.
+
+We want to protect our uses data. Forcing our users toenter secure passwords makes it easier to protect hteir account information.
+
+WE want to protect ourselves. There are many ways that malicious users can misuse unprotected forms to damage the application.
