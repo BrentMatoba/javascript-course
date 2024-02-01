@@ -9,3 +9,9 @@ This section contains a general overview of topics that you will learn in this L
     Understand Constraint Validation API for more control over form validation.
     Add validation using only JavaScript.
 
+Client-Side validation: https://developer.mozilla.org/en-US/docs/Learn/Forms/Form_validation#validating_forms_using_javascript
+Before submitting data to the server, it is important to ensure that all requried form controls are filled out , in the correct format.
+This is called client-side form validatoin, and helps ensure data submitted matches the requirements set forth in the varous form controls.
+
+Client-side validation is an initial check and an important feature of good user eperience; by catching invalid data on the client-side, the user can fix it sraight awa.
+If it gest to the server and is then rejectred, anoticeable delay is causeed by a round trip to the server and theen back to the client-side to tell the user to fix their data.
