@@ -1,3 +1,11 @@
 Forms are a crucial part of most websites. Almost every major site  has sign-up forms, contact forms,
 search forms, and more! Luckily HTML5 andjavascripthave some handy buil in methods. Youve larady learned about validation
 with HTML and styling validations with CSS in our form validations elsson in the intemrediate HTML and css course.
+
+
+LESSON OVERVIEW:
+This section contains a general overview of topics that you will learn in this LESSON
+    Understand the importance of validation in HTML forms.
+    Understand Constraint Validation API for more control over form validation.
+    Add validation using only JavaScript.
+
