@@ -15,3 +15,16 @@ This is called client-side form validatoin, and helps ensure data submitted matc
 
 Client-side validation is an initial check and an important feature of good user eperience; by catching invalid data on the client-side, the user can fix it sraight awa.
 If it gest to the server and is then rejectred, anoticeable delay is causeed by a round trip to the server and theen back to the client-side to tell the user to fix their data.
+
+However, client side validation shoudl NOT be considered an exhaust secuiryt measure, Your apps should ALWAYS perform security check on any fomr-submitted dat on the server side
+AS WELL as the client-sdie, because client-side validation is too easy to bypass, so malicious users can still easily send bata data through to your server.
+
+
+
+WHATR IS FORM VALIDTION?
+Go to any popular site with a registration fomr, and you will notice that they provide ffedback when
+you don't enter your data in the format they are expecting.
+
+This is called FORM VALIDATION. When you enter data, then the browser and/or the web serverwill check
+to see that the dat is in the correct format and within the constraints set by the application. GValidation done in the broswer is called client-side valition,
+while validation done on the sever is called server side validation in this chapter we are focusing on the licent side vladiation.
