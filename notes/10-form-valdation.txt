@@ -1,0 +1,3 @@
+Forms are a crucial part of most websites. Almost every major site  has sign-up forms, contact forms,
+search forms, and more! Luckily HTML5 andjavascripthave some handy buil in methods. Youve larady learned about validation
+with HTML and styling validations with CSS in our form validations elsson in the intemrediate HTML and css course.

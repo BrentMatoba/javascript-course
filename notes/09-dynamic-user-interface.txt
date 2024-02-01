@@ -19,4 +19,6 @@ slides down nicely. As mentioned previously, you alrdy know everything you need 
 Mobile Menus. 
     Movile versions of your sites are almost definitely gong to need their own menu implementation. Depending on how you decided to implement your drop down,
     you COULD reuse it here, but th ere are tons of more inventine options out there.
-    
+
+
+Image sliders
