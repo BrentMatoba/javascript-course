@@ -65,3 +65,10 @@ Using built in form validaiton:
 
         pattern: Specifies a regular expression that defines a pattern the entered data needs to follow.
 
+When an element in s invalid, the following things are true;
+    The elements matches the :invalid CSS pseudo-class, and some times otehr Using
+    pseudo calsses(e.g. out of range)
+    depending on the error, which lets you apply a specific style to invalid elements.
+    If the user tries to send thed ata, the browser will block the form and display an error message.
+
+    
