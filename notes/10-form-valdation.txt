@@ -71,4 +71,8 @@ When an element in s invalid, the following things are true;
     depending on the error, which lets you apply a specific style to invalid elements.
     If the user tries to send thed ata, the browser will block the form and display an error message.
 
-    
+
+
+The required attribute:
+    The simpleset HTML validation feature is the required attribute. To make an input jmandatory, add this attribute to the elemnt. When this attribute i sset, the elemnt matches the :required UI pseudo-class and the fomr oqn't submit, displaying
+    an  error message on submission when the input is empty. While empty, the input will also be considered invalid, matching the :invalid UI pseudo-class.
