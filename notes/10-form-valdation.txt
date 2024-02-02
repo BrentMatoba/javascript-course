@@ -50,4 +50,18 @@ There are two different types of client side validation that you'll encounter on
 
     Javascript validation is coded using javascript. This validation is completely customizable, but you need to create it all (or use a library.)
 
-    
+
+
+Using built in form validaiton:
+    One of the most significant features of modern form controls is the ability to validate most user data without relying javascript.
+    This is done by  using validation attributes on form elements. WE've seen many of these earlier in this course, but to recap:
+        required; specifies whether a form field needs to b filled in before the form can be submitted.
+        
+        minlenght anda maxlength: specfifies the minimum and maximum lenght of textual data (strings)
+
+        min and max: specifies the minimum and maximum values of numerical input types.
+
+        type: Sepcifies whetehr the data needs to be a number, an email address, or some other specifi preset type.
+
+        pattern: Specifies a regular expression that defines a pattern the entered data needs to follow.
+
