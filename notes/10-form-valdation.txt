@@ -133,3 +133,15 @@ The constraint validation APi makes the following properties available on the ab
         There is no standard way to change their lok adn feel with CSS>
         Theyd depend on the browsser locale, which means that you can ahve a page in on elanguage but an error message displayed in another language, as seen in the firefox screenshot.
 
+
+Validating forms without a buil-in APII
+
+IN SOME CASES sucha s custom contorls, you won't be able to or won't want to use the constraint validation API. YOu're sitll ablet ou se javascrip tto avalidate your form, but you'll just have to writ eyou r own.
+To validate a form, ask yourself a few questions:
+What kidn fo validation shoudl I perform?
+You ned to determine how to validate your data: string operations,
+type coinversion, regulra expressions, and so on. Its up to you..
+
+What should I do if the form doesn' tvalidate? This is celarly a UI matter. Yo9u have to defide howt he form wiill behave. Does the form send data anywa? Should yyou highly the fiields athat are in error?
+
+
