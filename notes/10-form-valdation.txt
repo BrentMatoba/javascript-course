@@ -110,6 +110,13 @@ The constraint validation APi makes the following properties available on the ab
     ValidationMessage: REturns a localized message describing the validation constraints that the control doens't satisfy.
     If the control is not a candidate for constraint validation or the elements value fsatisfies its constraints this will return an empty string.
 
-    Validation: Returns a ValidityState object that ocntains several properties describing the validity stae of the element. You can find 
+    Validity: Returns a ValidityState object that ocntains several properties describing the validity stae of the element. You can find 
     full details of all the available properties int eh validitystate reference page:
-    
+
+
+
+        Pattern Mismatch: return strue if the value does not match the specified pattern, and flase if ti does match. Fit true, the elemetn matches the :invalid CSS pusedo-0class
+        tooLong: Returns true if the value is longer htan the maximum specifies by the maxlength attribute, or false if it is shorter than or equal to the maximum. IF true, the elemnt matches hte :invalid CSS pseudo-class.
+
+        tooShort: Returns true if the value is shorter than the mininmum lenght specifie by the minlenght attribute, or false if it sgreater than or equal to the minmum.
+        If true, the element matches the :invalid CSS pseudo-clas.s
