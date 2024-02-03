@@ -120,3 +120,16 @@ The constraint validation APi makes the following properties available on the ab
 
         tooShort: Returns true if the value is shorter than the mininmum lenght specifie by the minlenght attribute, or false if it sgreater than or equal to the minmum.
         If true, the element matches the :invalid CSS pseudo-clas.s
+
+        There are many more you get the idea.
+
+        check validity
+
+        Implemmenting a customized error message:
+        As you saw in the HTML validation constraint examples earlier, each time a user tries to submit an invaalid form, the browser displays an error message.
+        The way this message is displayed depends on the broswer.
+
+        These automated messages have two drawbacks:
+        There is no standard way to change their lok adn feel with CSS>
+        Theyd depend on the browsser locale, which means that you can ahve a page in on elanguage but an error message displayed in another language, as seen in the firefox screenshot.
+
