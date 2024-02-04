@@ -172,4 +172,12 @@ By a call to the checkValidity() or reportalidity() method of a form-associated 
 which evalues the constraints only on this element, allowing a script to get this information. The checkValidity()method returns a boolean indicat ing that elements value passes its constraints. This is typ8ically doneby the user-
 agent when determining which of the CSS pseudo-classe,s :valid or :ionvalid, applies.
  In constrast the reportFValidit() method reports any constraint failures to the user.
- 
+
+    By a call to the checkValdiity() or report Validity() method on the HTMLFormelement interface.
+    By submitting the form itself.
+    Calling checkValidity() is called statically validating the constraints, while calling reportValidity() or usbmittin gthe fomr is called interactively validating the constraints.
+
+    NOTE:
+    IF the novalidate attribute is set ont he <form>element, interactive validation of the constraints doesn't happen,
+    Calling the submit() method ont he HTMLFormElement interfafce sdoesn't trigger a constraint validation. In other words,
+    this method =send sthe form data to the server even if it doesn't satisfy the constraints. Call the click() method on a submit button instead.
