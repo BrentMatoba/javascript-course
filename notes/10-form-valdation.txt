@@ -166,3 +166,10 @@ For both of these input types, if the multiple attribute is set, several values 
 as a comma separated list. If any of these do not satisfy the condition descirbed here, the ytype mistmatch constraint violation is triggered.
 Note that most ihnput types don't have intrinsic constriants, as some are barred from constrait validation or have a sanitization algorithm transofrming incorrect values to a correct default
 
+Costraint validation process: Constraint validaiton is done throught he constraitn validation api eithe ron a single form element or at the form level, on the <form> element itself.
+THe constraint validation is done in the folowing ways;
+By a call to the checkValidity() or reportalidity() method of a form-associated DOM interface( (HTMLnputElement, HTMLSElectElement, HTMLButtonElement, HTMLOutputElement or HTML TextAreaElement)
+which evalues the constraints only on this element, allowing a script to get this information. The checkValidity()method returns a boolean indicat ing that elements value passes its constraints. This is typ8ically doneby the user-
+agent when determining which of the CSS pseudo-classe,s :valid or :ionvalid, applies.
+ In constrast the reportFValidit() method reports any constraint failures to the user.
+ 
