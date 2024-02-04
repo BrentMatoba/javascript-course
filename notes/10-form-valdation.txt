@@ -145,3 +145,8 @@ type coinversion, regulra expressions, and so on. Its up to you..
 What should I do if the form doesn' tvalidate? This is celarly a UI matter. Yo9u have to defide howt he form wiill behave. Does the form send data anywa? Should yyou highly the fiields athat are in error?
 
 
+Intrinsic and Basic constraints:
+    In HTML, basic contraints are declared in two ways:
+    by choosing the most semanitcally appropriate value for the type attribute of the <input> elment.
+    Choosing the email type autmoatically creates a constrant that checks whether the value is a valid email address.
+    By setting values on validatoin related attributes, allowing basic constraints to be described in a simple way, without the need for javascript.
