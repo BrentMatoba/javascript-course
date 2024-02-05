@@ -189,3 +189,21 @@ Anohter ocmmon constraint is to limit the size of af ile to be uploaded. Checkin
 This on a client side before the file is tgransmitted
 to the server requires combining the contraint validation API and especiallyu
 the field.setCustomValidity() method, with another javascript API
+
+
+
+Visual Styling of constraint validation:
+Apart from setting constraints, web developers want to control what messages are displayed to the users and how they are styled.
+Controlling the look of elements:
+ The look of elements can be controleld via CSS pseudo-classes.
+
+ :required and :optional CSS pseudo-classes.
+ The :required adn :optional pseudo-classes allow writing selectors that match form elements that have the requried attribute, ro that don't have it.
+
+ :placeholder-shown CSS pseudo-class.
+
+ :valid :invalid CSS pseudo-classes.
+ The :valid and :invalid pseudo-clasess are used to represent <input> elements whose content validates and fails to validate
+ respectively according to the input's type setting. These classes allow the user to style valid
+ or invalid form elemetns tom ake it easier to identify elemnts taht are either formatted correctly or incorrectly.
+ 
