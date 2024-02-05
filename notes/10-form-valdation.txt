@@ -207,3 +207,16 @@ Controlling the look of elements:
  respectively according to the input's type setting. These classes allow the user to style valid
  or invalid form elemetns tom ake it easier to identify elemnts taht are either formatted correctly or incorrectly.
  
+
+ Controlling the text of constraint violation:
+ The following items can help with controlling the text of a constraint violation:
+ The setCustomValidity(message) method on the following elements:
+ <fieldset> Note: Setting a custom validity message on fieldset elements will not prevent form submission in most browsers.
+ <input>
+ <output>
+ <select>
+
+ Submit buttons created with eithe ra <button> elemnt witht eh submit type, or an input element witht the submit type. Other types of buttons do not participate in constraint validation.
+
+ <textarea>
+
