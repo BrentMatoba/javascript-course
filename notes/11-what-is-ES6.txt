@@ -1,0 +1,7 @@
+What is ES6? 
+Introduciton
+We've been throwing around the term ES6 since our veyr first lessons, but we haven't taken the time throwing
+properly explain what it means or to investigate the implications of it in our code.
+
+ES6 is a version of javascrip that was officially released in the summer of 2015. It included many new features
+that make writin gjavascript much easier and cleaner. If you have been following our lessons you have already been learning hese new features because, well, ES6 is just JAVASCRIPT.
