@@ -181,3 +181,11 @@ agent when determining which of the CSS pseudo-classe,s :valid or :ionvalid, app
     IF the novalidate attribute is set ont he <form>element, interactive validation of the constraints doesn't happen,
     Calling the submit() method ont he HTMLFormElement interfafce sdoesn't trigger a constraint validation. In other words,
     this method =send sthe form data to the server even if it doesn't satisfy the constraints. Call the click() method on a submit button instead.
+
+
+
+Limiting the size of a file before its upload:
+Anohter ocmmon constraint is to limit the size of af ile to be uploaded. Checking
+This on a client side before the file is tgransmitted
+to the server requires combining the contraint validation API and especiallyu
+the field.setCustomValidity() method, with another javascript API
