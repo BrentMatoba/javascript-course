@@ -220,3 +220,7 @@ Controlling the look of elements:
 
  <textarea>
 
+The validitystate interface describes the object returned by the
+validity property of the elment types listed baove.
+It represents various ways that an entered value can be invalid. Together,
+they help exlpain why an elements value fails to validate, it its not valid.
