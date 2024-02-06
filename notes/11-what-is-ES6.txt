@@ -18,3 +18,8 @@ Support ALL of these ES6, most of ES7.
 But older browsers (various versions of interexporeer for instance, do not)
 This means that unfortunately, that if you write code that uses these new features, it will not run in browsers that od no tuspporty it.
 
+For most of us, this has not been an issue because youare almost definitely usin ga new browser that automatically updates itself when a new version is released.
+but in the real world, if you're selling products to customsers you can't contro lwhich browsers will use ot connect oto your site.
+
+Fortunatley there IS a solution to this rpoblem. Babel i sa tool that makes your modern javascrpit code and transpiles it to code that older browsers can udnerstand.
+it can be used from the command line wiht a single command, and can alsoeasily be added to  your webpack configuration witht the babel-loader.
