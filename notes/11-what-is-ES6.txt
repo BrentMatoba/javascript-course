@@ -5,3 +5,9 @@ properly explain what it means or to investigate the implications of it in our c
 
 ES6 is a version of javascrip that was officially released in the summer of 2015. It included many new features
 that make writin gjavascript much easier and cleaner. If you have been following our lessons you have already been learning hese new features because, well, ES6 is just JAVASCRIPT.
+
+You have probably also come accross articles talking about features in ES7 or ES8, or ES2015 or ES2017 etc. Part of the confusion here is that right
+after the release of ES6, the committe that maeks these decisions changed the naming scheme from version numbesr to rlease years.
+T
+
+
