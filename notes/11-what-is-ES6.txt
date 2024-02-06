@@ -11,3 +11,10 @@ after the release of ES6, the committe that maeks these decisions changed the na
 T
 
 
+The problem with javascript constantly updating and adding features is that it sometimes
+takes web browsers a while to catch up an dimplement new features once they've been released.
+At the current itme allm odern browsers Chrome, firefox, safari, and edge.
+Support ALL of these ES6, most of ES7.
+But older browsers (various versions of interexporeer for instance, do not)
+This means that unfortunately, that if you write code that uses these new features, it will not run in browsers that od no tuspporty it.
+
