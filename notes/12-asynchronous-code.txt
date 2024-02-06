@@ -1,0 +1,5 @@
+Asynchronous code
+Introduction:
+Since javascriptg is the language of the web, thre are some functions that by necessity are goingt o take a decent
+amount of itme to cpmlete, sucha s fetching data from a server to display on your site. For this reason, jagvascdript includes
+support for asynchrounous functions, or to put it another way, functions that can happen in the background while the rest of your code executes.
