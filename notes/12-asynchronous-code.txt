@@ -43,3 +43,12 @@ const getData = function() {
 }
 The issue with this example is that it takes some time to fetche the data, but unless we tell our code that, it assumes that everything in the funciton happens essentially instantly.
 
+So if we try this:
+const myData = getData()
+const pieceOfData = myData["whatever"]
+
+WE're going to run into trouble because when we try to extract pieceOfData out of the returned data,
+the funciton getData() will mostlikely still be fetchingh, so myData will not be the expected data,
+but will be undefined. Sad.
+
+We need some way to solve this problem, and tell our code to wait until the data is done fetching to continue. Promises solve this issue. 
