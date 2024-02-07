@@ -52,3 +52,13 @@ the funciton getData() will mostlikely still be fetchingh, so myData will not be
 but will be undefined. Sad.
 
 We need some way to solve this problem, and tell our code to wait until the data is done fetching to continue. Promises solve this issue. 
+
+
+
+const myData = getData() //if this is refactored to return a promise...
+
+
+myData.then(function(data) [//.,then() tell is to wait until the promise is resolved
+    const pieceOfData = data["whatever]//and THEN run the function inside.
+])
+
