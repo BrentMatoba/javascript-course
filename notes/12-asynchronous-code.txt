@@ -26,3 +26,10 @@ Here, the function addEventListern() takes a callback ("the do something" funcit
 YOu will likely recognize htis pattern as something that hpapens all the time in javascript code.
 Unfortuantely, though they are useful in situations like the above example, using callbacks can get out of hand, especially when you need to chain several of htem together in a specific
 order. the rest of htis lesson discusses pattersn and functions that will help keep you out of callback hell.
+
+Promises:
+There are multiple ways that you can handle asynchronous code in JavaScrfipt, and they all have their use cases.
+Promises are one such mechanism, and they're on you will see somewhat often when using other libraries or frameworks. Knowing 
+what thye are and how to use them is quite useful.
+
+Essentially, a promise is an object that might produce a value at some point in the future.
