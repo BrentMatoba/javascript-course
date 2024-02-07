@@ -21,3 +21,8 @@ For example:
     myDiv.addEventListern("click", function()){
     DO SOMETHINGGG
     }
+
+Here, the function addEventListern() takes a callback ("the do something" funciton) and then aclls it when myDiv gest clicked>
+YOu will likely recognize htis pattern as something that hpapens all the time in javascript code.
+Unfortuantely, though they are useful in situations like the above example, using callbacks can get out of hand, especially when you need to chain several of htem together in a specific
+order. the rest of htis lesson discusses pattersn and functions that will help keep you out of callback hell.
