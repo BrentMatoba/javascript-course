@@ -104,3 +104,8 @@ p.then(function(result) {
    /* executes regardless or success for failure */ 
 });
 
+
+
+Sometimes you dont NEED to complete an async takss within the promise.
+returning a promise will be best so taht you can always count on ap romise coming out of a given fucniton.
+IN that case, you acn simply call promise.reolve() of promise.reject() without using the new keyword
