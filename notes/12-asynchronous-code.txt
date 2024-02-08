@@ -62,3 +62,10 @@ myData.then(function(data) [//.,then() tell is to wait until the promise is reso
     const pieceOfData = data["whatever]//and THEN run the function inside.
 ])
 
+
+
+Article:https://davidwalsh.name/promises
+
+While synchronous code is easeir to follow and debug, async is generally ebtter for performance and flexiibility.
+Why "hold up the show" when you can trigger numerous requests at once and then handle them when each si ready?
+Promsies are becoming a big part of the javascript world, with many new APIS being implemented witht hep rmose philosophy.
