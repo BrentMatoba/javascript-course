@@ -80,3 +80,7 @@ The XMLHttpRequest API is async but does NOT use the promises API. TGhere are a 
 Promises will only become more prevalent so its important that allf ront-end developers get used to them.
 Its also worht noting that node.js is another platform for promises. Obviously as promise is a core language features.
 
+Basic Promise Usage:
+The new Promise() constructor should only be used fo rlegacy async tasks, like the usage of setTimeout or XMLHttpRequest. 
+AA new promsie is created with the new keyword and the promise provides resolvea dn reject funcitons to the provided callback:
+
