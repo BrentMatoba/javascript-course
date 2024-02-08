@@ -69,3 +69,14 @@ Article:https://davidwalsh.name/promises
 While synchronous code is easeir to follow and debug, async is generally ebtter for performance and flexiibility.
 Why "hold up the show" when you can trigger numerous requests at once and then handle them when each si ready?
 Promsies are becoming a big part of the javascript world, with many new APIS being implemented witht hep rmose philosophy.
+
+
+Promises in the wild:
+The XMLHttpRequest API is async but does NOT use the promises API. TGhere are a few native apis that now use promises however.
+    Battery API
+    fetch API
+    ServiceWorker API
+
+Promises will only become more prevalent so its important that allf ront-end developers get used to them.
+Its also worht noting that node.js is another platform for promises. Obviously as promise is a core language features.
+
