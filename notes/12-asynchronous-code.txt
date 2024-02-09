@@ -129,3 +129,8 @@ As you no doubt have observed, callbacks are by far the most common way that asy
 prorams is expressed and managed. Inded, the callback is the most fundamental async pattenr in the language.
 
 
+Countless JS programs, even very sophisticated and compelx ones, have been written upon no other async foundation than the callback.
+(with of course the concurrency interaction patterns we explored in chapte r1) The callback fucniton is the async work horse for javascript, and it does its job respectabl.
+
+Except... Callbacks are not without their shortcomings. Many developers are excited by the PROMSE of better async patterns. But its impossible to effectively use any abstraciton if you don't
+understand what its abstracting, and whyl.
