@@ -134,3 +134,19 @@ Countless JS programs, even very sophisticated and compelx ones, have been writt
 
 Except... Callbacks are not without their shortcomings. Many developers are excited by the PROMSE of better async patterns. But its impossible to effectively use any abstraciton if you don't
 understand what its abstracting, and whyl.
+
+
+Continuations:
+
+// A
+ajax( "..", function(..){
+	// C
+} );
+// B
+
+
+// A and // B represent the first half of the program (aka the now), and // C marks the second half of the program (aka the later). The first half executes right away, and then there's a "pause" of indeterminate length. At some future moment, if the Ajax call completes, then the program will pick up where it left off, and continue with the second half.
+
+In other words, the callback function wraps or encapsulates the continuation of the program.
+
+Let's make the code even simpler:
