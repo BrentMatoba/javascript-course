@@ -109,3 +109,13 @@ p.then(function(result) {
 Sometimes you dont NEED to complete an async takss within the promise.
 returning a promise will be best so taht you can always count on ap romise coming out of a given fucniton.
 IN that case, you acn simply call promise.reolve() of promise.reject() without using the new keyword
+
+
+Callbacks: https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch2.md
+
+IN chapter 1, we explored the terminology adn concepts around asynchronous programming in javascript.
+Our focus is onudnerstandint he single-threaded (one at a time) event lop queue that
+drives all events. WE also explored vairous ways that concurrency pattersn explains the relationshipos
+between any simultaneously running chains of events, or processes.
+
+
