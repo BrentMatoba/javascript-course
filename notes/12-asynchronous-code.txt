@@ -118,4 +118,6 @@ Our focus is onudnerstandint he single-threaded (one at a time) event lop queue 
 drives all events. WE also explored vairous ways that concurrency pattersn explains the relationshipos
 between any simultaneously running chains of events, or processes.
 
-
+All oru examples in chapter 1 use the funciton as the individual, indivisible unit of operations, whereby inside
+the funciton, statements run in predictrable order ( above the ocmpiler level) but at the
+funciton ordering level, events (aka async funciton invocations) can happen in a variety or ordres.
