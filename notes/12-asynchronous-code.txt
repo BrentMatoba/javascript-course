@@ -160,3 +160,10 @@ setTimeout( function(){
 
 Stop for a moment and ask yourself how you'd descrfibe the wayt hat program behaves. 
 try it out loud. Its a good exercise that will help my next points make sense.
+
+
+Most readres just now probably thought or said something to the effect of: "Do A, then set up a setTimeout
+to wait1,000 milliseconds, then once that fires, do c. How close was your rendition?
+
+You might have cauvht yourself and self-edited to: "do A, setup the timeout for 1,000 milliseconds, then
+do b, then after the timeout fires, do C. Thats more accurate thatn the first version
