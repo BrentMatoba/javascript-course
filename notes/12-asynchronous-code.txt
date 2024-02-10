@@ -177,3 +177,11 @@ As soon as we introduce a single fcontiuation. In the ofrm of a callback functio
 to form between how our brains work and the way th ecode will operate. Any time these two diverge (and this is by far no the only place that happens,)
 we run into the inevitable fact that our code becomes harder to udnerstand, reason about, debug, and maintain.
 
+
+Sequential Brain:
+I'm pretty sure most of your readeres have heard someone say "i'm a multitasker" The effects of trying to act
+as  a multitasker range from humorous to mundane to downright dangerous.
+
+But are we multitaskers? Can we really do two conscious, intentional actions at once and think/reason about both of htem at 
+exactly the samem moment? Does our highest level of brain funcitonality have parallel multithreading going on?
+probably not.
