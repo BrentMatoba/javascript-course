@@ -150,3 +150,13 @@ ajax( "..", function(..){
 In other words, the callback function wraps or encapsulates the continuation of the program.
 
 Let's make the code even simpler:
+
+// A
+setTimeout( function(){
+	// C
+}, 1000 );
+// B
+
+
+Stop for a moment and ask yourself how you'd descrfibe the wayt hat program behaves. 
+try it out loud. Its a good exercise that will help my next points make sense.
