@@ -185,3 +185,13 @@ as  a multitasker range from humorous to mundane to downright dangerous.
 But are we multitaskers? Can we really do two conscious, intentional actions at once and think/reason about both of htem at 
 exactly the samem moment? Does our highest level of brain funcitonality have parallel multithreading going on?
 probably not.
+
+
+
+Thats just not really how our brains appear to be set up. We're much more single taskers than many of us would like to admit.
+We can really only think about one thing at anygiven instant.
+
+I'm not talking about all our invaluntary, subconciuos, automatic brain functions, suchas heart beating, breathing, and eyelid blinking.
+Thes are all vital tasks to our sustained life, but we don't intentionally allcoate any rbain power to them.
+Thankfully, while we obsses about checking social network feeds for the 15th time in three minutes, our brain carries on in the background (Threads!) 
+withall those important tasks.
