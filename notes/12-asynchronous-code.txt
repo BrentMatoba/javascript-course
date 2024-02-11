@@ -209,3 +209,8 @@ If not, go back and read chapter 1 again!
 
 In fact, one way of simplifying, the massively complex world of neurology into somethign I can remotely hope to discuss here is that our brains work kind like the event loop queue.
 
+If you think about every single letter or word I type as a single async event, in jsut this sentence alone there are severeal dozen opportunities for my brain to be interrupted by some tother event, 
+such as from m y sense, or even just my random thoughts.
+
+I don't get interrupted and pulled ot another "process" at every oppporutnity that I could be.
+But it happens often enough that I feel my own brain is nearly constanlty switching to variou sdifferent contexts and thats an awful lot like howt he js engine would probably fel.
