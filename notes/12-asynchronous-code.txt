@@ -203,3 +203,9 @@ dozen times in thes last couple of paragraphs!
 WHen we fake multitasking, such as trying to type something at the same ttime we're talking to a friend or family emmeber on the phone,
 what we're actually most likely doing is acting as fast context switchers. In other words, we switch back and forth bewtween two or more tasks in rapid succession, 
 simultaneously progressing on each task in tiny, fast little cunks. We do it so fast that to the outside world it appears as if we're doing those things in parallel.
+
+DSoes that sound suspiciously like async evented concurrency to you?
+If not, go back and read chapter 1 again!
+
+In fact, one way of simplifying, the massively complex world of neurology into somethign I can remotely hope to discuss here is that our brains work kind like the event loop queue.
+
