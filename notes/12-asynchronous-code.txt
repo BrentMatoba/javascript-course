@@ -214,3 +214,13 @@ such as from m y sense, or even just my random thoughts.
 
 I don't get interrupted and pulled ot another "process" at every oppporutnity that I could be.
 But it happens often enough that I feel my own brain is nearly constanlty switching to variou sdifferent contexts and thats an awful lot like howt he js engine would probably fel.
+
+
+DOING VS PLANNING:
+Ok so our brains can thought of as operating in single threaded event loop queue like ways, as can the JS engine.
+But we need to be more nuanced than that in our analysis. There's a big, observable difference between how we plan various tasks,
+and how our brains actually operate those tasks.
+
+Again, back ot the wriitng of htis text as my metahpor,. My rough mental outline plan here is to keep wriitng and writing,
+going sequentially through a set of points I have ordered in my thoguhts. I don't plan to have any interruptions or nonlinear activity in this wriitng.
+But yeet, my brain is nevertheless swithcing around all the time.
