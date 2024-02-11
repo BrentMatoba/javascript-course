@@ -224,3 +224,9 @@ and how our brains actually operate those tasks.
 Again, back ot the wriitng of htis text as my metahpor,. My rough mental outline plan here is to keep wriitng and writing,
 going sequentially through a set of points I have ordered in my thoguhts. I don't plan to have any interruptions or nonlinear activity in this wriitng.
 But yeet, my brain is nevertheless swithcing around all the time.
+
+Even though at an operational level our brains are async event3ed, weseem to plaln out tasks in a sequqneial synchronous wayl. "i nee to go to the store then buy some ilk, then drop off my dry cleaning".
+
+You'll noce that this higher level thinking doesn't seem very async event3ed in its formulation.
+In fact, its kidn of rare for us to delibterately think solely in terms of events. Intead, we lan things out carefully, sequentially,
+and then we assume to an extrent a sort of temporal blocking that forces b to wai t on A and c to wa it on B.
