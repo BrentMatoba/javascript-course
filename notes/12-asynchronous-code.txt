@@ -230,3 +230,11 @@ Even though at an operational level our brains are async event3ed, weseem to pla
 You'll noce that this higher level thinking doesn't seem very async event3ed in its formulation.
 In fact, its kidn of rare for us to delibterately think solely in terms of events. Intead, we lan things out carefully, sequentially,
 and then we assume to an extrent a sort of temporal blocking that forces b to wai t on A and c to wa it on B.
+
+When a developer writews code, they are planning out a set of actions to occur. If htey're any good at being a developer, they're carefully planning it out. I need to set z to the value ofx, then x to the value of y and so forth..
+z = x;
+x = 7;
+y = x;
+
+These three assignment statements are synchronous, so x=y waits for x=x to finish, and y = z in tyrn ways for x=7 to finish. 
+Another way of saying it is that these three statements are temporarily bound to execute in a certain order, one right after the other. Thankfully, we don't need to be bothered with any async evented details here.
