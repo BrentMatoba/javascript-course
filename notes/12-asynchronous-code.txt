@@ -241,3 +241,9 @@ Another way of saying it is that these three statements are temporarily bound to
 
 So if synchronous brain planning maps well to synchronous code statement,s how well do our brains at planning out asynchronous code?
 It turnms out how we express asynchronoy in our code doesn't map very well at all to that synchronous brain planning behavior.
+
+We think in step by step terms, but the tools (callbacks) available to us in code aren ot expressed in a step by step fashion once we move from synchronous to asynchronous.
+
+And THAT is why its so hard to accurately author and reason about async JS code with callbacks:
+because thats now how our pbrain planing works.
+Note: The only thing worse than not knowing why some code breaks is not knowing why it worked in the first place! It's the classic "house of cards" mentality: "it works, but not sure why, so nobody touch it!" You may have heard, "Hell is other people" (Sartre), and the programmer meme twist, "Hell is other people's code." I believe truly: "Hell is not understanding my own code." And callbacks are one main culprit.
