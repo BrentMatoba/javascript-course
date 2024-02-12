@@ -265,3 +265,10 @@ listen( "click", function handler(evt){
 } );
 
 Threres a good chance code like that is recognizable to you. WE've got a chian of three funcitons ensted together, each one representing a step in an asynchronous series.
+
+
+This kidn of code is often called "callback hell" and sometimes also referred to as the pyramid of dooml.
+
+But callback hell actually has almost nothing to do with the nesting/inentatin. Its a far deeper problem than that. We'll see how and why as we continue through the rest of this chapter.
+
+FIrst we're waiting for the "click" event, then we're waiting for hte timer to fire, then we're waiting for hte ajax repsponse to come back ,and which point we might do it alla gian.
