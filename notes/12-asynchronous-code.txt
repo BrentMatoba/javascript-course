@@ -247,3 +247,21 @@ We think in step by step terms, but the tools (callbacks) available to us in cod
 And THAT is why its so hard to accurately author and reason about async JS code with callbacks:
 because thats now how our pbrain planing works.
 Note: The only thing worse than not knowing why some code breaks is not knowing why it worked in the first place! It's the classic "house of cards" mentality: "it works, but not sure why, so nobody touch it!" You may have heard, "Hell is other people" (Sartre), and the programmer meme twist, "Hell is other people's code." I believe truly: "Hell is not understanding my own code." And callbacks are one main culprit.
+
+
+
+Nested/Chained callbacks:
+listen( "click", function handler(evt){
+	setTimeout( function request(){
+		ajax( "http://some.url.1", function response(text){
+			if (text == "hello") {
+				handler();
+			}
+			else if (text == "world") {
+				request();
+			}
+		} );
+	}, 500) ;
+} );
+
+Threres a good chance code like that is recognizable to you. WE've got a chian of three funcitons ensted together, each one representing a step in an asynchronous series.
