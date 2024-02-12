@@ -238,3 +238,6 @@ y = x;
 
 These three assignment statements are synchronous, so x=y waits for x=x to finish, and y = z in tyrn ways for x=7 to finish. 
 Another way of saying it is that these three statements are temporarily bound to execute in a certain order, one right after the other. Thankfully, we don't need to be bothered with any async evented details here.
+
+So if synchronous brain planning maps well to synchronous code statement,s how well do our brains at planning out asynchronous code?
+It turnms out how we express asynchronoy in our code doesn't map very well at all to that synchronous brain planning behavior.
