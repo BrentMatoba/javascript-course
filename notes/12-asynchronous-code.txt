@@ -324,3 +324,18 @@ THAT is what "callback hell" is all about! The nesting/indentation are basically
 And as if all thats not enough, we haven't even touched what happens hen two or more chains of thse callback contiuatinos are happening SIMULATANEOUSLY, or whent eh third step branches out in "parallel" callbacks
 with gates or latches/
 
+
+
+Trust ISSUES:
+The mismatch between sequential brain planning and callback driven async js code is the only part o the problem wit h callbacks. Theres somethign muchd eeper to be concerned about.
+
+// A
+ajax( "..", function(..){
+	// C
+} );
+// B
+
+// A and // B happeng NOW, under the direct control of the main JS program. but //c gets deferred to happen later, and udner the contorl of anothe rparty -- in this case, the ajax(..) funciton. In a basic sense,
+that sort of hand-off of o control doesn't regularly cause lots of problems for programs.
+
+
