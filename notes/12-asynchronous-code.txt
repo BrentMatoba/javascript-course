@@ -300,3 +300,11 @@ As we go linearly (sequentially reason) about this code, we have to skip from on
 to the next, and bounce all around the code base to see the qsequence flow.
 As remember, this is simplified code in sort of best-case fashion, We all know that real async JS p[rogram code bases are
 often fantastically more jmbled, which makes such reasoning order of magnitude more difficult]
+
+
+Another thing to noice: to get steps 2,3, and 4 linked together so they happen in succession, the noly affordance callbacks alone
+gives us to hardcore step 2 into step 1, step 3 into step 22, step 4 into step 3 asnd so on. The hardcoding isn't necessarily a bad thing, if it
+really is a fixed condition that step 2 should always lead to step 3.
+
+But the hardcoding defnitely makes the code a bit more brittle, as it doesn't account for angything going wrong
+that might cause a edeviation int he progression of steps. For exapmle, if step 2 fails, step 3 never gets reached, nord oes step 2 retry, or move ot an alternate error handling flow, and so on.
