@@ -272,3 +272,26 @@ This kidn of code is often called "callback hell" and sometimes also referred to
 But callback hell actually has almost nothing to do with the nesting/inentatin. Its a far deeper problem than that. We'll see how and why as we continue through the rest of this chapter.
 
 FIrst we're waiting for the "click" event, then we're waiting for hte timer to fire, then we're waiting for hte ajax repsponse to come back ,and which point we might do it alla gian.
+
+
+listen( "click", handler );
+
+function handler() {
+	setTimeout( request, 500 );
+}
+
+function request(){
+	ajax( "http://some.url.1", response );
+}
+
+function response(text){
+	if (text == "hello") {
+		handler();
+	}
+	else if (text == "world") {
+		request();
+	}
+}
+
+This formulation of the code is not hardly as recognizxable as hagving the nesting/indentation woes of its previous form,
+and yet its every bit as suceptible to"callback hell". WHy?
