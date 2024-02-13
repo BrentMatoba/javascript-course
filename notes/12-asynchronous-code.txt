@@ -295,3 +295,8 @@ function response(text){
 
 This formulation of the code is not hardly as recognizxable as hagving the nesting/indentation woes of its previous form,
 and yet its every bit as suceptible to"callback hell". WHy?
+
+As we go linearly (sequentially reason) about this code, we have to skip from one function to hte next,
+to the next, and bounce all around the code base to see the qsequence flow.
+As remember, this is simplified code in sort of best-case fashion, We all know that real async JS p[rogram code bases are
+often fantastically more jmbled, which makes such reasoning order of magnitude more difficult]
