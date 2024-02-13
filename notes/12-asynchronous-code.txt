@@ -308,3 +308,9 @@ really is a fixed condition that step 2 should always lead to step 3.
 
 But the hardcoding defnitely makes the code a bit more brittle, as it doesn't account for angything going wrong
 that might cause a edeviation int he progression of steps. For exapmle, if step 2 fails, step 3 never gets reached, nord oes step 2 retry, or move ot an alternate error handling flow, and so on.
+
+
+All of these issues are things you CAN manually hardcode into each step, but that code is often very repetetive and not reuseable in other steps or in other async flows in your program.
+
+Even though our brains might plan out a series of tasks in a sequential type of way (this, then this, then this) the evented nature of our brain operation makes recovery retry forking of flow control almsot efortless.
+If you're out r unning errands, and you realize you left a shoppin glist at home, it doesn't end the day b ecause you didn't plan that ahead of itme. your brain routes aroudn this hiccup easily: you got home, get a list, then head right back out to the store.
