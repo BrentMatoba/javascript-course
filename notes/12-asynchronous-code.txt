@@ -314,3 +314,13 @@ All of these issues are things you CAN manually hardcode into each step, but tha
 
 Even though our brains might plan out a series of tasks in a sequential type of way (this, then this, then this) the evented nature of our brain operation makes recovery retry forking of flow control almsot efortless.
 If you're out r unning errands, and you realize you left a shoppin glist at home, it doesn't end the day b ecause you didn't plan that ahead of itme. your brain routes aroudn this hiccup easily: you got home, get a list, then head right back out to the store.
+
+
+But the brittle nature of manually hardocded callbacks (even with haredcoded error handling) is often far less graceful. Once you end up speciiying (aka preplaning) all the various eventulaities/paths,
+the code becomes so convoluted that it s hard to ever maintain or update it.
+
+THAT is what "callback hell" is all about! The nesting/indentation are basically a side show, a red herring.
+
+And as if all thats not enough, we haven't even touched what happens hen two or more chains of thse callback contiuatinos are happening SIMULATANEOUSLY, or whent eh third step branches out in "parallel" callbacks
+with gates or latches/
+
