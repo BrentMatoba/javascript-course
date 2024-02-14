@@ -353,3 +353,11 @@ It might noe bt terribly obvious why this is such a big deal. Let me construct a
 
 IMagine yoiu're a developer taske with building out an ecommerce checkout system for a site that sells expesnive TV's. You alreaedy have all the various pages of the checkout stystem builto ut just fine.
  On the last page, when the user clicks "confirm" to buy the TV, you need to call a third-party function so that the sale can be tracked.
+
+ You noticve that htye've provided what looks like an asynct racking utility, probably for the sak eof performance best practices, which means you need to pass in a callback funciton. in this contiunation that you pass in,
+ you will have the final code that charges the customer's cr3edit card and dislays the thank yo upage.
+
+ analytics.trackPurchase( purchaseData, function(){
+	chargeCreditCard();
+	displayThankyouPage();
+} );
