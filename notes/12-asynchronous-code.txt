@@ -339,3 +339,10 @@ ajax( "..", function(..){
 that sort of hand-off of o control doesn't regularly cause lots of problems for programs.
 
 
+But don't be fooled by its infrequency that this control switch isn't a bitg deal. in fact, its one of the worst (and yet most subtle) problems
+about callbacjk-driven design. It reolves around the idea that sometimes 
+the party that hnaldes your callback contuation is not a function that you wrote, or that you direclty control.
+Many times, its a utility provided by some third party.
+
+WE call this "inversion of control", when you take part o fyour program and give control of its executiont o another third party. There's an unspoken
+"contract" that e4xists between your code and the third party utility -- a set of htings youe xpect to be maintained.
