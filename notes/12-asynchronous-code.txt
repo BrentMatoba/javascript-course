@@ -361,3 +361,14 @@ IMagine yoiu're a developer taske with building out an ecommerce checkout system
 	chargeCreditCard();
 	displayThankyouPage();
 } );
+
+Easy enough, right? You write the code, test it, eerything works, and you deploy to production> everyone's happy.
+
+Six months go by anad no isues. You've almost forgotten you even wrote that code. Once morning you're at a coffee shop before work, casually enjoyuing your latte, when you get pacnkicked clal form your boss
+insisting you drop the coffe and rush into work right away.
+
+When you arrive, you'll findo ut that high profile customer has his credit card charrged five times for the same tv, and he's understandbly upset. CUstomer service has already issued
+an apology and processed a refund. But your boiss demsnds to know how this could possibly have happened. "don't we have tests for stuff like this?"
+
+YOu don't even rememebr the code you wrote. But you dig back in and start trying to find out what could ahve gone awry.
+
