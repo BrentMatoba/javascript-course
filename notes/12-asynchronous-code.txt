@@ -372,3 +372,8 @@ an apology and processed a refund. But your boiss demsnds to know how this could
 
 YOu don't even rememebr the code you wrote. But you dig back in and start trying to find out what could ahve gone awry.
 
+AFter digging through some logs, you come to the conclusion that the only explanation is that the analytics utilty somehow, for some reason, called your callback five times tinstead of once. Nohting in their documentation mentions anything baout this.
+
+Frustratec,you ocontat customer support, who of course is as astonished as you are. They agree to escalate it to their developers and promose to get back to you.
+The next day, you recive aq lenghty email explaining what they found, which you promptly forward to your boss.
+
