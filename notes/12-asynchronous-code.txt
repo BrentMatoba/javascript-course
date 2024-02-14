@@ -346,3 +346,10 @@ Many times, its a utility provided by some third party.
 
 WE call this "inversion of control", when you take part o fyour program and give control of its executiont o another third party. There's an unspoken
 "contract" that e4xists between your code and the third party utility -- a set of htings youe xpect to be maintained.
+
+
+Tale of five callbacks:
+It might noe bt terribly obvious why this is such a big deal. Let me construct an exaggerated scenario to illustrate the hazards of trust at play.
+
+IMagine yoiu're a developer taske with building out an ecommerce checkout system for a site that sells expesnive TV's. You alreaedy have all the various pages of the checkout stystem builto ut just fine.
+ On the last page, when the user clicks "confirm" to buy the TV, you need to call a third-party function so that the sale can be tracked.
