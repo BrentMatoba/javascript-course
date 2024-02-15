@@ -431,3 +431,25 @@ function addNumbers(x,y) {
 
 addNumbers( 21, 21 );	// 42
 addNumbers( 21, "21" );	// "2121"
+
+Defensive version of code:
+function addNumbers(x,y) {
+	// ensure numerical input
+	if (typeof x != "number" || typeof y != "number") {
+		throw Error( "Bad parameters" );
+	}
+
+	// if we get here, + will safely do numeric addition
+	return x + y;
+}
+
+addNumbers( 21, 21 );	// 42
+addNumbers( 21, "21" );	// Error: "Bad parameters"
+
+
+
+
+However you go about it, these sorts of checks/normalizations are failry common on fucntion inputs, evne with code we theoretically entirely trust. IN a crude sort of way, its like the programming equivalent of the geopolitical principle fo "trust but verify"
+
+So doesn't it stadn to treason that we should do the same thing about the copmosition of async funciton callbacks, not just with truly external code but even with code we know is generall udner our own control? OF COURSE WE SHOULD.
+
