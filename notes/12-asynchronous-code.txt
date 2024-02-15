@@ -398,3 +398,18 @@ analytics.trackPurchase( purchaseData, function(){
 } );
 
 But one of your WA engineers asks "What happen sif they never call the callback? Oops. Neitehr of you had thought about that.
+
+You beging to chase down the rabbit hole, and think of all the possible things that could go wrong weith them calling your callback.
+Here's roughly the list you come up with of ways the analytics utility could misbehave:
+
+	Call the callback too early (before its been tracked)
+	Call the callback too late (or never)
+	call the callback too few or too many times (like the problem you encountered!)
+	Fail to pass along any necessary environment/parameters to your callback.
+	Swallow any errors/exceptions that may happen.
+
+That hsould feel like a troubling list, because it is. You're probably slowly starting to realize that you're going to have to invent an awful lot of ad hoc logic in each and every single callback
+thats passed to a utility you're not positive you can trust.
+Now yo realize a bit more completely just how hellish "callback hell is"
+
+
