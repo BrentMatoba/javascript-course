@@ -413,3 +413,21 @@ thats passed to a utility you're not positive you can trust.
 Now yo realize a bit more completely just how hellish "callback hell is"
 
 
+Not just others code:
+Some of you mayu be skeptical at this point whether this is as big a deal as i'm making it out to be. Perhaps you don't interact wiht truly third-party utilities much if at all.
+Herpahs you use version APIS or self-host such lirbaries, sot aht tis behavior can't be changed out from underneath you.
+
+So contemplate this: can you even REALLY trust utilities that you do theoretically control in your own code base?
+
+Think of it this way: most of us agree that at least to some extent we should bulid our own internal functions ith some defensive checks ont he input parameters,  to reduce/prevent uenxepcted issues.
+
+function addNumbers(x,y) {
+	// + is overloaded with coercion to also be
+	// string concatenation, so this operation
+	// isn't strictly safe depending on what's
+	// passed in.
+	return x + y;
+}
+
+addNumbers( 21, 21 );	// 42
+addNumbers( 21, "21" );	// "2121"
