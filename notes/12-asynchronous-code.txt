@@ -386,4 +386,15 @@ YOu talk it over with your boss, but hes not feeling particularly comfortable wi
 and that you'll need to figure out how to protect hte checkout code from such a vulnerability again.
 
 
+Example code for tracking checkouts.
+var tracked = false;
 
+analytics.trackPurchase( purchaseData, function(){
+	if (!tracked) {
+		tracked = true;
+		chargeCreditCard();
+		displayThankyouPage();
+	}
+} );
+
+But one of your WA engineers asks "What happen sif they never call the callback? Oops. Neitehr of you had thought about that.
