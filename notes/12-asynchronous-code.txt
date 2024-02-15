@@ -377,3 +377,13 @@ AFter digging through some logs, you come to the conclusion that the only explan
 Frustratec,you ocontat customer support, who of course is as astonished as you are. They agree to escalate it to their developers and promose to get back to you.
 The next day, you recive aq lenghty email explaining what they found, which you promptly forward to your boss.
 
+Apparently, the developers at the analytics companyh had been working on some experimetnba code that, uner ertain conditions, would retry to the provided callback once per second, for five seconds, before fialing with a timeout.
+They had never inteded to push that into production, but somehow they did, and they're totally embarassed and apologetic. They go into plenty of detail about how they've
+identified the breakdown adn what they'll do to ensure it enver happens again.yadda, yadda.
+Whats next?
+
+YOu talk it over with your boss, but hes not feeling particularly comfortable witht eh state of things. he insi9sts, and you reluctantly agree, taht you fan't trust tthem anymore
+and that you'll need to figure out how to protect hte checkout code from such a vulnerability again.
+
+
+
