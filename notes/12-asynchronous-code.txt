@@ -480,3 +480,21 @@ NOte: THis split-callback design is what hte ES6 promise API uses. WE'll coer ES
 Another common callback pattern is called "error-first style" sometimes called node style as its also the convention used accross nearly all node.js APIs where the first argument
 of a single callback is reserved for an error object. If any. If succes, this argumetn will be empty/falsy and any subsequent arguments will be the success data but ifan error
 result is being signaled, the first argument is set/truthy and nusually nothign else is passed.
+
+function response(err,data) {
+	// error?
+	if (err) {
+		console.error( err );
+	}
+	// otherwise, assume success
+	else {
+		console.log( data );
+	}
+}
+
+ajax( "http://some.url.1", response );
+
+
+IN both of htese cases, several things hsould be observed.
+First, it has not really resolved the majority of trust issues like it may appear. There's ntohign about eitehr callbac that prevents or filters unwanted repeatd invocations. Morever, things are worse now,
+because you may get both success and eror signals, or noeither, and you still have to code around either of those conditions.
