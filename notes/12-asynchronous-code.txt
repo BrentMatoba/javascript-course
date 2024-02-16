@@ -457,3 +457,18 @@ But callbacks don't really offer anythign to assist us. We have to construct all
 The most troublesome problem with callbacks is inversion of control leading to a complete breakdown along those trust lines. If you ahve code tha tuses callbacks,
 especially but not exclusively with third-party utilties, and you're not already aplying some sort of mitigation logic for all thes e inversion of contrrol trust issues, your code AHS bugs in it right now even thought ehy nay not have beitten you yet.
 Latent bugs ar estill bugs,. Hell indeed.
+
+
+Trying to save calllbacks:
+There are several variations of callback design that have attempted toa ddress some (not all!) of the trust issues we've just looked at.
+Its a valiant, but doomed, effort to save the callback pattern from imploding on itself.
+
+function success(data) {
+	console.log( data );
+}
+
+function failure(err) {
+	console.error( err );
+}
+
+ajax( "http://some.url.1", success, failure );
