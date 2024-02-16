@@ -453,3 +453,7 @@ However you go about it, these sorts of checks/normalizations are failry common 
 
 So doesn't it stadn to treason that we should do the same thing about the copmosition of async funciton callbacks, not just with truly external code but even with code we know is generall udner our own control? OF COURSE WE SHOULD.
 
+But callbacks don't really offer anythign to assist us. We have to construct all that machinery ourselves, and it often ends up being a lot of boilerplate/overhead that we repeat for every single async callback.
+The most troublesome problem with callbacks is inversion of control leading to a complete breakdown along those trust lines. If you ahve code tha tuses callbacks,
+especially but not exclusively with third-party utilties, and you're not already aplying some sort of mitigation logic for all thes e inversion of contrrol trust issues, your code AHS bugs in it right now even thought ehy nay not have beitten you yet.
+Latent bugs ar estill bugs,. Hell indeed.
