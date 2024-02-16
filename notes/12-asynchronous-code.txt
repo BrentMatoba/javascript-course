@@ -472,3 +472,7 @@ function failure(err) {
 }
 
 ajax( "http://some.url.1", success, failure );
+
+In APIS of this desing, oftne the failure()error handler is optional, and if not provided it will be assumed you want thte erros swallowed. Ugh.
+
+NOte: THis split-callback design is what hte ES6 promise API uses. WE'll coer ES6 promises in much more detail in the enext chapter.
