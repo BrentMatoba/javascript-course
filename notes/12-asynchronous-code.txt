@@ -532,3 +532,20 @@ and oftentimes this effort is much more than you can or should spend on such cod
 
 You might find yourself wishig for built-in API's or other language mechanics toa ddress these isuses.
 Finnaly ES6 ha arrived ont he scen with some great answers, so keep reading!
+
+Review:
+Callbacks are the fundamental unit of asynchrony in JS. but they're not enough for the evolving landscape of async programming as JS matures.
+
+FIrst, our brains plan things out in sequential, blocking, single-threaded semantic ways bt callbacks express asynchronous flow in a rather nonlinear, nonsequential way, whihc makes reassoning properly 
+about such code much harder. Bad to reason about code is bad tcod etha tleads to bad bugs. 
+
+We need a way to express asynchrony in a more synchronus, sequntial, blocking manner, just like our brains do.
+We need a way to express asynchrony in a more synchronous, sequential, blocking manner, just like our brains do.
+
+Second, and more importantly, callbacks suffer from inversion of control in that they implicitly give control over to another party (often a third-party utility not in your control!) to invoke the continuation of your program. This control transfer leads us to a troubling list of trust issues, such as whether the callback is called more times than we expect.
+
+Inventing ad hoc logic to solve these trust issues is possible, but it's more difficult than it should be, and it produces clunkier and harder to maintain code, as well as code that is likely insufficiently protected from these hazards until you get visibly bitten by the bugs.
+
+We need a generalized solution to all of the trust issues, one that can be reused for as many callbacks as we create without all the extra boilerplate overhead.
+
+We need something better than callbacks. They've served us well to this point, but the future of JavaScript demands more sophisticated and capable async patterns. The subsequent chapters in this book will dive into those emerging evolutions.
