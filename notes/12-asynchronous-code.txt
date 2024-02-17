@@ -502,3 +502,19 @@ because you may get both success and eror signals, or noeither, and you still ha
 Also don't miss the fact that while its a standard pattern you can employ, its definitely more verbose and boilerplate-ish without much reuse, so you're going to get weary of typing all that out for everyf single callback in your application.
 What about hte trust issue of never being calle? If  this is a concern (and it probably should be!) yo ulike will need to set up a timeout that cancels the event. you could make
 a utility 
+
+function timeoutify(fn,delay) {
+	var intv = setTimeout( function(){
+			intv = null;
+			fn( new Error( "Timeout!" ) );
+		}, delay )
+	;
+
+	return function() {
+		// timeout hasn't happened yet?
+		if (intv) {
+			clearTimeout( intv );
+			fn.apply( this, [ null ].concat( [].slice.call( arguments ) ) );
+		}
+	};
+}
