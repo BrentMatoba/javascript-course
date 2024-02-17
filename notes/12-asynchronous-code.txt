@@ -498,3 +498,7 @@ ajax( "http://some.url.1", response );
 IN both of htese cases, several things hsould be observed.
 First, it has not really resolved the majority of trust issues like it may appear. There's ntohign about eitehr callbac that prevents or filters unwanted repeatd invocations. Morever, things are worse now,
 because you may get both success and eror signals, or noeither, and you still have to code around either of those conditions.
+
+Also don't miss the fact that while its a standard pattern you can employ, its definitely more verbose and boilerplate-ish without much reuse, so you're going to get weary of typing all that out for everyf single callback in your application.
+What about hte trust issue of never being calle? If  this is a concern (and it probably should be!) yo ulike will need to set up a timeout that cancels the event. you could make
+a utility 
