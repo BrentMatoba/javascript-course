@@ -561,3 +561,9 @@ In chapter 2, we identified two major categories of deficiencies with using call
 Lack of sequentiality and lack of trustability. Now that we understand the problems more intimately, its time we turn our attention to patterns that can address them.
 
 The issue we want to address first is the inversion of controlk, the trust that is so frageily held and so easily lost.
+
+Recall that we wrap up the contiuation of our program in a  callback function, and hand that callback over to another party
+(potentially even external code) and just cross our fingers that it willl do the right thing with the invocatin of the callback.
+We do this because we want to say that "here what happens LATER, after the currne step finishes"
+But hwat if we could uninvert the inversion of cohntrol? What if instead of handing the continuation of our program to another party, we could expect it to return us a capability
+to know when its task finishes, and then our code could decide what to do next?
