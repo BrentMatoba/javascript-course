@@ -578,3 +578,11 @@ What is a promise?:
 When developers decide to learn a new tehcnology or pattern, usually their first step is "show me the code!" its quite natural for us ot just jump in and learn as we go.
 But it turn sout that some abstractions get lost on the APIS alone. Promises are one of htose tools where it can be painfully obvious from how someone uses it whether they udnerstand what its for and about
 vereuss just learning  and using the API.
+
+Future Value:
+IMagine this scenario: I walk up to the counter at a fast-food restaurant and place an  orer for a cheeseburger. I hand the cvashier 1.47. By placing my order and paying for it, I've made a request for a value back (the cheeseburger)
+I've started a transaction.
+But often, the cheesebruger is not immediately available for me. The cashier hands me something in place of my cheeseburger: a receipt with an order number on it. THi soder numebr is an IOU PROMISE that ensures
+that eventually, I shoudl receive a cheesebruger.
+
+So I hold onto my receipt and order number. I know it rerpesents my future cheeseburger, so I don't need to wayy about ti anymore -- aside from being hungry!
