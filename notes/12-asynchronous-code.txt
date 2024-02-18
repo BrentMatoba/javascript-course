@@ -573,3 +573,8 @@ This paradigm is called PROMISES.
 Promises are starting to take the javascript world by storm ,as deveopers and specification writers alike desperately seek to untangle the insanity of callback hell in their code/desin. In fact,
 most new async APIs are being added to JS/DOM platform are being built on promises. So its probably a good idea to dig in and learn hteml, don't you thinK?
 
+
+What is a promise?:
+When developers decide to learn a new tehcnology or pattern, usually their first step is "show me the code!" its quite natural for us ot just jump in and learn as we go.
+But it turn sout that some abstractions get lost on the APIS alone. Promises are one of htose tools where it can be painfully obvious from how someone uses it whether they udnerstand what its for and about
+vereuss just learning  and using the API.
