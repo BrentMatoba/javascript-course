@@ -567,3 +567,9 @@ Recall that we wrap up the contiuation of our program in a  callback function, a
 We do this because we want to say that "here what happens LATER, after the currne step finishes"
 But hwat if we could uninvert the inversion of cohntrol? What if instead of handing the continuation of our program to another party, we could expect it to return us a capability
 to know when its task finishes, and then our code could decide what to do next?
+
+
+This paradigm is called PROMISES.
+Promises are starting to take the javascript world by storm ,as deveopers and specification writers alike desperately seek to untangle the insanity of callback hell in their code/desin. In fact,
+most new async APIs are being added to JS/DOM platform are being built on promises. So its probably a good idea to dig in and learn hteml, don't you thinK?
+
