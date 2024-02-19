@@ -599,3 +599,6 @@ In other words, once my future value was ready, I exchanged my value-promise for
 But there's another possible outcome. They call my order number, but when I go to retrieve my cheeseburger, the cashier
 regretfully informs me, I'm sorry, but we we appear to be all out of cheeseburgerS" Setting aside the customer frustration of htis scenario for a moement, we can see
 an important characteristic of future values: They ca n either indicate a success or failure.
+
+Every time I order a cheeseburer, I know that i'll eitehr get a cheeseburger eventually, or i'll get the sad news of th cheesebrger shortage, and I"ll have to figure out something else to eat for lunch.
+Note: In ocde, things are not quite as simple, because metaphorically the order number may never be called, in which case we're left indefinitely in an unresolved state.
