@@ -602,3 +602,9 @@ an important characteristic of future values: They ca n either indicate a succes
 
 Every time I order a cheeseburer, I know that i'll eitehr get a cheeseburger eventually, or i'll get the sad news of th cheesebrger shortage, and I"ll have to figure out something else to eat for lunch.
 Note: In ocde, things are not quite as simple, because metaphorically the order number may never be called, in which case we're left indefinitely in an unresolved state.
+
+
+Values now and later:
+This all might soudn too mentally abstract to apply to your code, so lets be more concrete. 
+However, before we canintroduce how promises work in this fashion, we're going to derivce in code that we already udnerstand. Callbacks! How to handle these future values.
+When you write code too reason about a value, such as perfomring math on a number, whether you realize it or not, you've been assuming something very fundamentalabout that value, which is that its s a contcrete now value.
