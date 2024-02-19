@@ -586,3 +586,8 @@ But often, the cheesebruger is not immediately available for me. The cashier han
 that eventually, I shoudl receive a cheesebruger.
 
 So I hold onto my receipt and order number. I know it rerpesents my future cheeseburger, so I don't need to wayy about ti anymore -- aside from being hungry!
+
+While I wait, I can do other things, like send a text message to af riend saying "hey can you come join me for lunch? I'm going to eat a cheeseburger."
+
+I am reasoning about my FUTURE fcheeseburger already, even though I don't have it ihn my haneds yet. My brain
+is able to do this beecause its treating the order number as a placeholder for the cheeseurger. The placeholder essentially amkes the value time independent. Its a future value.
