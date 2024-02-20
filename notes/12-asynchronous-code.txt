@@ -619,3 +619,9 @@ The x + y operation assumes both x and y are alrady set. In terms we'll expounnd
 It would be nonsense to expeft the + operator by itself would somehow be magicvally capable
 of detecting and waiting around until both x and y are resolved, only then to do the operation.
 That owuld cause chaos in the program if different statements finished NOW and others finishhed later right?
+
+
+How oculd you possibly reason about the relationships between two statements if either one (or both) of them might not be finished yet?
+If statement 2 relies on statement1 being finished, there are just two outcomes: eitehr statement1 finished right NOW and everything proceeeds fine,
+or statement1 didn't finish yet, and thus staement 2 is going to fail.
+
