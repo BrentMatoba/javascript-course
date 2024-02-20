@@ -650,3 +650,7 @@ add( fetchX, fetchY, function(sum){
 } );
 
 
+When the ugliness is undeniable, theres something very important to notice about this async pattern.
+in that snippet, we treated x and y as future values,a nd we express an operation add(...) that from the outside
+does not care whether x or y or both are available right away or not. In other words, it noramlizes the now and later,
+such taht we can rely on a predictable outcome of the add(...) operation
