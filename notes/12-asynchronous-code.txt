@@ -698,3 +698,6 @@ There are two layers of promises in this snippet.
 fetchX() and fetvchY() are called irectly, and the values they return (promises) are passed into add(....)
 the underlyuing values those promises represent may be ready now or later, but each promise noramlizes the bhavior to be the same regardless. We reason about X and Y values in a timer independent way.
 They are future values.
+
+The second layer is the promise that addd(...) creates (vvia Promise.all) and returns, which we wait on by calling then(...) when the add(...)
+operation completes, our sum future value is ready and we can print it out. WE hid inside of add(..) the logic for waiting ont he x and y future values.
