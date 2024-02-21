@@ -692,3 +692,9 @@ add( fetchX(), fetchY() )
 .then( function(sum){
 	console.log( sum ); // that was easier!
 } );
+
+
+There are two layers of promises in this snippet.
+fetchX() and fetvchY() are called irectly, and the values they return (promises) are passed into add(....)
+the underlyuing values those promises represent may be ready now or later, but each promise noramlizes the bhavior to be the same regardless. We reason about X and Y values in a timer independent way.
+They are future values.
