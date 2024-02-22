@@ -724,3 +724,11 @@ add( fetchX(), fetchY() )
 		console.error( err ); // bummer!
 	}
 );
+
+
+If something went wrong with getting x or y, or something somehow failed during the addition, the promise that add(...) returns is rejected, and the second callback error handler
+passed to the then(...) will receive the rejection value from the promise.
+
+Because promises encapsluate the time-dependent state -- waiting on the fulfillment or rejection of the underlying value -- from the outside, the promise itself is time-independent, and thus promises can becomposed (combined in predictable ways regardless of the timing or outcome underneat.)
+
+Moreover, once a promise is resolved, it stays that way forever -- itbecomes an immutable value ant that point -- and can be observed as many times as necessary.
