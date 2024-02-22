@@ -744,3 +744,24 @@ add( fetchX(), fetchY() )
 		console.error( err ); // bummer!
 	}
 );
+If something went wrong getting X or Y, or something somehow failed during the addition, the promise that add(..) returns is rejected, and the second callback error handler passed to then(..) will receive the rejection value from the promise.
+
+Because Promises encapsulate the time-dependent state -- waiting on the fulfillment or rejection of the underlying value -- from the outside, the Promise itself is time-independent, and thus Promises can be composed (combined) in predictable ways regardless of the timing or outcome underneath.
+
+Moreover, once a Promise is resolved, it stays that way forever -- it becomes an immutable value at that point -- and can then be observed as many times as necessary.
+
+Note: Because a Promise is externally immutable once resolved, it's now safe to pass that value around to any party and know that it cannot be modified accidentally or maliciously. This is especially true in relation to multiple parties observing the resolution of a Promise. It is not possible for one party to affect another party's ability to observe Promise resolution. Immutability may sound like an academic topic, but it's actually one of the most fundamental and important aspects of Promise design, and shouldn't be casually passed over.
+
+That's one of the most powerful and important concepts to understand about Promises. With a fair amount of work, you could ad hoc create the same effects with nothing but ugly callback composition, but that's not really an effective strategy, especially because you have to do it over and over again.
+
+Promises are an easily repeatable mechanism for encapsulating and composing future values.
+
+
+
+Completion Event:
+As we just saw, an individual promise behaves as a future value. But there's anohte rway to think of the resolution as a promise: as a flow-control mechanism -- a temporal this th en that for two or more steps in an asynchronous task.
+Lets imagine the calling a function foo(...) to perform some tak. We don't nkow about any of its details, nor do we care. It may complete the task right awya, or it may take awhile.
+We just simply need to know when foo() finishes so that we3 can move on to our next task. In other words, we'd like a away to be notified of foo()'s completeion so that we can continue.
+
+In typical javascript fashion, you need to listen for a notifcation, you'd likely think of that in terms of events.
+So we could reframe our need for notification as a need to listen for a completion.
