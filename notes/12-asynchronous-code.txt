@@ -818,3 +818,12 @@ The inversion from normal callback-oriented code should be obvious, and it's int
 But if you recall from Chapter 2, callbacks themselves represent an inversion of control. So inverting the callback pattern is actually an inversion of inversion, or an uninversion of control -- restoring control back to the calling code where we wanted it to be in the first place.
 
 One important benefit is that multiple separate parts of the code can be given the event listening capability, and they can all independently be notified of when foo(..) completes to perform subsequent steps after its completion:
+
+
+var evt = foo( 42 );
+
+// let `bar(..)` listen to `foo(..)`'s completion
+bar( evt );
+
+// also, let `baz(..)` listen to `foo(..)`'s completion
+baz( evt );
