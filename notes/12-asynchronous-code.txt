@@ -810,3 +810,11 @@ evt.on( "completion", function(){
 evt.on( "failure", function(err){
 	// oops, something went wrong in `foo(..)`
 } );
+
+foo(..) expressly creates an event subscription capability to return back, and the calling code receives and registers the two event handlers against it.
+
+The inversion from normal callback-oriented code should be obvious, and it's intentional. Instead of passing the callbacks to foo(..), it returns an event capability we call evt, which receives the callbacks.
+
+But if you recall from Chapter 2, callbacks themselves represent an inversion of control. So inverting the callback pattern is actually an inversion of inversion, or an uninversion of control -- restoring control back to the calling code where we wanted it to be in the first place.
+
+One important benefit is that multiple separate parts of the code can be given the event listening capability, and they can all independently be notified of when foo(..) completes to perform subsequent steps after its completion:
