@@ -770,3 +770,16 @@ Note: Whether you call it a "completion event" or a "continuation event" depends
  The event notification tells us that foo(..) has completed, but also that it's OK to continue with the next step. Indeed, the callback you pass to be called for the event notification is itself what we've previously called a continuation. 
  Because completion event is a bit more focused on the foo(..), which more has our attention at present, we slightly favor completion event for the rest of this text.
 
+foo(x) {
+	// start doing something that could take a while
+}
+
+foo( 42 )
+
+on (foo "completion") {
+	// now we can do the next step!
+}
+
+on (foo "error") {
+	// oops, something went wrong in `foo(..)`
+}
