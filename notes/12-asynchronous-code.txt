@@ -831,3 +831,10 @@ baz( evt );
 Uninversion of control enables a nicer separation of concerns, where bar(..) and baz(..) don't need to be involved in how foo(..) is called. Similarly, foo(..) doesn't need to know or care that bar(..) and baz(..) exist or are waiting to be notified when foo(..) completes.
 
 Essentially, this evt object is a neutral third-party negotiation between the separate concerns.
+
+
+Promise "Events"
+As yo umay ahgve guessed by now, the et even listening capability 8is an analogy for ap romise
+In a Promise-based approach, the previous snippet would have foo(..) creating and returning a Promise instance, and that promise would then be passed to bar(..) and baz(..).
+
+Note: The Promise resolution "events" we listen for aren't strictly events (though they certainly behave like events for these purposes), and they're not typically called "completion" or "error". Instead, we use then(..) to register a "then" event. Or perhaps more precisely, then(..) registers "fulfillment" and/or "rejection" event(s), though we don't see those terms used explicitly in the code.
