@@ -894,3 +894,6 @@ var p = foo( 42 );
 p.then( bar, oopsBar );
 
 p.then( baz, oopsBaz );
+
+Note: If you've seen Promise-based coding before, you might be tempted to believe that the last two lines of that code could be written as p.then( .. ).then( .. ), using chaining, rather than p.then(..); p.then(..). That would have an entirely different behavior, so be careful! The difference might not be clear right now, but it's actually a different async pattern than we've seen thus far: splitting/forking. 
+
