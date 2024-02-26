@@ -940,3 +940,9 @@ if (
 else {
 	// not a thenable
 }
+
+Yuck! Setting aside the fact that this logic is a bit ugly to implement in various places, there's something deeper and more troubling going on.
+
+If you try to fulfill a Promise with any object/function value that happens to have a then(..) function on it, but you weren't intending it to be treated as a Promise/thenable, you're out of luck, because it will automatically be recognized as thenable and treated with special rules (see later in the chapter).
+
+This is even true if you didn't realize the value has a then(..) on it. For example:
