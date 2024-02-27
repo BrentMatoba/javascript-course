@@ -956,3 +956,10 @@ v.someStuff = "cool";
 v.otherStuff = "not so cool";
 
 v.hasOwnProperty( "then" );		
+
+v doesn't look like a Promise or thenable at all. It's just a plain object with some properties on it. You're probably just intending to send that value around like any other object.
+
+But unknown to you, v is also [[Prototype]]-linked (see the this & Object Prototypes title of this book series) to another object o, which happens to have a then(..) on it. So the thenable duck typing checks will think and assume v is a thenable. Uh oh.
+
+It doesn't even need to be something as directly intentional as that:
+
