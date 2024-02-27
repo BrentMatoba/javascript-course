@@ -963,3 +963,9 @@ But unknown to you, v is also [[Prototype]]-linked (see the this & Object Protot
 
 It doesn't even need to be something as directly intentional as that:
 
+
+Object.prototype.then = function(){};
+Array.prototype.then = function(){};
+
+var v1 = { hello: "world" };
+var v2 = [ "Hello", "World" ];
