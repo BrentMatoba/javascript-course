@@ -984,3 +984,12 @@ Promise Trust
 We've now seen two strong analogies that explain different aspects of what Promises can do for our async code. But if we stop there, we've missed perhaps the single most important characteristic that the Promise pattern establishes: trust.
 
 Whereas the future values and completion events analogies play out explicitly in the code patterns we've explored, it won't be entirely obvious why or how Promises are designed to solve all of the inversion of control trust issues we laid out in the "Trust Issues" section of Chapter 2. But with a little digging, we can uncover some important guarantees that restore the confidence in async coding that Chapter 2 tore down!
+
+Let's start by reviewing the trust issues with callbacks-only coding. When you pass a callback to a utility foo(..), it might:
+
+Call the callback too early
+Call the callback too late (or never)
+Call the callback too few or too many times
+Fail to pass along any necessary environment/parameters
+Swallow any errors/exceptions that may happen
+The characteristics of Promises are intentionally designed to provide useful, repeatable answers to all these concerns.
