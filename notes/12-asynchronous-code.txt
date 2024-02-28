@@ -1021,3 +1021,9 @@ p.then( function(){
 	console.log( "B" );
 } );
 // A B C
+
+
+romise Scheduling Quirks
+It's important to note, though, that there are lots of nuances of scheduling where the relative ordering between callbacks chained off two separate Promises is not reliably predictable.
+
+If two promises p1 and p2 are both already resolved, it should be true that p1.then(..); p2.then(..) would end up calling the callback(s) for p1 before the ones for p2. But there are subtle cases where that might not be true, such as the following:
