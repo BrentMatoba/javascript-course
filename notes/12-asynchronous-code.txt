@@ -1115,3 +1115,8 @@ Something to be aware of: If you call resolve(..) or reject(..) with multiple pa
 If you want to pass along multiple values, you must wrap them in another single value that you pass, such as an array or an object.
 
 As for environment, functions in JS always retain their closure of the scope in which they're defined (see the Scope & Closures title of this series), so they of course would continue to have access to whatever surrounding state you provide. Of course, the same is true of callbacks-only design, so this isn't a specific augmentation of benefit from Promises -- but it's a guarantee we can rely on nonetheless.
+
+Swallowing Any Errors/Exceptions
+In the base sense, this is a restatement of the previous point. If you reject a Promise with a reason (aka error message), that value is passed to the rejection callback(s).
+
+But there's something much bigger at play here. If at any point in the creation of a Promise, or in the observation of its resolution, a JS exception error occurs, such as a TypeError or ReferenceError, that exception will be caught, and it will force the Promise in question to become rejected.
