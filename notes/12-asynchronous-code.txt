@@ -1103,3 +1103,11 @@ The "too many" case is easy to explain. Promises are defined so that they can on
 ecause a Promise can only be resolved once, any then(..) registered callbacks will only ever be called once (each).
 
 Of course, if you register the same callback more than once, (e.g., p.then(f); p.then(f);), it'll be called as many times as it was registered. The guarantee that a response function is called only once does not prevent you from shooting yourself in the foot.
+
+
+Failing to Pass Along Any Parameters/Environment
+Promises can have, at most, one resolution value (fulfillment or rejection).
+
+If you don't explicitly resolve with a value either way, the value is undefined, as is typical in JS. But whatever the value, it will always be passed to all registered (and appropriate: fulfillment or rejection) callbacks, either now or in the future.
+
+Something to be aware of: If you call resolve(..) or reject(..) with multiple parameters, all subsequent parameters beyond the first will be silently ignored. Although that might seem a violation of the guarantee we just described, it's not exactly, because it constitutes an invalid usage of the Promise mechanism. Other invalid usages of the API (such as calling resolve(..) multiple times) are similarly protected, so the Promise behavior here is consistent (if not a tiny bit frustrating).
