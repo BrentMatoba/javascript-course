@@ -1120,3 +1120,19 @@ Swallowing Any Errors/Exceptions
 In the base sense, this is a restatement of the previous point. If you reject a Promise with a reason (aka error message), that value is passed to the rejection callback(s).
 
 But there's something much bigger at play here. If at any point in the creation of a Promise, or in the observation of its resolution, a JS exception error occurs, such as a TypeError or ReferenceError, that exception will be caught, and it will force the Promise in question to become rejected.
+
+
+var p = new Promise( function(resolve,reject){
+	foo.bar();	// `foo` is not defined, so error!
+	resolve( 42 );	// never gets here :(
+} );
+
+p.then(
+	function fulfilled(){
+		// never gets here :(
+	},
+	function rejected(err){
+		// `err` will be a `TypeError` exception object
+		// from the `foo.bar()` line.
+	}
+);
