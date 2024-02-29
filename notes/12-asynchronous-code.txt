@@ -1066,3 +1066,34 @@ First, nothing (not even a JS error) can prevent a Promise from notifying you of
 Of course, if your callbacks themselves have JS errors, you may not see the outcome you expect, but the callback will in fact have been called. We'll cover later how to be notified of an error in your callback, because even those don't get swallowed.
 
 But what if the Promise itself never gets resolved either way? Even that is a condition that Promises provide an answer for, using a higher level abstraction called a "race":
+
+
+// a utility for timing out a Promise
+function timeoutPromise(delay) {
+	return new Promise( function(resolve,reject){
+		setTimeout( function(){
+			reject( "Timeout!" );
+		}, delay );
+	} );
+}
+
+// setup a timeout for `foo()`
+Promise.race( [
+	foo(),					// attempt `foo()`
+	timeoutPromise( 3000 )	// give it 3 seconds
+] )
+.then(
+	function(){
+		// `foo(..)` fulfilled in time!
+	},
+	function(err){
+		// either `foo()` rejected, or it just
+		// didn't finish in time, so inspect
+		// `err` to know which
+	}
+);
+
+Calling Too Few or Too Many Times
+By definition, one is the appropriate number of times for the callback to be called. The "too few" case would be zero calls, which is the same as the "never" case we just examined.
+
+The "too many" case is easy to explain. Promises are defined so that they can only be resolved once. If for some reason the Promise creation code tries to call resolve(..) or reject(..) multiple times, or tries to call both, the Promise will accept only the first resolution, and will silently ignore any subsequent attempts.
