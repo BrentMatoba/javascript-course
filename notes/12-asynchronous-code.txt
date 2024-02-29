@@ -1111,3 +1111,7 @@ Promises can have, at most, one resolution value (fulfillment or rejection).
 If you don't explicitly resolve with a value either way, the value is undefined, as is typical in JS. But whatever the value, it will always be passed to all registered (and appropriate: fulfillment or rejection) callbacks, either now or in the future.
 
 Something to be aware of: If you call resolve(..) or reject(..) with multiple parameters, all subsequent parameters beyond the first will be silently ignored. Although that might seem a violation of the guarantee we just described, it's not exactly, because it constitutes an invalid usage of the Promise mechanism. Other invalid usages of the API (such as calling resolve(..) multiple times) are similarly protected, so the Promise behavior here is consistent (if not a tiny bit frustrating).
+
+If you want to pass along multiple values, you must wrap them in another single value that you pass, such as an array or an object.
+
+As for environment, functions in JS always retain their closure of the scope in which they're defined (see the Scope & Closures title of this series), so they of course would continue to have access to whatever surrounding state you provide. Of course, the same is true of callbacks-only design, so this isn't a specific augmentation of benefit from Promises -- but it's a guarantee we can rely on nonetheless.
