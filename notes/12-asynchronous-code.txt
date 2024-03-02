@@ -1173,3 +1173,17 @@ But why would this be any more trustable than just callbacks alone? How can we b
 One of the most important, but often overlooked, details of Promises is that they have a solution to this issue as well. Included with the native ES6 Promise implementation is Promise.resolve(..).
 
 If you pass an immediate, non-Promise, non-thenable value to Promise.resolve(..), you get a promise that's fulfilled with that value. In other words, these two promises p1 and p2 will behave basically identically:
+
+var p1 = new Promise( function(resolve,reject){
+	resolve( 42 );
+} );
+
+var p2 = Promise.resolve( 42 );
+
+
+But if you pass a genuine Promise to Promise.resolve(..), you just get the same promise back:
+var p1 = Promise.resolve( 42 );
+
+var p2 = Promise.resolve( p1 );
+
+p1 === p2; // true
