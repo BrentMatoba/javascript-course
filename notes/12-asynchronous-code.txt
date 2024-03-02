@@ -1162,3 +1162,14 @@ Wait, that makes it seem like the exception from foo.bar() really did get swallo
 Why couldn't it just call the error handler we have defined there? Seems like a logical behavior on the surface. But it would violate the fundamental principle that Promises are immutable once resolved. p was already fulfilled to the value 42, so it can't later be changed to a rejection just because there's an error in observing p's resolution.
 
 Besides the principle violation, such behavior could wreak havoc, if say there were multiple then(..) registered callbacks on the promise p, because some would get called and others wouldn't, and it would be very opaque as to why.
+
+Trustable Promise?
+There's one last detail to examine to establish trust based on the Promise pattern.
+
+You've no doubt noticed that Promises don't get rid of callbacks at all. They just change where the callback is passed to. Instead of passing a callback to foo(..), we get something (ostensibly a genuine Promise) back from foo(..), and we pass the callback to that something instead.
+
+But why would this be any more trustable than just callbacks alone? How can we be sure the something we get back is in fact a trustable Promise? Isn't it basically all just a house of cards where we can trust only because we already trusted?
+
+One of the most important, but often overlooked, details of Promises is that they have a solution to this issue as well. Included with the native ES6 Promise implementation is Promise.resolve(..).
+
+If you pass an immediate, non-Promise, non-thenable value to Promise.resolve(..), you get a promise that's fulfilled with that value. In other words, these two promises p1 and p2 will behave basically identically:
