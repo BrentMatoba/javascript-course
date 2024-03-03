@@ -1213,3 +1213,12 @@ Can you write async code in JS without trust? Of course you can. We JS developer
 But once you start questioning just how much you can trust the mechanisms you build upon to actually be predictable and reliable, you start to realize callbacks have a pretty shaky trust foundation.
 
 Promises are a pattern that augments callbacks with trustable semantics, so that the behavior is more reason-able and more reliable. By uninverting the inversion of control of callbacks, we place the control with a trustable system (Promises) that was designed specifically to bring sanity to our async.
+
+Chain Flow
+We've hinted at this a couple of times already, but Promises are not just a mechanism for a single-step this-then-that sort of operation. That's the building block, of course, but it turns out we can string multiple Promises together to represent a sequence of async steps.
+
+The key to making this work is built on two behaviors intrinsic to Promises:
+
+Every time you call then(..) on a Promise, it creates and returns a new Promise, which we can chain with.
+Whatever value you return from the then(..) call's fulfillment callback (the first parameter) is automatically set as the fulfillment of the chained Promise (from the first point).
+Let's first illustrate what that means, and then we'll derive how that helps us create async sequences of flow control. Consider the following:
