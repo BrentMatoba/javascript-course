@@ -1254,3 +1254,11 @@ p
 .then( function(v){
 	console.log( v );	// 42
 } );
+
+So now the first then(..) is the first step in an async sequence, and the second then(..) is the second step. This could keep going for as long as you needed it to extend. Just keep chaining off a previous then(..) with each automatically created Promise.
+
+But there's something missing here. What if we want step 2 to wait for step 1 to do something asynchronous? We're using an immediate return statement, which immediately fulfills the chained promise.
+
+The key to making a Promise sequence truly async capable at every step is to recall how Promise.resolve(..) operates when what you pass to it is a Promise or thenable instead of a final value. Promise.resolve(..) directly returns a received genuine Promise, or it unwraps the value of a received thenable -- and keeps going recursively while it keeps unwrapping thenables.
+
+The same sort of unwrapping happens if you return a thenable or Promise from the fulfillment (or rejection) handler. Consider:
