@@ -1262,3 +1262,19 @@ But there's something missing here. What if we want step 2 to wait for step 1 to
 The key to making a Promise sequence truly async capable at every step is to recall how Promise.resolve(..) operates when what you pass to it is a Promise or thenable instead of a final value. Promise.resolve(..) directly returns a received genuine Promise, or it unwraps the value of a received thenable -- and keeps going recursively while it keeps unwrapping thenables.
 
 The same sort of unwrapping happens if you return a thenable or Promise from the fulfillment (or rejection) handler. Consider:
+
+
+var p = Promise.resolve( 21 );
+
+p.then( function(v){
+	console.log( v );	// 21
+
+	// create a promise and return it
+	return new Promise( function(resolve,reject){
+		// fulfill with value `42`
+		resolve( v * 2 );
+	} );
+} )
+.then( function(v){
+	console.log( v );	// 42
+} );
