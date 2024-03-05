@@ -1355,3 +1355,6 @@ request( "http://some.url.1/" )
 .then( function(response2){
 	console.log( response2 );
 } );
+
+
+Note: Developers commonly encounter situations in which they want to do Promise-aware async flow control with utilities that are not themselves Promise-enabled (like ajax(..) here, which expects a callback). Although the native ES6 Promise mechanism doesn't automatically solve this pattern for us, practically all Promise libraries do. They usually call this process "lifting" or "promisifying" or some variation thereof. We'll come back to this technique later.
