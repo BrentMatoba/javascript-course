@@ -1336,3 +1336,14 @@ Note: As described, technically there are two promises in that interchange: the 
 To be honest, though, sequences of delays with no message passing isn't a terribly useful example of Promise flow control. Let's look at a scenario that's a little more practical.
 
 Instead of timers, let's consider making Ajax requests:
+
+// assume an `ajax( {url}, {callback} )` utility
+
+// Promise-aware ajax
+function request(url) {
+	return new Promise( function(resolve,reject){
+		// the `ajax(..)` callback should be our
+		// promise's `resolve(..)` function
+		ajax( url, resolve );
+	} );
+}
