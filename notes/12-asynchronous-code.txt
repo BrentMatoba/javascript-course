@@ -1522,3 +1522,16 @@ p
 		console.log( err ); // evil laugh
 	}
 );
+
+This p is a thenable but it's not so well behaved of a promise. Is it malicious? Or is it just ignorant of how Promises should work? It doesn't really matter, to be honest. In either case, it's not trustable as is.
+
+Nonetheless, we can pass either of these versions of p to Promise.resolve(..), and we'll get the normalized, safe result we'd expect:
+Promise.resolve( p )
+.then(
+	function fulfilled(val){
+		console.log( val ); // 42
+	},
+	function rejected(err){
+		// never gets here
+	}
+);
