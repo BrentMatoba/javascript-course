@@ -1586,3 +1586,7 @@ var p2 = p.then( function(v){
 p2.then( function(v){
 	console.log( v );	// 42
 } );
+
+By returning v * 2 (i.e., 42), we fulfill the p2 promise that the first then(..) call created and returned. When p2's then(..) call runs, it's receiving the fulfillment from the return v * 2 statement. Of course, p2.then(..) creates yet another promise, which we could have stored in a p3 variable.
+
+But it's a little annoying to have to create an intermediate variable p2 (or p3, etc.). Thankfully, we can easily just chain these together:
