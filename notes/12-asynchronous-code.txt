@@ -1627,3 +1627,5 @@ p.then( function(v){
 .then( function(v){
 	console.log( v );	// 42
 } );
+
+Even though we wrapped 42 up in a promise that we returned, it still got unwrapped and ended up as the resolution of the chained promise, such that the second then(..) still received 42. If we introduce asynchrony to that wrapping promise, everything still nicely works the same
