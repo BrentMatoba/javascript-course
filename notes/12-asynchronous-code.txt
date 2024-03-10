@@ -1604,3 +1604,7 @@ p
 .then( function(v){
 	console.log( v );	// 42
 } );
+
+So now the first then(..) is the first step in an async sequence, and the second then(..) is the second step. This could keep going for as long as you needed it to extend. Just keep chaining off a previous then(..) with each automatically created Promise.
+
+But there's something missing here. What if we want step 2 to wait for step 1 to do something asynchronous? We're using an immediate return statement, which immediately fulfills the chained promise.
