@@ -1677,3 +1677,5 @@ delay( 100 ) // step 1
 	console.log( "step 5 (after another 50ms)" );
 } )
 ...
+
+Calling delay(200) creates a promise that will fulfill in 200ms, and then we return that from the first then(..) fulfillment callback, which causes the second then(..)'s promise to wait on that 200ms promise.
