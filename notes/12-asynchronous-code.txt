@@ -1708,3 +1708,7 @@ Note: Developers commonly encounter situations in which they want to do Promise-
 Using the Promise-returning request(..), we create the first step in our chain implicitly by calling it with the first URL, and chain off that returned promise with the first then(..).
 
 Once response1 comes back, we use that value to construct a second URL, and make a second request(..) call. That second request(..) promise is returned so that the third step in our async flow control waits for that Ajax call to complete. Finally, we print response2 once it returns.
+
+The Promise chain we construct is not only a flow control that expresses a multistep async sequence, but it also acts as a message channel to propagate messages from step to step.
+
+What if something went wrong in one of the steps of the Promise chain? An error/exception is on a per-Promise basis, which means it's possible to catch such an error at any point in the chain, and that catching acts to sort of "reset" the chain back to normal operation at that point:
