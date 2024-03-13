@@ -1740,3 +1740,9 @@ request( "http://some.url.1/" )
 .then( function(msg){
 	console.log( msg );		// 42
 } );
+
+When the error occurs in step 2, the rejection handler in step 3 catches it. The return value (42 in this snippet), if any, from that rejection handler fulfills the promise for the next step (4), such that the chain is now back in a fulfillment state.
+
+Note: As we discussed earlier, when returning a promise from a fulfillment handler, it's unwrapped and can delay the next step. That's also true for returning promises from rejection handlers, such that if the return 42 in step 3 instead returned a promise, that promise could delay step 4. A thrown exception inside either the fulfillment or rejection handler of a then(..) call causes the next (chained) promise to be immediately rejected with that exception.
+
+If you call then(..) on a promise, and you only pass a fulfillment handler to it, an assumed rejection handler is substituted:
