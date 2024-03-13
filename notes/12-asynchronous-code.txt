@@ -1712,3 +1712,31 @@ Once response1 comes back, we use that value to construct a second URL, and make
 The Promise chain we construct is not only a flow control that expresses a multistep async sequence, but it also acts as a message channel to propagate messages from step to step.
 
 What if something went wrong in one of the steps of the Promise chain? An error/exception is on a per-Promise basis, which means it's possible to catch such an error at any point in the chain, and that catching acts to sort of "reset" the chain back to normal operation at that point:
+
+// step 1:
+request( "http://some.url.1/" )
+
+// step 2:
+.then( function(response1){
+	foo.bar(); // undefined, error!
+
+	// never gets here
+	return request( "http://some.url.2/?v=" + response1 );
+} )
+
+// step 3:
+.then(
+	function fulfilled(response2){
+		// never gets here
+	},
+	// rejection handler to catch the error
+	function rejected(err){
+		console.log( err );	// `TypeError` from `foo.bar()` error
+		return 42;
+	}
+)
+
+// step 4:
+.then( function(msg){
+	console.log( msg );		// 42
+} );
