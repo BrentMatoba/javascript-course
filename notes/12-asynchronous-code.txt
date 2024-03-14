@@ -1797,3 +1797,6 @@ If the fulfillment or rejection handler returns a Promise, it is unwrapped, so t
 While chaining flow control is helpful, it's probably most accurate to think of it as a side benefit of how Promises compose (combine) together, rather than the main intent. As we've discussed in detail several times already, Promises normalize asynchrony and encapsulate time-dependent value state, and that is what lets us chain them together in this useful way.
 
 Certainly, the sequential expressiveness of the chain (this-then-this-then-this...) is a big improvement over the tangled mess of callbacks as we identified in Chapter 2. But there's still a fair amount of boilerplate (then(..) and function(){ .. }) to wade through. In the next chapter, we'll see a significantly nicer pattern for sequential flow control expressivity, with generators.
+
+erminology: Resolve, Fulfill, and Reject
+There's some slight confusion around the terms "resolve," "fulfill," and "reject" that we need to clear up, before you get too much deeper into learning about Promises. Let's first consider the Promise(..) constructor:
