@@ -1782,3 +1782,8 @@ p.then(
 		// never gets here
 	}
 );
+
+
+As you can see, the default fulfillment handler simply passes whatever value it receives along to the next step (Promise).
+
+Note: The then(null,function(err){ .. }) pattern -- only handling rejections (if any) but letting fulfillments pass through -- has a shortcut in the API: catch(function(err){ .. }). We'll cover catch(..) more fully in the next section.
