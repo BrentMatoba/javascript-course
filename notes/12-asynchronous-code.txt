@@ -1800,3 +1800,8 @@ Certainly, the sequential expressiveness of the chain (this-then-this-then-this.
 
 erminology: Resolve, Fulfill, and Reject
 There's some slight confusion around the terms "resolve," "fulfill," and "reject" that we need to clear up, before you get too much deeper into learning about Promises. Let's first consider the Promise(..) constructor:
+
+var p = new Promise( function(X,Y){
+	// X() for fulfillment
+	// Y() for rejection
+} );
