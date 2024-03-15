@@ -1809,3 +1809,11 @@ var p = new Promise( function(X,Y){
 As you can see, two callbacks (here labeled X and Y) are provided. The first is usually used to mark the Promise as fulfilled, and the second always marks the Promise as rejected. But what's the "usually" about, and what does that imply about accurately naming those parameters?
 
 Ultimately, it's just your user code and the identifier names aren't interpreted by the engine to mean anything, so it doesn't technically matter; foo(..) and bar(..) are equally functional. But the words you use can affect not only how you are thinking about the code, but how other developers on your team will think about it. Thinking wrongly about carefully orchestrated async code is almost surely going to be worse than the spaghetti-callback alternatives.
+
+So it actually does kind of matter what you call them.
+
+The second parameter is easy to decide. Almost all literature uses reject(..) as its name, and because that's exactly (and only!) what it does, that's a very good choice for the name. I'd strongly recommend you always use reject(..).
+
+But there's a little more ambiguity around the first parameter, which in Promise literature is often labeled resolve(..). That word is obviously related to "resolution," which is what's used across the literature (including this book) to describe setting a final value/state to a Promise. We've already used "resolve the Promise" several times to mean either fulfilling or rejecting the Promise.
+
+But if this parameter seems to be used to specifically fulfill the Promise, why shouldn't we call it fulfill(..) instead of resolve(..) to be more accurate? To answer that question, let's also take a look at two of the Promise API methods:
