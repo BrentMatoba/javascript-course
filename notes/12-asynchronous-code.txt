@@ -1839,3 +1839,17 @@ As we discussed earlier in this chapter, Promise.resolve(..) will return a recei
 So Promise.resolve(..) is a good, accurate name for the API method, because it can actually result in either fulfillment or rejection.
 
 The first callback parameter of the Promise(..) constructor will unwrap either a thenable (identically to Promise.resolve(..)) or a genuine Promise:
+
+var rejectedPr = new Promise( function(resolve,reject){
+	// resolve this promise with a rejected promise
+	resolve( Promise.reject( "Oops" ) );
+} );
+
+rejectedPr.then(
+	function fulfilled(){
+		// never gets here
+	},
+	function rejected(err){
+		console.log( err );	// "Oops"
+	}
+);
