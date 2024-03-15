@@ -1825,3 +1825,11 @@ var rejectedPr = Promise.reject( "Oops" );
 Promise.resolve(..) creates a Promise that's resolved to the value given to it. In this example, 42 is a normal, non-Promise, non-thenable value, so the fulfilled promise fulfilledPr is created for the value 42. Promise.reject("Oops") creates the rejected promise rejectedPr for the reason "Oops".
 
 Let's now illustrate why the word "resolve" (such as in Promise.resolve(..)) is unambiguous and indeed more accurate, if used explicitly in a context that could result in either fulfillment or rejection:
+
+var rejectedTh = {
+	then: function(resolved,rejected) {
+		rejected( "Oops" );
+	}
+};
+
+var rejectedPr = Promise.resolve( rejectedTh );
