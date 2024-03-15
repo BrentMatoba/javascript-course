@@ -1859,3 +1859,16 @@ It should be clear now that resolve(..) is the appropriate name for the first ca
 Warning: The previously mentioned reject(..) does not do the unwrapping that resolve(..) does. If you pass a Promise/thenable value to reject(..), that untouched value will be set as the rejection reason. A subsequent rejection handler would receive the actual Promise/thenable you passed to reject(..), not its underlying immediate value.
 
 But now let's turn our attention to the callbacks provided to then(..). What should they be called (both in literature and in code)? I would suggest fulfilled(..) and rejected(..):
+
+function fulfilled(msg) {
+	console.log( msg );
+}
+
+function rejected(err) {
+	console.error( err );
+}
+
+p.then(
+	fulfilled,
+	rejected
+);
