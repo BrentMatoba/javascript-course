@@ -1817,3 +1817,7 @@ The second parameter is easy to decide. Almost all literature uses reject(..) as
 But there's a little more ambiguity around the first parameter, which in Promise literature is often labeled resolve(..). That word is obviously related to "resolution," which is what's used across the literature (including this book) to describe setting a final value/state to a Promise. We've already used "resolve the Promise" several times to mean either fulfilling or rejecting the Promise.
 
 But if this parameter seems to be used to specifically fulfill the Promise, why shouldn't we call it fulfill(..) instead of resolve(..) to be more accurate? To answer that question, let's also take a look at two of the Promise API methods:
+
+var fulfilledPr = Promise.resolve( 42 );
+
+var rejectedPr = Promise.reject( "Oops" );
