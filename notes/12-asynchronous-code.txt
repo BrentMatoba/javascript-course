@@ -1876,3 +1876,17 @@ p.then(
 We've already seen several examples of how Promise rejection -- either intentional through calling reject(..) or accidental through JS exceptions -- allows saner error handling in asynchronous programming. Let's circle back though and be explicit about some of the details that we glossed over.
 
 The most natural form of error handling for most developers is the synchronous try..catch construct. Unfortunately, it's synchronous-only, so it fails to help in async code patterns:
+
+function foo() {
+	setTimeout( function(){
+		baz.bar();
+	}, 100 );
+}
+
+try {
+	foo();
+	// later throws global error from `baz.bar()`
+}
+catch (err) {
+	// never gets here
+}
