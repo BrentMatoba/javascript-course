@@ -1890,3 +1890,6 @@ try {
 catch (err) {
 	// never gets here
 }
+try..catch would certainly be nice to have, but it doesn't work across async operations. That is, unless there's some additional environmental support, which we'll come back to with generators in Chapter 4.
+
+In callbacks, some standards have emerged for patterned error handling, most notably the "error-first callback" style:
