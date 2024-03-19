@@ -1969,3 +1969,13 @@ p.then(
 	}
 )
 .catch( handleErrors );
+
+Because we didn't pass a rejection handler to the then(..), the default handler was substituted, which simply propagates the error to the next promise in the chain. As such, both errors that come into p, and errors that come after p in its resolution (like the msg.toLowerCase() one) will filter down to the final handleErrors(..).
+
+Problem solved, right? Not so fast!
+
+What happens if handleErrors(..) itself also has an error in it? Who catches that? There's still yet another unattended promise: the one catch(..) returns, which we don't capture and don't register a rejection handler for.
+
+You can't just stick another catch(..) on the end of that chain, because it too could fail. The last step in any Promise chain, whatever it is, always has the possibility, even decreasingly so, of dangling with an uncaught error stuck inside an unobserved Promise.
+
+Sound like an impossible conundrum yet?
