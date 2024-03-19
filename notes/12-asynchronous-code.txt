@@ -1990,3 +1990,17 @@ In practice, this has worked well for many libraries, as most usage patterns don
 Another more common suggestion is that Promises should have a done(..) added to them, which essentially marks the Promise chain as "done." done(..) doesn't create and return a Promise, so the callbacks passed to done(..) are obviously not wired up to report problems to a chained Promise that doesn't exist.
 
 So what happens instead? It's treated as you might usually expect in uncaught error conditions: any exception inside a done(..) rejection handler would be thrown as a global uncaught error (in the developer console, basically):
+
+var p = Promise.resolve( 42 );
+
+p.then(
+	function fulfilled(msg){
+		// numbers don't have string functions,
+		// so will throw an error
+		console.log( msg.toLowerCase() );
+	}
+)
+.done( null, handleErrors );
+
+// if `handleErrors(..)` caused its own exception, it would
+// be thrown globally here
