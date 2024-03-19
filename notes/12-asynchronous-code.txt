@@ -1987,3 +1987,6 @@ Some Promise libraries have added methods for registering something like a "glob
 
 In practice, this has worked well for many libraries, as most usage patterns don't typically call for significant delay between Promise rejection and observation of that rejection. But this pattern is troublesome because 3 seconds is so arbitrary (even if empirical), and also because there are indeed some cases where you want a Promise to hold on to its rejectedness for some indefinite period of time, and you don't really want to have your "uncaught" handler called for all those false positives (not-yet-handled "uncaught errors").
 
+Another more common suggestion is that Promises should have a done(..) added to them, which essentially marks the Promise chain as "done." done(..) doesn't create and return a Promise, so the callbacks passed to done(..) are obviously not wired up to report problems to a chained Promise that doesn't exist.
+
+So what happens instead? It's treated as you might usually expect in uncaught error conditions: any exception inside a done(..) rejection handler would be thrown as a global uncaught error (in the developer console, basically):
