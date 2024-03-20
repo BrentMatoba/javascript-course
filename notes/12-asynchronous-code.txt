@@ -2038,3 +2038,10 @@ foo( 42 )
 	}
 );
 ...
+
+When we create p, we know we're going to wait a while to use/observe its rejection, so we call defer() -- thus no global reporting. defer() simply returns the same promise, for chaining purposes.
+
+The promise returned from foo(..) gets an error handler attached right away, so it's implicitly opted out and no global reporting for it occurs either.
+
+But the promise returned from the then(..) call has no defer() or error handler attached, so if it rejects (from inside either resolution handler), then it will be reported to the developer console as an uncaught error.
+
