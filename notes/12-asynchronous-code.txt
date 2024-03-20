@@ -2025,3 +2025,16 @@ For the cases where you want a rejected Promise to hold onto its rejected state 
 
 If a Promise is rejected, it defaults to noisily reporting that fact to the developer console (instead of defaulting to silence). You can opt out of that reporting either implicitly (by registering an error handler before rejection), or explicitly (with defer()). In either case, you control the false positives.
 
+var p = Promise.reject( "Oops" ).defer();
+
+// `foo(..)` is Promise-aware
+foo( 42 )
+.then(
+	function fulfilled(){
+		return p;
+	},
+	function rejected(err){
+		// handle `foo(..)` error
+	}
+);
+...
