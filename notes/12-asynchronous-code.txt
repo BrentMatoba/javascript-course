@@ -2050,3 +2050,7 @@ This design is a pit of success. By default, all errors are either handled or re
 The only real danger in this approach is if you defer() a Promise but then fail to actually ever observe/handle its rejection.
 
 But you had to intentionally call defer() to opt into that pit of despair -- the default was the pit of success -- so there's not much else we could do to save you from your own mistakes.
+
+I think there's still hope for Promise error handling (post-ES6). I hope the powers that be will rethink the situation and consider this alternative. In the meantime, you can implement this yourself (a challenging exercise for the reader!), or use a smarter Promise library that does so for you!
+
+Note: This exact model for error handling/reporting is implemented in my asynquence Promise abstraction library, which will be discussed in Appendix A of this book.
