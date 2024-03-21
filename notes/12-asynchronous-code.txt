@@ -2054,3 +2054,8 @@ But you had to intentionally call defer() to opt into that pit of despair -- the
 I think there's still hope for Promise error handling (post-ES6). I hope the powers that be will rethink the situation and consider this alternative. In the meantime, you can implement this yourself (a challenging exercise for the reader!), or use a smarter Promise library that does so for you!
 
 Note: This exact model for error handling/reporting is implemented in my asynquence Promise abstraction library, which will be discussed in Appendix A of this book.
+
+Promise Patterns
+We've already implicitly seen the sequence pattern with Promise chains (this-then-this-then-that flow control) but there are lots of variations on asynchronous patterns that we can build as abstractions on top of Promises. These patterns serve to simplify the expression of async flow control -- which helps make our code more reason-able and more maintainable -- even in the most complex parts of our programs.
+
+Two such patterns are codified directly into the native ES6 Promise implementation, so we get them for free, to use as building blocks for other patterns.
