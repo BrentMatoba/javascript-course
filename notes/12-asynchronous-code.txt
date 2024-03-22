@@ -2109,3 +2109,20 @@ Similar to Promise.all([ .. ]), Promise.race([ .. ]) will fulfill if and when an
 Warning: A "race" requires at least one "runner," so if you pass an empty array, instead of immediately resolving, the main race([..]) Promise will never resolve. This is a footgun! ES6 should have specified that it either fulfills, rejects, or just throws some sort of synchronous error. Unfortunately, because of precedence in Promise libraries predating ES6 Promise, they had to leave this gotcha in there, so be careful never to send in an empty array.
 
 Let's revisit our previous concurrent Ajax example, but in the context of a race between p1 and p2:
+
+// `request(..)` is a Promise-aware Ajax utility,
+// like we defined earlier in the chapter
+
+var p1 = request( "http://some.url.1/" );
+var p2 = request( "http://some.url.2/" );
+
+Promise.race( [p1,p2] )
+.then( function(msg){
+	// either `p1` or `p2` will win the race
+	return request(
+		"http://some.url.3/?v=" + msg
+	);
+} )
+.then( function(msg){
+	console.log( msg );
+} );
