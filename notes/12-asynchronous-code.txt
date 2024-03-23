@@ -2154,3 +2154,10 @@ The key question to ask is, "What happens to the promises that get discarded/ign
 But what if foo() in the previous example is reserving some sort of resource for usage, but the timeout fires first and causes that promise to be ignored? Is there anything in this pattern that proactively frees the reserved resource after the timeout, or otherwise cancels any side effects it may have had? What if all you wanted was to log the fact that foo() timed out?
 
 Some developers have proposed that Promises need a finally(..) callback registration, which is always called when a Promise resolves, and allows you to specify any cleanup that may be necessary. This doesn't exist in the specification at the moment, but it may come in ES7+. We'll have to wait and see.
+
+var p = Promise.resolve( 42 );
+
+p.then( something )
+.finally( cleanup )
+.then( another )
+.finally( cleanup );
