@@ -2225,3 +2225,21 @@ Sometimes you want to iterate over a list of Promises and perform some task agai
 But if the tasks are fundamentally asynchronous, or can/should otherwise be performed concurrently, you can use async versions of these utilities as provided by many libraries.
 
 For example, let's consider an asynchronous map(..) utility that takes an array of values (could be Promises or anything else), plus a function (task) to perform against each. map(..) itself returns a promise whose fulfillment value is an array that holds (in the same mapping order) the async fulfillment value from each task:
+
+if (!Promise.map) {
+	Promise.map = function(vals,cb) {
+		// new promise that waits for all mapped promises
+		return Promise.all(
+			// note: regular array `map(..)`, turns
+			// the array of values into an array of
+			// promises
+			vals.map( function(val){
+				// replace `val` with a new promise that
+				// resolves after `val` is async mapped
+				return new Promise( function(resolve){
+					cb( val, resolve );
+				} );
+			} )
+		);
+	};
+}
