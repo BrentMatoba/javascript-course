@@ -2266,3 +2266,8 @@ Promise.map( [p1,p2,p3], function(pr,done){
 .then( function(vals){
 	console.log( vals );	// [42,84,"Oops"]
 } );
+
+Let's review the ES6 Promise API that we've already seen unfold in bits and pieces throughout this chapter.
+
+Note: The following API is native only as of ES6, but there are specification-compliant polyfills (not just extended Promise libraries) which can define Promise and all its associated behavior so that you can use native Promises even in pre-ES6 browsers. One such polyfill is "Native Promise Only" (http://github.com/getify/native-promise-only), which I wrote!
+
