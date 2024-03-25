@@ -2307,3 +2307,10 @@ var p2 = Promise.resolve( rejectedTh );
 
 // `p1` will be a fulfilled promise
 // `p2` will be a rejected promise
+
+then(..) and catch(..)
+Each Promise instance (not the Promise API namespace) has then(..) and catch(..) methods, which allow registering of fulfillment and rejection handlers for the Promise. Once the Promise is resolved, one or the other of these handlers will be called, but not both, and it will always be called asynchronously (see "Jobs" in Chapter 1).
+
+then(..) takes one or two parameters, the first for the fulfillment callback, and the second for the rejection callback. If either is omitted or is otherwise passed as a non-function value, a default callback is substituted respectively. The default fulfillment callback simply passes the message along, while the default rejection callback simply rethrows (propagates) the error reason it receives.
+
+catch(..) takes only the rejection callback as a parameter, and automatically substitutes the default fulfillment callback, as just discussed. In other words, it's equivalent to then(null,..):
