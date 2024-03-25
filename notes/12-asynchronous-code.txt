@@ -2271,3 +2271,4 @@ Let's review the ES6 Promise API that we've already seen unfold in bits and piec
 
 Note: The following API is native only as of ES6, but there are specification-compliant polyfills (not just extended Promise libraries) which can define Promise and all its associated behavior so that you can use native Promises even in pre-ES6 browsers. One such polyfill is "Native Promise Only" (http://github.com/getify/native-promise-only), which I wrote!
 
+The revealing constructor Promise(..) must be used with new, and must be provided a function callback that is synchronously/immediately called. This function is passed two function callbacks that act as resolution capabilities for the promise. We commonly label these resolve(..) and reject(..):
