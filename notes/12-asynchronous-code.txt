@@ -2342,3 +2342,9 @@ Promise.all( [p1,p2] )
 .then( function(msgs){
 	console.log( msgs );	// [42,"Hello World"]
 } );
+
+Warning: Be careful! If an empty array is passed to Promise.all([ .. ]), it will fulfill immediately, but Promise.race([ .. ]) will hang forever and never resolve.
+
+The ES6 Promise API is pretty simple and straightforward. It's at least good enough to serve the most basic of async cases, and is a good place to start when rearranging your code from callback hell to something better.
+
+But there's a whole lot of async sophistication that apps often demand which Promises themselves will be limited in addressing. In the next section, we'll dive into those limitations as motivations for the benefit of Promise libraries.
