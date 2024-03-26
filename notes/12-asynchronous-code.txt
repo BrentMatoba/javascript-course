@@ -2365,3 +2365,9 @@ If you construct a Promise chain that has no error handling in it, any error any
 var p = foo( 42 )
 .then( STEP2 )
 .then( STEP3 );
+
+But if any step of the chain in fact does its own error handling (perhaps hidden/abstracted away from what you can see), your handleErrors(..) won't be notified. This may be what you want -- it was, after all, a "handled rejection" -- but it also may not be what you want. The complete lack of ability to be notified (of "already handled" rejection errors) is a limitation that restricts capabilities in some use cases.
+
+It's basically the same limitation that exists with a try..catch that can catch an exception and simply swallow it. So this isn't a limitation unique to Promises, but it is something we might wish to have a workaround for.
+
+Unfortunately, many times there is no reference kept for the intermediate steps in a Promise-chain sequence, so without such references, you cannot attach error handlers to reliably observe the errors.
