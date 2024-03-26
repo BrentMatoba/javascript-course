@@ -2371,3 +2371,8 @@ But if any step of the chain in fact does its own error handling (perhaps hidden
 It's basically the same limitation that exists with a try..catch that can catch an exception and simply swallow it. So this isn't a limitation unique to Promises, but it is something we might wish to have a workaround for.
 
 Unfortunately, many times there is no reference kept for the intermediate steps in a Promise-chain sequence, so without such references, you cannot attach error handlers to reliably observe the errors.
+
+Single Value
+Promises by definition only have a single fulfillment value or a single rejection reason. In simple examples, this isn't that big of a deal, but in more sophisticated scenarios, you may find this limiting.
+
+The typical advice is to construct a values wrapper (such as an object or array) to contain these multiple messages. This solution works, but it can be quite awkward and tedious to wrap and unwrap your messages with every single step of your Promise chain.
