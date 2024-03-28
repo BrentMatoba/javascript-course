@@ -2435,3 +2435,16 @@ But this approach more closely embraces the Promise design theory. It's now easi
 
 Unwrap/Spread Arguments
 The var x = .. and var y = .. assignments are still awkward overhead. We can employ some functional trickery (hat tip to Reginald Braithwaite, @raganwald on Twitter) in a helper utility:
+
+function spread(fn) {
+	return Function.apply.bind( fn, null );
+}
+
+Promise.all(
+	foo( 10, 20 )
+)
+.then(
+	spread( function(x,y){
+		console.log( x, y );	// 200 599
+	} )
+)
