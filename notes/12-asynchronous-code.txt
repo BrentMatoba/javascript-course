@@ -2428,3 +2428,10 @@ Promise.all(
 
 	console.log( x, y );
 } );
+
+Is an array of promises really better than an array of values passed through a single promise? Syntactically, it's not much of an improvement.
+
+But this approach more closely embraces the Promise design theory. It's now easier in the future to refactor to split the calculation of x and y into separate functions. It's cleaner and more flexible to let the calling code decide how to orchestrate the two promises -- using Promise.all([ .. ]) here, but certainly not the only option -- rather than to abstract such details away inside of foo(..).
+
+Unwrap/Spread Arguments
+The var x = .. and var y = .. assignments are still awkward overhead. We can employ some functional trickery (hat tip to Reginald Braithwaite, @raganwald on Twitter) in a helper utility:
