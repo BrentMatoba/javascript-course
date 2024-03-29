@@ -2487,3 +2487,12 @@ Promise.all(
 .then( function([x,y]){
 	console.log( x, y );	// 200 599
 } );
+
+ingle Resolution
+One of the most intrinsic behaviors of Promises is that a Promise can only be resolved once (fulfillment or rejection). For many async use cases, you're only retrieving a value once, so this works fine.
+
+But there's also a lot of async cases that fit into a different model -- one that's more akin to events and/or streams of data. It's not clear on the surface how well Promises can fit into such use cases, if at all. Without a significant abstraction on top of Promises, they will completely fall short for handling multiple value resolution.
+
+Imagine a scenario where you might want to fire off a sequence of async steps in response to a stimulus (like an event) that can in fact happen multiple times, like a button click.
+
+This probably won't work the way you want:
