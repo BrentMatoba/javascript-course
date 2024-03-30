@@ -2520,3 +2520,10 @@ click( "#mybtn", function(evt){
 		console.log( text );
 	} );
 } );
+
+
+This approach will work in that a whole new Promise sequence will be fired off for each "click" event on the button.
+
+But beyond just the ugliness of having to define the entire Promise chain inside the event handler, this design in some respects violates the idea of separation of concerns/capabilities (SoC). You might very well want to define your event handler in a different place in your code from where you define the response to the event (the Promise chain). That's pretty awkward to do in this pattern, without helper mechanisms.
+
+Note: Another way of articulating this limitation is that it'd be nice if we could construct some sort of "observable" that we can subscribe a Promise chain to. There are libraries that have created these abstractions (such as RxJS -- http://rxjs.codeplex.com/), but the abstractions can seem so heavy that you can't even see the nature of Promises anymore. Such heavy abstraction brings important questions to mind such as whether (sans Promises) these mechanisms are as trustable as Promises themselves have been designed to be. We'll revisit the "Observable" pattern in Appendix B.
