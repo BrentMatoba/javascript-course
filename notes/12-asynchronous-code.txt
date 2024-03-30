@@ -2496,3 +2496,18 @@ But there's also a lot of async cases that fit into a different model -- one tha
 Imagine a scenario where you might want to fire off a sequence of async steps in response to a stimulus (like an event) that can in fact happen multiple times, like a button click.
 
 This probably won't work the way you want:
+
+// `click(..)` binds the `"click"` event to a DOM element
+// `request(..)` is the previously defined Promise-aware Ajax
+
+var p = new Promise( function(resolve,reject){
+	click( "#mybtn", resolve );
+} );
+
+p.then( function(evt){
+	var btnID = evt.currentTarget.id;
+	return request( "http://some.url.1/?id=" + btnID );
+} )
+.then( function(text){
+	console.log( text );
+} );
