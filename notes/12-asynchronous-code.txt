@@ -2558,3 +2558,26 @@ Is it immediately obvious what the first steps are to convert this callback-base
 As we've covered before, we definitely need an Ajax utility that is Promise-aware instead of callback-based, which we could call request(..). You can make your own, as we have already. But the overhead of having to manually define Promise-aware wrappers for every callback-based utility makes it less likely you'll choose to refactor to Promise-aware coding at all.
 
 Promises offer no direct answer to that limitation. Most Promise libraries do offer a helper, however. But even without a library, imagine a helper like this:
+
+// polyfill-safe guard check
+if (!Promise.wrap) {
+	Promise.wrap = function(fn) {
+		return function() {
+			var args = [].slice.call( arguments );
+
+			return new Promise( function(resolve,reject){
+				fn.apply(
+					null,
+					args.concat( function(err,v){
+						if (err) {
+							reject( err );
+						}
+						else {
+							resolve( v );
+						}
+					} )
+				);
+			} );
+		};
+	};
+}
