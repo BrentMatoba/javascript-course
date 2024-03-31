@@ -2590,3 +2590,15 @@ Rather than waste too much time talking about how this Promise.wrap(..) helper w
 OK, that's more than just a tiny trivial utility. However, although it may look a bit intimidating, it's not as bad as you'd think. It takes a function that expects an error-first style callback as its last parameter, and returns a new one that automatically creates a Promise to return, and substitutes the callback for you, wired up to the Promise fulfillment/rejection.
 
 Rather than waste too much time talking about how this Promise.wrap(..) helper works, let's just look at how we use it:
+
+Promise.wrap(..) does not produce a Promise. It produces a function that will produce Promises. In a sense, a Promise-producing function could be seen as a "Promise factory." I propose "promisory" as the name for such a thing ("Promise" + "factory").
+
+The act of wrapping a callback-expecting function to be a Promise-aware function is sometimes referred to as "lifting" or "promisifying". But there doesn't seem to be a standard term for what to call the resultant function other than a "lifted function", so I like "promisory" better as I think it's more descriptive.
+
+Note: Promisory isn't a made-up term. It's a real word, and its definition means to contain or convey a promise. That's exactly what these functions are doing, so it turns out to be a pretty perfect terminology match!
+
+So, Promise.wrap(ajax) produces an ajax(..) promisory we call request(..), and that promisory produces Promises for Ajax responses.
+
+If all functions were already promisories, we wouldn't need to make them ourselves, so the extra step is a tad bit of a shame. But at least the wrapping pattern is (usually) repeatable so we can put it into a Promise.wrap(..) helper as shown to aid our promise coding.
+
+So back to our earlier example, we need a promisory for both ajax(..) and foo(..):
