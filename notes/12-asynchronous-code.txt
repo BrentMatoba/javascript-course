@@ -2581,3 +2581,12 @@ if (!Promise.wrap) {
 		};
 	};
 }
+
+
+OK, that's more than just a tiny trivial utility. However, although it may look a bit intimidating, it's not as bad as you'd think. It takes a function that expects an error-first style callback as its last parameter, and returns a new one that automatically creates a Promise to return, and substitutes the callback for you, wired up to the Promise fulfillment/rejection.
+
+Rather than waste too much time talking about how this Promise.wrap(..) helper works, let's just look at how we use it:
+
+OK, that's more than just a tiny trivial utility. However, although it may look a bit intimidating, it's not as bad as you'd think. It takes a function that expects an error-first style callback as its last parameter, and returns a new one that automatically creates a Promise to return, and substitutes the callback for you, wired up to the Promise fulfillment/rejection.
+
+Rather than waste too much time talking about how this Promise.wrap(..) helper works, let's just look at how we use it:
