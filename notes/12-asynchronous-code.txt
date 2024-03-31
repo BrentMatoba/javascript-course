@@ -2693,3 +2693,14 @@ A single Promise is not really a flow-control mechanism (at least not in a very 
 By contrast, a chain of Promises taken collectively together -- what I like to call a "sequence" -- is a flow control expression, and thus it's appropriate for cancelation to be defined at that level of abstraction.
 
 No individual Promise should be cancelable, but it's sensible for a sequence to be cancelable, because you don't pass around a sequence as a single immutable value like you do with a Promise.
+
+Promise Performance
+This particular limitation is both simple and complex.
+
+Comparing how many pieces are moving with a basic callback-based async task chain versus a Promise chain, it's clear Promises have a fair bit more going on, which means they are naturally at least a tiny bit slower. Think back to just the simple list of trust guarantees that Promises offer, as compared to the ad hoc solution code you'd have to layer on top of callbacks to achieve the same protections.
+
+More work to do, more guards to protect, means that Promises are slower as compared to naked, untrustable callbacks. That much is obvious, and probably simple to wrap your brain around.
+
+But how much slower? Well... that's actually proving to be an incredibly difficult question to answer absolutely, across the board.
+
+Frankly, it's kind of an apples-to-oranges comparison, so it's probably the wrong question to ask. You should actually compare whether an ad-hoc callback system with all the same protections manually layered in is faster than a Promise implementation.
