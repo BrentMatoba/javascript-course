@@ -2552,3 +2552,9 @@ foo( 11, 31, function(err,text) {
 		console.log( text );
 	}
 } );
+
+Is it immediately obvious what the first steps are to convert this callback-based code to Promise-aware code? Depends on your experience. The more practice you have with it, the more natural it will feel. But certainly, Promises don't just advertise on the label exactly how to do it -- there's no one-size-fits-all answer -- so the responsibility is up to you.
+
+As we've covered before, we definitely need an Ajax utility that is Promise-aware instead of callback-based, which we could call request(..). You can make your own, as we have already. But the overhead of having to manually define Promise-aware wrappers for every callback-based utility makes it less likely you'll choose to refactor to Promise-aware coding at all.
+
+Promises offer no direct answer to that limitation. Most Promise libraries do offer a helper, however. But even without a library, imagine a helper like this:
