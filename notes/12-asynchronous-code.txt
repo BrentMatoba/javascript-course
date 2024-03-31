@@ -2681,3 +2681,15 @@ p.then( function(){
 		// only happens if no timeout! :)
 	}
 } );
+
+This is ugly. It works, but it's far from ideal. Generally, you should try to avoid such scenarios.
+
+But if you can't, the ugliness of this solution should be a clue that cancelation is a functionality that belongs at a higher level of abstraction on top of Promises. I'd recommend you look to Promise abstraction libraries for assistance rather than hacking it yourself.
+
+Note: My asynquence Promise abstraction library provides just such an abstraction and an abort() capability for the sequence, all of which will be discussed in Appendix A.
+
+A single Promise is not really a flow-control mechanism (at least not in a very meaningful sense), which is exactly what cancelation refers to; that's why Promise cancelation would feel awkward.
+
+By contrast, a chain of Promises taken collectively together -- what I like to call a "sequence" -- is a flow control expression, and thus it's appropriate for cancelation to be defined at that level of abstraction.
+
+No individual Promise should be cancelable, but it's sensible for a sequence to be cancelable, because you don't pass around a sequence as a single immutable value like you do with a Promise.
