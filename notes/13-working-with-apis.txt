@@ -52,3 +52,12 @@ if (window.XMLHttpRequest) { // Mozilla, Safari, ...
 // Open, send.
 request.open('GET', 'https://url.com/some/url', true);
 request.send(null);
+
+// URL (required), options (optional)
+fetch('https://url.com/some/url')
+  .then(function(response) {
+    // Successful response :)
+  })
+  .catch(function(err) {
+    // Error :(
+  });
