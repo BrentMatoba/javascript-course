@@ -2704,3 +2704,9 @@ More work to do, more guards to protect, means that Promises are slower as compa
 But how much slower? Well... that's actually proving to be an incredibly difficult question to answer absolutely, across the board.
 
 Frankly, it's kind of an apples-to-oranges comparison, so it's probably the wrong question to ask. You should actually compare whether an ad-hoc callback system with all the same protections manually layered in is faster than a Promise implementation.
+
+If Promises have a legitimate performance limitation, it's more that they don't really offer a line-item choice as to which trustability protections you want/need or not -- you get them all, always.
+
+Nevertheless, if we grant that a Promise is generally a little bit slower than its non-Promise, non-trustable callback equivalent -- assuming there are places where you feel you can justify the lack of trustability -- does that mean that Promises should be avoided across the board, as if your entire application is driven by nothing but must-be-utterly-the-fastest code possible?
+
+Sanity check: if your code is legitimately like that, is JavaScript even the right language for such tasks? JavaScript can be optimized to run applications very performantly (see Chapter 5 and Chapter 6). But is obsessing over tiny performance tradeoffs with Promises, in light of all the benefits they offer, really appropriate?
