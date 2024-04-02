@@ -21,3 +21,34 @@ On one hand, issuing API keys allows an API service to better track abuse of the
 As such, you’ll find that most API services, if not all, provide paid tiers that come with the ability to make more frequent requests, or provide access to more information unavailable in lower tiers. For example, WeatherAPI’s free plan only allows your app to make a monthly total of 1 million requests and limits the information provided, while the “Business” tier allows up to 10,000,000 requests per month and gives you all of the available information! The free tier also comes with basic hourly and daily forecasting data, but it does not include data for a 30-day forecast (details here if you’re interested). So, if your app becomes successful and needs additional features, you’ll probably need to pay for a better account.
 
 Because your API key is your key to these services and data, securing them is an important habit, especially if you are using a paid tier. There are plenty of bots that crawl GitHub repositories solely for hardcoded/unsecured API keys, allowing bad agents to then access and utilize the services and data you’ve paid for. In fact, the more eagle-eyed readers may have noticed a problem with the demonstration above: The API key is right there in the URL request. It would not take much for an internet traffic sniffer to pick up on the API key, least of all someone looking over your shoulder!
+
+At this point in the curriculum, though, this point is largely moot. After all, we’re leveraging free access to APIs, and the majority of our apps are only going to be used by us and the people that view our portfolios. Just make a note of the severe limitations of using API keys as demonstrated above for now. The basics of securing and obfuscating API keys from GitHub and from your requests will be covered later in the curriculum.
+
+Back to WeatherAPI. Go ahead and create an account to obtain an API key from their free tier. Once the key has been activated, try making a new request with the city of your choice AND the API key passed in as query string parameters, like the example above. You’ll hopefully see a proper response, something like:
+
+{"location":{"name":"London","region":"City of London, Greater London","country":"United Kingdom","lat":51.52,"lon":-0.11,"tz_id":"Europe/London","localtime_epoch":1676482062,"localtime":"2023-02-15 17:27"},"current":{"temp_c":13.0,"temp_f":55.4,"is_day":0,"condition":{"text":"Clear","icon":"//cdn.weatherapi.com/weather/64x64/night/113.png","code":1000},"wind_mph":12.5,"wind_kph":20.2,"wind_degree":210,"wind_dir":"SSW","pressure_mb":1022.0,"pressure_in":30.18,"precip_mm":0.0,"precip_in":0.0,"humidity":58,"cloud":0,"feelslike_c":11.7,"feelslike_f":53.1,"vis_km":10.0,"vis_miles":6.0,"uv":4.0,"gust_mph":12.1,"gust_kph":19.4}}
+Congratulations on making your first API request!
+
+Fetching data
+So how do we actually get the data from an API into our code?
+
+A couple of years ago the main way to access API data in your code was using an XMLHttpRequest. This function still works in all browsers, but unfortunately, it is not particularly nice to use. The syntax looks something like this:
+
+// Just getting XHR is a mess!
+if (window.XMLHttpRequest) { // Mozilla, Safari, ...
+  request = new XMLHttpRequest();
+} else if (window.ActiveXObject) { // IE
+  try {
+    request = new ActiveXObject('Msxml2.XMLHTTP');
+  }
+  catch (e) {
+    try {
+      request = new ActiveXObject('Microsoft.XMLHTTP');
+    }
+    catch (e) {}
+  }
+}
+
+// Open, send.
+request.open('GET', 'https://url.com/some/url', true);
+request.send(null);
