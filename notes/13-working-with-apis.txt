@@ -12,3 +12,8 @@ You’ll probably get an error like this:
 
 {{"error":{"code":1002,"message":"API key is invalid or not provided."}}}
 This brings us to another point about APIs. In most cases, you will have to create an account and request an “API key” from the API service before attempting to fetch data from their endpoints (specific URLs that you use to access a particular function or data within the API). Once obtained, an API key will usually have to be included with every data request, such as another URL query string parameter:
+
+https://api.weatherapi.com/v1/current.json?key=11111111111111111&q=london
+As you can imagine, an API key is random and unique to you. As such, services like WeatherAPI can correlate your API key to your requests of their data, including how much and how often you are requesting it.
+
+On one hand, issuing API keys allows an API service to better track abuse of their systems and data. On the other hand, it can also be a way for those services to mitigate and recuperate operating costs. WeatherAPI, for example, provides not only a free tier but a variety of paid tiers that can cost up to 65 USD/month! After all, running servers costs money, and APIs are no exception. While a single request to an API might cost a fraction of a penny, imagine using that API to create an amazing weather app that gets used all over the world… you could easily have thousands of people accessing that data every minute! The cost to handle that traffic could quickly balloon up to significant sums for the API service.
