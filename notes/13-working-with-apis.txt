@@ -114,3 +114,25 @@ You should now be able to open the HTML file in your browser, and while you wonâ
       console.log(response);
     });
 </script>
+
+<script>
+  const img = document.querySelector('img');
+  fetch('https://api.giphy.com/v1/gifs/translate?api_key=YOUR_KEY_HERE&s=cats', {mode: 'cors'})
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(response) {
+      console.log(response.data.images.original.url);
+    });
+</script>
+
+<script>
+  const img = document.querySelector('img');
+  fetch('https://api.giphy.com/v1/gifs/translate?api_key=YOUR_KEY_HERE&s=cats', {mode: 'cors'})
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(response) {
+      img.src = response.data.images.original.url;
+    });
+</script>
