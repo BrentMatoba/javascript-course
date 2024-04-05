@@ -104,3 +104,13 @@ Adding fetch with our URL from above is also relatively easy:
 </script>
 You should now be able to open the HTML file in your browser, and while you won’t see anything on the page, you should have something logged in the console. The trickiest part of this whole process is deciphering how to get to the data you desire from the server’s response. In this case, inspecting the browser’s console will reveal that what’s being returned is another Promise… to get the data we need another .then() function.
 
+<script>
+  const img = document.querySelector('img');
+  fetch('https://api.giphy.com/v1/gifs/translate?api_key=YOUR_KEY_HERE&s=cats', {mode: 'cors'})
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(response) {
+      console.log(response);
+    });
+</script>
