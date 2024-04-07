@@ -225,3 +225,20 @@ Copy to Clipboard
 fetch("https://example.com", {
   credentials: "include",
 });
+
+f you only want to send credentials if the request URL is on the same origin as the calling script, add credentials: 'same-origin'.
+
+JS
+Copy to Clipboard
+// The calling script is on the origin 'https://example.com'
+
+fetch("https://example.com", {
+  credentials: "same-origin",
+});
+To instead ensure browsers don't include credentials in the request, use credentials: 'omit'.
+
+JS
+Copy to Clipboard
+fetch("https://example.com", {
+  credentials: "omit",
+});
