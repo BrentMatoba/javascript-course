@@ -267,3 +267,29 @@ async function postJSON(data) {
 
 const data = { username: "example" };
 postJSON(data);
+
+Uploading a file
+Files can be uploaded using an HTML <input type="file" /> input element, FormData() and fetch().
+
+JS
+Copy to Clipboard
+async function upload(formData) {
+  try {
+    const response = await fetch("https://example.com/profile/avatar", {
+      method: "PUT",
+      body: formData,
+    });
+    const result = await response.json();
+    console.log("Success:", result);
+  } catch (error) {
+    console.error("Error:", error);
+  }
+}
+
+const formData = new FormData();
+const fileField = document.querySelector('input[type="file"]');
+
+formData.append("username", "abc123");
+formData.append("avatar", fileField.files[0]);
+
+upload(formData);
