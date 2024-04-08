@@ -368,3 +368,10 @@ const myRequest = new Request("flowers.jpg", {
 });
 
 fetchImage(myRequest);
+
+Request() accepts exactly the same parameters as the fetch() method. You can even pass in an existing request object to create a copy of it:
+
+JS
+Copy to Clipboard
+const anotherRequest = new Request(myRequest, myInit);
+This is pretty useful, as request and response bodies can only be used once. Making a copy like this allows you to effectively use the request/response again while varying the init options if desired. The copy must be made before the body is read.
