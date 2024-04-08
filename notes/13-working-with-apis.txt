@@ -341,3 +341,6 @@ async function fetchImage() {
   } catch (error) {
     console.error("There has been a problem with your fetch operation:", error);
   }
+
+  Supplying your own request object
+Instead of passing a path to the resource you want to request into the fetch() call, you can create a request object using the Request() constructor, and pass that in as a fetch() method argument:
