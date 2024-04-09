@@ -411,3 +411,7 @@ console.log(myHeaders.get("X-Custom-Header")); // ['ProcessThisImmediately', 'An
 
 myHeaders.delete("X-Custom-Header");
 console.log(myHeaders.get("X-Custom-Header")); // null
+
+Some of these operations are only useful in ServiceWorkers, but they provide a much nicer API for manipulating headers.
+
+All of the Headers methods throw a TypeError if a header name is used that is not a valid HTTP Header name. The mutation operations will throw a TypeError if there is an immutable guard (see below). Otherwise, they fail silently. For example:
