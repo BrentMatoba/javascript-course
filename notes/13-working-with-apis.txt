@@ -435,3 +435,6 @@ async function fetchJSON(request) {
   } catch (error) {
     console.error("Error:", error);
   }
+
+  Guard
+Since headers can be sent in requests and received in responses, and have various limitations about what information can and should be mutable, headers' objects have a guard property. This is not exposed to the Web, but it affects which mutation operations are allowed on the headers object.
