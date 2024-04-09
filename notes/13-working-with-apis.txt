@@ -388,3 +388,13 @@ const myHeaders = new Headers();
 myHeaders.append("Content-Type", "text/plain");
 myHeaders.append("Content-Length", content.length.toString());
 myHeaders.append("X-Custom-Header", "ProcessThisImmediately");
+
+The same can be achieved by passing an array of arrays or an object literal to the constructor:
+
+JS
+Copy to Clipboard
+const myHeaders = new Headers({
+  "Content-Type": "text/plain",
+  "Content-Length": content.length.toString(),
+  "X-Custom-Header": "ProcessThisImmediately",
+});
