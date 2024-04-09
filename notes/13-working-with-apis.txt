@@ -377,3 +377,14 @@ const anotherRequest = new Request(myRequest, myInit);
 This is pretty useful, as request and response bodies can only be used once. Making a copy like this allows you to effectively use the request/response again while varying the init options if desired. The copy must be made before the body is read.
 
 Note: There is also a clone() method that creates a copy. Both methods of creating a copy will fail if the body of the original request or response has already been read, but reading the body of a cloned response or request will not cause it to be marked as read in the original.
+
+Headers
+The Headers interface allows you to create your own headers object via the Headers() constructor. A headers object is a simple multi-map of names to values:
+
+JS
+Copy to Clipboard
+const content = "Hello World";
+const myHeaders = new Headers();
+myHeaders.append("Content-Type", "text/plain");
+myHeaders.append("Content-Length", content.length.toString());
+myHeaders.append("X-Custom-Header", "ProcessThisImmediately");
