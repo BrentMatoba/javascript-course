@@ -438,3 +438,11 @@ async function fetchJSON(request) {
 
   Guard
 Since headers can be sent in requests and received in responses, and have various limitations about what information can and should be mutable, headers' objects have a guard property. This is not exposed to the Web, but it affects which mutation operations are allowed on the headers object.
+
+Possible guard values are:
+
+none: default.
+request: guard for a headers object obtained from a request (Request.headers).
+request-no-cors: guard for a headers object obtained from a request created with Request.mode no-cors.
+response: guard for a headers object obtained from a response (Response.headers).
+immutable: guard that renders a headers object read-only; mostly used for ServiceWorkers.
