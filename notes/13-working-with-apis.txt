@@ -446,3 +446,12 @@ request: guard for a headers object obtained from a request (Request.headers).
 request-no-cors: guard for a headers object obtained from a request created with Request.mode no-cors.
 response: guard for a headers object obtained from a response (Response.headers).
 immutable: guard that renders a headers object read-only; mostly used for ServiceWorkers.
+
+Response objects
+As you have seen above, Response instances are returned when fetch() promises are resolved.
+
+The most common response properties you'll use are:
+
+Response.status — An integer (default value 200) containing the response status code.
+Response.statusText — A string (default value ""), which corresponds to the HTTP status code message. Note that HTTP/2 does not support status messages.
+Response.ok — seen in use above, this is a shorthand for checking that status is in the range 200-299 inclusive. This returns a boolean value.
