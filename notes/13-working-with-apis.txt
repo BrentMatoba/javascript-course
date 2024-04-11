@@ -487,3 +487,9 @@ Request.blob() / Response.blob()
 Request.formData() / Response.formData()
 Request.json() / Response.json()
 Request.text() / Response.text()
+
+const form = new FormData(document.getElementById("login-form"));
+fetch("/login", {
+  method: "POST",
+  body: form,
+});
