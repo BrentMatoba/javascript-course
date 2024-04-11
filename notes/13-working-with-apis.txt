@@ -455,3 +455,14 @@ The most common response properties you'll use are:
 Response.status — An integer (default value 200) containing the response status code.
 Response.statusText — A string (default value ""), which corresponds to the HTTP status code message. Note that HTTP/2 does not support status messages.
 Response.ok — seen in use above, this is a shorthand for checking that status is in the range 200-299 inclusive. This returns a boolean value.
+
+const myBody = new Blob();
+
+addEventListener("fetch", (event) => {
+  // ServiceWorker intercepting a fetch
+  event.respondWith(
+    new Response(myBody, {
+      headers: { "Content-Type": "text/plain" },
+    }),
+  );
+});
