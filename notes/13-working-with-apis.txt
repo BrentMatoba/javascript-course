@@ -513,3 +513,4 @@ Unless fetch() is called with the credentials option set to include, fetch():
 won't send cookies in cross-origin requests
 won't set any cookies sent back in cross-origin responses
 As of August 2018, the default credentials policy changed to same-origin.
+
