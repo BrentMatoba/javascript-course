@@ -97,3 +97,15 @@ async function getPersonsInfo(name) {
 }
 Doing this can look messy, but it is a very easy way to handle errors without appending .catch() after your function calls. How you handle the errors is up to you, and which method you use should be determined by how your code was written. You will get a feel for what needs to be done over time. The assignments will also help you understand how to handle your errors.
 
+Remember the Giphy API practice project? (If not, you should go back and complete the API lesson). We are going to convert the promise based code into async/await compatible code. Here’s a refresher of the code we are starting with:
+
+<script>
+  const img = document.querySelector('img');
+  fetch('https://api.giphy.com/v1/gifs/translate?api_key=YOUR_KEY_HERE&s=cats', {mode: 'cors'})
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(response) {
+      img.src = response.data.images.original.url;
+    });
+</script>
