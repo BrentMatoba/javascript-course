@@ -122,3 +122,16 @@ You should now be able to open the HTML file in your browser, and while you wonâ
       console.log(response);
     });
 </script>
+
+To get to the data we need to drill down through the layers of the object until we find what we want!
+
+<script>
+  const img = document.querySelector('img');
+  fetch('https://api.giphy.com/v1/gifs/translate?api_key=YOUR_KEY_HERE&s=cats', {mode: 'cors'})
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(response) {
+      console.log(response.data.images.original.url);
+    });
+</script>
