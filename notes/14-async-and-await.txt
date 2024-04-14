@@ -135,3 +135,16 @@ To get to the data we need to drill down through the layers of the object until 
       console.log(response.data.images.original.url);
     });
 </script>
+
+Running the file should now log the URL of the image. All that’s left to do is set the source of the image that’s on the page to the URL we’ve just accessed:
+
+<script>
+  const img = document.querySelector('img');
+  fetch('https://api.giphy.com/v1/gifs/translate?api_key=YOUR_KEY_HERE&s=cats', {mode: 'cors'})
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(response) {
+      img.src = response.data.images.original.url;
+    });
+</script>
