@@ -233,3 +233,12 @@ abortBtn.addEventListener("click", () => {
   controller.abort();
   console.log("Download aborted");
 });
+
+Sending a request with credentials included
+To cause browsers to send a request with credentials included on both same-origin and cross-origin calls, add credentials: 'include' to the init object you pass to the fetch() method.
+
+JS
+Copy to Clipboard
+fetch("https://example.com", {
+  credentials: "include",
+});
