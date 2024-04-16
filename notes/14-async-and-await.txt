@@ -313,3 +313,16 @@ async function f() {
 The word “async” before a function means one simple thing: a function always returns a promise. Other values are wrapped in a resolved promise automatically.
 
 For instance, this function returns a resolved promise with the result of 1; let’s test it:
+
+async function f() {
+  return 1;
+}
+
+f().then(alert); // 1
+…We could explicitly return a promise, which would be the same:
+
+async function f() {
+  return Promise.resolve(1);
+}
+
+f().then(alert); // 1
