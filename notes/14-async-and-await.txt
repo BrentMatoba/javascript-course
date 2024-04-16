@@ -285,3 +285,17 @@ async function getPersonsInfo(name) {
     // Handle the error any way you'd like
   }
 }
+
+Remember the Giphy API practice project? (If not, you should go back and complete the API lesson). We are going to convert the promise based code into async/await compatible code. Here’s a refresher of the code we are starting with:
+
+<script>
+  const img = document.querySelector('img');
+  fetch('https://api.giphy.com/v1/gifs/translate?api_key=YOUR_KEY_HERE&s=cats', {mode: 'cors'})
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(response) {
+      img.src = response.data.images.original.url;
+    });
+</script>
+Since await does not work on the global scope, we will have to create an async function that wraps our API call to Giphy.
