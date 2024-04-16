@@ -242,3 +242,11 @@ Copy to Clipboard
 fetch("https://example.com", {
   credentials: "include",
 });
+
+
+The async keyword
+The async keyword is what lets the JavaScript engine know that you are declaring an asynchronous function. This is required to use await inside any function. When a function is declared with async, it automatically returns a promise; returning in an async function is the same as resolving a promise. Likewise, throwing an error will reject the promise.
+
+An important thing to understand is async functions are just syntactical sugar for promises.
+
+The async keyword can also be used with any of the ways a function can be created. Said differently: it is valid to use an async function anywhere you can use a normal function. Below you will see some examples that may not be intuitive. If you don’t understand them, come back and take a look when you are done with the assignments.
