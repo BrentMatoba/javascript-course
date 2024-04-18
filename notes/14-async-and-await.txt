@@ -393,3 +393,23 @@ async function showAvatar() {
 }
 
 showAvatar();
+
+Modern browsers allow top-level await in modules
+In modern browsers, await on top level works just fine, when we’re inside a module. We’ll cover modules in article Modules, introduction.
+
+For instance:
+
+// we assume this code runs at top level, inside a module
+let response = await fetch('/article/promise-chaining/user.json');
+let user = await response.json();
+
+console.log(user);
+If we’re not using modules, or older browsers must be supported, there’s a universal recipe: wrapping into an anonymous async function.
+
+Like this:
+
+(async () => {
+  let response = await fetch('/article/promise-chaining/user.json');
+  let user = await response.json();
+  ...
+})();
