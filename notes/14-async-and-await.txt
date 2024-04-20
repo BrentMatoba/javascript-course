@@ -592,3 +592,7 @@ function f() {
   // we need to call async wait() and wait to get 10
   // remember, we can't use "await"
 }
+
+ES 2017 introduced Asynchronous functions. Async functions are essentially a cleaner way to work with asynchronous code in JavaScript. In order to understand exactly what these are, and how they work, we first need to understand Promises.
+
+If you don’t know what Promises are, you should read this article I published on Promises before proceeding. You will not understand Async/Await in JavaScript until you understand Promises.
