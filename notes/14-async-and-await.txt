@@ -613,3 +613,10 @@ function add(x,y){
 // Async Function
 async function add(x,y){
   return x + y;
+
+  Await
+Async functions can make use of the await expression. This will pause the async function and wait for the Promise to resolve prior to moving on.
+
+Example Time
+Enough talk. To understand what all of this means, lets look at an example! First we’re going to create some code using promises. Once we’ve got something working, we’ll rewrite our function using async/await so you can see just how much simpler it is!
+
