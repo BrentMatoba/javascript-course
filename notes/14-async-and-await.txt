@@ -630,3 +630,11 @@ function doubleAfter2Seconds(x) {
 In this code we have a function called doubleAfter2Seconds. This function will take a number as input and will resolve two seconds later with the number doubled.
 
 We can invoke our function and pass in the number 10 to try it out. To do this, we’ll call our function while passing in 10. Then, after the promise has resolved, we’ll take our returned value and log it to the console. Here’s what this would look like:
+
+But what if we want to run a few different values through our function and add the result? Unfortunately, we cant just add our invocations together and log them:
+
+let sum =   doubleAfter2Seconds(10)
+          + doubleAfter2Seconds(20)
+          + doubleAfter2Seconds(30);
+console.log(sum);
+// undefined
