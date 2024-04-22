@@ -692,3 +692,8 @@ function addPromise(x){
 addPromise(10).then((sum) => {
   console.log(sum);
 });
+
+Switching from Promises to Async/Await.
+Awesome! Now lets see just how much easier we could write the above code with Async/Await!
+
+Remove the addPromise function, and create a new function named addAsync. This function will have the exact same purpose as our addPromise did. When you create your addPromise function, make use of the async keyword. Here’s what that looks like:
