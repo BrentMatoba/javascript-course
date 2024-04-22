@@ -661,3 +661,10 @@ function addPromise(x){
     })
   });
 }
+
+First, we create our function addPromise. This function accepts one parameter.
+Next, we create our new Promise that we’ll be returning. Note that for the sake of simplicity, we’re not handling rejections/errors.
+Next we invoke doubleAfter2Seconds for the first time, passing in a value of 10. Two seconds later, the return value of 20 will be returned to the a variable.
+We invoke doubleAfter2Seconds again, this time passing in a value of 20. Two seconds later, the return value of 40 will be returned to the b variable.
+We invoke doubleAfter2Seconds one final time, this time passing in a value of 30. Two seconds later, the return value of 60 will be returned to the c variable.
+Finally, we resolve our Promise with the value of 10 + 20 + 40 + 60 or 130.
