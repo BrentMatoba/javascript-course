@@ -697,3 +697,15 @@ Switching from Promises to Async/Await.
 Awesome! Now lets see just how much easier we could write the above code with Async/Await!
 
 Remove the addPromise function, and create a new function named addAsync. This function will have the exact same purpose as our addPromise did. When you create your addPromise function, make use of the async keyword. Here’s what that looks like:
+
+async function addAsync(x) {
+  // code here...
+}
+Now that you’ve created an async function, we can make use of the await keyword which will pause our code until the Promise has resolved. Here’s how easy that is:
+
+async function addAsync(x) {
+  const a = await doubleAfter2Seconds(10);
+  const b = await doubleAfter2Seconds(20);
+  const c = await doubleAfter2Seconds(30);
+  return x + a + b + c;
+}
