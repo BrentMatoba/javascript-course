@@ -668,3 +668,27 @@ Next we invoke doubleAfter2Seconds for the first time, passing in a value of 10.
 We invoke doubleAfter2Seconds again, this time passing in a value of 20. Two seconds later, the return value of 40 will be returned to the b variable.
 We invoke doubleAfter2Seconds one final time, this time passing in a value of 30. Two seconds later, the return value of 60 will be returned to the c variable.
 Finally, we resolve our Promise with the value of 10 + 20 + 40 + 60 or 130.
+
+function doubleAfter2Seconds(x) {
+  return new Promise(resolve => {
+    setTimeout(() => {
+      resolve(x * 2);
+    }, 2000);
+  });
+}
+
+function addPromise(x){
+  return new Promise(resolve => {
+    doubleAfter2Seconds(10).then((a) => {
+      doubleAfter2Seconds(20).then((b) => {
+        doubleAfter2Seconds(30).then((c) => {
+          resolve(x + a + b + c);
+      	})
+      })
+    })
+  });
+}
+
+addPromise(10).then((sum) => {
+  console.log(sum);
+});
