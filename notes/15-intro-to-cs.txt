@@ -17,3 +17,11 @@ Algorithms become important in web development when you have a lot of data that 
 
 Algorithms also let you handle complicated transformations on data. For example, maybe you want to develop a CAPTCHA. You could generate an image and output wavy letters with basic programming skills. However, if you learn algorithms, you will be better equipped to generate images with blur, ripples, reflection, noise, etc. Or, for instance, consider Google documents. Without algorithms, it would be impossible to create collaborative real-time text editing. The problem is just too large and too complex to bust out a solution in a single coding session. You need to have a process to get you from one state to another. Algorithms help you create solutions to these problems.
 
+What part do algorithms play in modern web development, specifically, user based web sites?
+
+For your typical website, algorithms are mostly not necessary. You might find hash tables and other caching methods helpful, but usually it doesn't make a huge difference.
+
+Algorithms become important in web development when you have a lot of data that you have to process or when you are performing complicated transformations on that data. For example, consider the Quora search engine. You could probably develop a similar search engine without much algorithms experience. However, once your site gained thousands or millions of users, your search engine would not be able to handle the large bandwidth of requests. There would simply be too many users requesting to search too many documents. And that is when algorithms help you. Algorithms let you figure out efficient ways to handle large amounts of data.
+
+Algorithms also let you handle complicated transformations on data. For example, maybe you want to develop a CAPTCHA. You could generate an image and output wavy letters with basic programming skills. However, if you learn algorithms, you will be better equipped to generate images with blur, ripples, reflection, noise, etc. Or, for instance, consider Google documents. Without algorithms, it would be impossible to create collaborative real-time text editing. The problem is just too large and too complex to bust out a solution in a single coding session. You need to have a process to get you from one state to another. Algorithms help you create solutions to these problems.
+
