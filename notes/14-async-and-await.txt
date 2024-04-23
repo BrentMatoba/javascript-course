@@ -740,3 +740,9 @@ Next, we get the value of b on line 11. Since the await keyword is used, our fun
 const b = await doubleAfter2Seconds(20);
 Next, we get the value of c on line 12. Since the await keyword is used, our function pauses for two seconds while we wait for the promise to resolve. Once the promise resolves, c = 60.
 const c = await doubleAfter2Seconds(30);
+
+Finally, we can return the value of x + a + b + c. Since we passed in 10 as our single parameter, we are returning the value of 10 + 20 + 40 + 60.
+A full six seconds later, our console.log(sum)is finally run. The value of 10 + 20 + 40 + 60 is passed in, and 130 is logged to the console.
+And that’s it! You’ve just created an asynchronous function in JavaScript!
+
+As you can see, since Async functions return a Promise, they can be used interchangeably with Promises very easily. Our code is also so much cleaner and easier to read when we use Async/Await instead of long Promise chain.
