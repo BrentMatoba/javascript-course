@@ -735,3 +735,8 @@ As you can see, we’re still making use of the same doubleAfter2Seconds functio
 First we call addAsync(10) passing in the value of 10.
 Next, we get the value of a on line 10. Since the await keyword is used, our function pauses for two seconds while we wait for the promise to resolve. Once the promise resolves, a = 20.
 const a = await doubleAfter2Seconds(10);
+
+Next, we get the value of b on line 11. Since the await keyword is used, our function pauses for two seconds while we wait for the promise to resolve. Once the promise resolves, b = 40.
+const b = await doubleAfter2Seconds(20);
+Next, we get the value of c on line 12. Since the await keyword is used, our function pauses for two seconds while we wait for the promise to resolve. Once the promise resolves, c = 60.
+const c = await doubleAfter2Seconds(30);
