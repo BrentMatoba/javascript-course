@@ -729,3 +729,9 @@ async function addAsync(x) {
 addAsync(10).then((sum) => {
   console.log(sum);
 });
+
+As you can see, we’re still making use of the same doubleAfter2Seconds function. Similarly, we’ll be invoking our addAsync() function and passing in the value of 10. Upon completion, we log the resulting value. Let’s walk through this step-by-step:
+
+First we call addAsync(10) passing in the value of 10.
+Next, we get the value of a on line 10. Since the await keyword is used, our function pauses for two seconds while we wait for the promise to resolve. Once the promise resolves, a = 20.
+const a = await doubleAfter2Seconds(10);
