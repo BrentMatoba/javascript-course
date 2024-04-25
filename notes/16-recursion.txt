@@ -29,3 +29,26 @@ If you are not new to programming, then it is probably familiar and you could sk
 Recursion is a programming pattern that is useful in situations when a task can be naturally split into several tasks of the same kind, but simpler. Or when a task can be simplified into an easy action plus a simpler variant of the same task. Or, as we’ll see soon, to deal with certain data structures.
 
 When a function solves a task, in the process it can call many other functions. A partial case of this is when a function calls itself. That’s called recursion.
+
+Two ways of thinking
+For something simple to start with – let’s write a function pow(x, n) that raises x to a natural power of n. In other words, multiplies x by itself n times.
+
+pow(2, 2) = 4
+pow(2, 3) = 8
+pow(2, 4) = 16
+There are two ways to implement it.
+
+Iterative thinking: the for loop:
+
+function pow(x, n) {
+  let result = 1;
+
+  // multiply result by x n times in the loop
+  for (let i = 0; i < n; i++) {
+    result *= x;
+  }
+
+  return result;
+}
+
+alert( pow(2, 3) ); // 8
