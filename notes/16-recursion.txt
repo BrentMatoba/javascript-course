@@ -83,3 +83,12 @@ pow(2, 3) = 2 * pow(2, 2)
 pow(2, 2) = 2 * pow(2, 1)
 pow(2, 1) = 2
 So, the recursion reduces a function call to a simpler one, and then – to even more simpler, and so on, until the result becomes obvious.
+
+Recursion is usually shorter
+A recursive solution is usually shorter than an iterative one.
+
+Here we can rewrite the same using the conditional operator ? instead of if to make pow(x, n) more terse and still very readable:
+
+function pow(x, n) {
+  return (n == 1) ? x : (x * pow(x, n - 1));
+}
