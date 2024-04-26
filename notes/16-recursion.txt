@@ -141,3 +141,11 @@ Here we call the same function pow, but it absolutely doesn’t matter. The proc
 The current context is “remembered” on top of the stack.
 The new context is created for the subcall.
 When the subcall is finished – the previous context is popped from the stack, and its execution continues.
+
+Here’s the context stack when we entered the subcall pow(2, 2):
+
+Context: { x: 2, n: 2, at line 1 } pow(2, 2)
+Context: { x: 2, n: 3, at line 5 } pow(2, 3)
+The new current execution context is on top (and bold), and previous remembered contexts are below.
+
+When we finish the subcall – it is easy to resume the previous context, because it keeps both variables and the exact place of the code where it stopped.
