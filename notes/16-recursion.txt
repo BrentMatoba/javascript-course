@@ -132,3 +132,12 @@ function pow(x, n) {
 }
 
 alert( pow(2, 3) );
+
+pow(2, 2)
+To do a nested call, JavaScript remembers the current execution context in the execution context stack.
+
+Here we call the same function pow, but it absolutely doesn’t matter. The process is the same for all functions:
+
+The current context is “remembered” on top of the stack.
+The new context is created for the subcall.
+When the subcall is finished – the previous context is popped from the stack, and its execution continues.
