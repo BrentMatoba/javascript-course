@@ -76,3 +76,10 @@ pow(x, n) =
 If n == 1, then everything is trivial. It is called the base of recursion, because it immediately produces the obvious result: pow(x, 1) equals x.
 Otherwise, we can represent pow(x, n) as x * pow(x, n - 1). In maths, one would write xn = x * xn-1. This is called a recursive step: we transform the task into a simpler action (multiplication by x) and a simpler call of the same task (pow with lower n). Next steps simplify it further and further until n reaches 1.
 We can also say that pow recursively calls itself till n == 1.
+For example, to calculate pow(2, 4) the recursive variant does these steps:
+
+pow(2, 4) = 2 * pow(2, 3)
+pow(2, 3) = 2 * pow(2, 2)
+pow(2, 2) = 2 * pow(2, 1)
+pow(2, 1) = 2
+So, the recursion reduces a function call to a simpler one, and then – to even more simpler, and so on, until the result becomes obvious.
