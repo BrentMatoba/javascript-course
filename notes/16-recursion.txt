@@ -186,3 +186,21 @@ The execution of pow(2, 2) is resumed. It has the result of the subcall pow(2, 1
 Then the previous context is restored:
 
 Context: { x: 2, n: 3, at line 5 } pow(2, 3)
+
+The recursion depth in this case was: 3.
+
+As we can see from the illustrations above, recursion depth equals the maximal number of context in the stack.
+
+Note the memory requirements. Contexts take memory. In our case, raising to the power of n actually requires the memory for n contexts, for all lower values of n.
+
+A loop-based algorithm is more memory-saving:
+
+function pow(x, n) {
+  let result = 1;
+
+  for (let i = 0; i < n; i++) {
+    result *= x;
+  }
+
+  return result;
+}
