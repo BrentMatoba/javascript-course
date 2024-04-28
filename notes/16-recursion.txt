@@ -163,3 +163,14 @@ A new execution context is created, the previous one is pushed on top of the sta
 Context: { x: 2, n: 1, at line 1 } pow(2, 1)
 Context: { x: 2, n: 2, at line 5 } pow(2, 2)
 Context: { x: 2, n: 3, at line 5 } pow(2, 3)
+
+The exit
+During the execution of pow(2, 1), unlike before, the condition n == 1 is truthy, so the first branch of if works:
+
+function pow(x, n) {
+  if (n == 1) {
+    return x;
+  } else {
+    return x * pow(x, n - 1);
+  }
+}
