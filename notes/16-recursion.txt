@@ -204,3 +204,8 @@ function pow(x, n) {
 
   return result;
 }
+
+Recursive traversals
+Another great application of the recursion is a recursive traversal.
+
+Imagine, we have a company. The staff structure can be presented as an object:
