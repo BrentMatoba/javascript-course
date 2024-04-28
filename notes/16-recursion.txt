@@ -154,3 +154,12 @@ Please note:
 Here in the picture we use the word “line”, as in our example there’s only one subcall in line, but generally a single line of code may contain multiple subcalls, like pow(…) + pow(…) + somethingElse(…).
 
 So it would be more precise to say that the execution resumes “immediately after the subcall”.
+
+pow(2, 1)
+The process repeats: a new subcall is made at line 5, now with arguments x=2, n=1.
+
+A new execution context is created, the previous one is pushed on top of the stack:
+
+Context: { x: 2, n: 1, at line 1 } pow(2, 1)
+Context: { x: 2, n: 2, at line 5 } pow(2, 2)
+Context: { x: 2, n: 3, at line 5 } pow(2, 3)
