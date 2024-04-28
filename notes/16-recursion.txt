@@ -174,3 +174,15 @@ function pow(x, n) {
     return x * pow(x, n - 1);
   }
 }
+
+There are no more nested calls, so the function finishes, returning 2.
+
+As the function finishes, its execution context is not needed anymore, so it’s removed from the memory. The previous one is restored off the top of the stack:
+
+Context: { x: 2, n: 2, at line 5 } pow(2, 2)
+Context: { x: 2, n: 3, at line 5 } pow(2, 3)
+The execution of pow(2, 2) is resumed. It has the result of the subcall pow(2, 1), so it also can finish the evaluation of x * pow(x, n - 1), returning 4.
+
+Then the previous context is restored:
+
+Context: { x: 2, n: 3, at line 5 } pow(2, 3)
