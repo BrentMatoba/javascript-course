@@ -209,3 +209,28 @@ Recursive traversals
 Another great application of the recursion is a recursive traversal.
 
 Imagine, we have a company. The staff structure can be presented as an object:
+
+let company = {
+  sales: [{
+    name: 'John',
+    salary: 1000
+  }, {
+    name: 'Alice',
+    salary: 1600
+  }],
+
+  development: {
+    sites: [{
+      name: 'Peter',
+      salary: 2000
+    }, {
+      name: 'Alex',
+      salary: 1800
+    }],
+
+    internals: [{
+      name: 'Jack',
+      salary: 1300
+    }]
+  }
+};
