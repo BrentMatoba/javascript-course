@@ -245,3 +245,11 @@ It is also possible that when a subdepartment grows, it divides into subsubdepar
 
 For instance, the sites department in the future may be split into teams for siteA and siteB. And they, potentially, can split even more. That’s not on the picture, just something to have in mind.
 
+An iterative approach is not easy, because the structure is not simple. The first idea may be to make a for loop over company with nested subloop over 1st level departments. But then we need more nested subloops to iterate over the staff in 2nd level departments like sites… And then another subloop inside those for 3rd level departments that might appear in the future? If we put 3-4 nested subloops in the code to traverse a single object, it becomes rather ugly.
+
+Let’s try recursion.
+
+As we can see, when our function gets a department to sum, there are two possible cases:
+
+Either it’s a “simple” department with an array of people – then we can sum the salaries in a simple loop.
+Or it’s an object with N subdepartments – then we can make N recursive calls to get the sum for each of the subdeps and combine the results.
