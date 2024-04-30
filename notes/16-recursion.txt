@@ -283,3 +283,10 @@ function sumSalaries(department) {
 
 alert(sumSalaries(company)); // 7700
 The code is short and easy to understand (hopefully?). That’s the power of recursion. It also works for any level of
+
+We can easily see the principle: for an object {...} subcalls are made, while arrays [...] are the “leaves” of the recursion tree, they give immediate result.
+
+Note that the code uses smart features that we’ve covered before:
+
+Method arr.reduce explained in the chapter Array methods to get the sum of the array.
+Loop for(val of Object.values(obj)) to iterate over object values: Object.values returns an array of them.
