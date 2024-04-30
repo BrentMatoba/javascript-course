@@ -355,3 +355,16 @@ The list can be easily split into multiple parts and later joined back:
 
 let secondList = list.next.next;
 list.next.next = null;
+
+list.next.next = secondList;
+And surely we can insert or remove items in any place.
+
+For instance, to prepend a new value, we need to update the head of the list:
+
+let list = { value: 1 };
+list.next = { value: 2 };
+list.next.next = { value: 3 };
+list.next.next.next = { value: 4 };
+
+// prepend the new value to the list
+list = { value: "new item", next: list };
