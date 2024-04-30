@@ -388,3 +388,13 @@ Lists can be enhanced:
 We can add property prev in addition to next to reference the previous element, to move back easily.
 We can also add a variable named tail referencing the last element of the list (and update it when adding/removing elements from the end).
 …The data structure may vary according to our needs.
+
+Terms:
+
+Recursion is a programming term that means calling a function from itself. Recursive functions can be used to solve tasks in elegant ways.
+
+When a function calls itself, that’s called a recursion step. The basis of recursion is function arguments that make the task so simple that the function does not make further calls.
+
+A recursively-defined data structure is a data structure that can be defined using itself.
+
+For instance, the linked list can be defined as a data structure consisting of an object referencing a list (or null).
