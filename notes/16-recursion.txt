@@ -451,3 +451,12 @@ is equivalent to:
 A compiler can recognize instances of this form of recursion and turn them into loops or simple jumps. E.g.:
         void do_loop () { start: ...; if (e) goto start; }
 Notice that this optimization also removes the space overhead associated with function calls.
+
+Tail Calls
+The second insight concerns tail calls. A call is said to be a tail call if it is the last thing that needs to be executed in a particular invocation of the function where it occurs. For example:
+
+        void zig (int n) { ... ; if (e) zag(n-1); }
+The call to zag is a tail call because, if it happens - i.e. if (e) evaluates to true - then it is the last thing that needs to be executed in the current invocation of zig.
+What it so special about tail calls? Simply this: if zag is the last thing to be executed in zig, surely zig won't need its local variables while zag is executing, and it won't need them after zag returns since there won't be anything left to do. Therefore, we can release the local space allocated to zig before calling zag.
+
+Thus, tail recursive algorithms can be optimized to execute in constant space - a tail recursive algorithm is one where the recursive steps are all tail calls
