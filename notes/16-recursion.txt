@@ -439,3 +439,6 @@ Thus, for example, many library implementations of quicksort will switch to a si
 Alternatively, one can employ large base cases that still use a divide-and-conquer algorithm, but implement the algorithm for predetermined set of fixed sizes where the algorithm can be completely unrolled into code that has no recursion, loops, or conditionals (related to the technique of partial evaluation). For example, this approach is used in some efficient FFT implementations, where the base cases are unrolled implementations of divide-and-conquer FFT algorithms for a set of fixed sizes.[11] Source-code generation methods may be used to produce the large number of separate base cases desirable to implement this strategy efficiently.[11]
 
 The generalized version of this idea is known as recursion "unrolling" or "coarsening", and various techniques have been proposed for automating the procedure of enlarging the base case.[12]
+
+Dynamic programming for overlapping subproblems
+For some problems, the branched recursion may end up evaluating the same sub-problem many times over. In such cases it may be worth identifying and saving the solutions to these overlapping subproblems, a technique which is commonly known as memoization. Followed to the limit, it leads to bottom-up divide-and-conquer algorithms such as dynamic programming.
