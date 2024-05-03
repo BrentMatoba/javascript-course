@@ -460,3 +460,9 @@ The call to zag is a tail call because, if it happens - i.e. if (e) evaluates to
 What it so special about tail calls? Simply this: if zag is the last thing to be executed in zig, surely zig won't need its local variables while zag is executing, and it won't need them after zag returns since there won't be anything left to do. Therefore, we can release the local space allocated to zig before calling zag.
 
 Thus, tail recursive algorithms can be optimized to execute in constant space - a tail recursive algorithm is one where the recursive steps are all tail calls
+The bad news is that often the most natural version of an algorithm is not tail recursive. Consider the factorial function:
+        int factorial(int n)
+        { return (n == 0) ? 1 : n * factorial(n-1); }
+The recursive call to factorial is not tail recursive: the last thing that needs to be done is the multiplication, not the call. Therefore, factorial executes in space proportional to n (linear space).
+The good news is that it is often not too difficult to turn a non tail-recursive algorithm into a tail-recursive one. Typically, this is done by adding extra parameters to the definition: these parameters serve to accumulate intermediate results.
+
