@@ -442,3 +442,12 @@ The generalized version of this idea is known as recursion "unrolling" or "coars
 
 Dynamic programming for overlapping subproblems
 For some problems, the branched recursion may end up evaluating the same sub-problem many times over. In such cases it may be worth identifying and saving the solutions to these overlapping subproblems, a technique which is commonly known as memoization. Followed to the limit, it leads to bottom-up divide-and-conquer algorithms such as dynamic programming.
+Iteration as a special case of recursion
+The first insight is that iteration is a special case of recursion.
+
+        void do_loop () { do { ... } while (e); }
+is equivalent to:
+        void do_loop () { ... ; if (e) do_loop(); }
+A compiler can recognize instances of this form of recursion and turn them into loops or simple jumps. E.g.:
+        void do_loop () { start: ...; if (e) goto start; }
+Notice that this optimization also removes the space overhead associated with function calls.
