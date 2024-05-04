@@ -490,3 +490,13 @@ fact_aux(n,a) = fact_aux(0,1*2*...*(n-2)*(n-1)*n*a)
 because when its 1st argument is 0, fact_aux simply returns its 2nd argument. By definition of factorial:
 factorial(n) = fact_aux(n,1) = 1*2*...*(n-2)*(n-1)*n*1
 This result is precisely `n!'.
+
+The fibonacci function is defined by the following equations:
+
+fib(0) = 1
+fib(1) = 1
+fib(n) = fib(n-2) + fib(n-1), if n>1
+which we can directly implement by:
+int fib(int n)
+{ return (n == 0 || n == 1) ? 1 : fib(n-2)+fib(n-1); }
+Unfortunately, there are two sources of inefficiency. Firstly, this algorithm is not tail recursive. Secondly, it spends a lot of time recomputing the same values over and over again. To wit, in order to compute fib(n):
