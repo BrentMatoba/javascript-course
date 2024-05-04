@@ -466,3 +466,15 @@ The bad news is that often the most natural version of an algorithm is not tail 
 The recursive call to factorial is not tail recursive: the last thing that needs to be done is the multiplication, not the call. Therefore, factorial executes in space proportional to n (linear space).
 The good news is that it is often not too difficult to turn a non tail-recursive algorithm into a tail-recursive one. Typically, this is done by adding extra parameters to the definition: these parameters serve to accumulate intermediate results.
 
+For example, the definition of factorial can be augmented with an `accumulator':
+
+        int factorial(int n,int accu)
+        { return (n == 0) ? accu : factorial(n-1,n*accu); }
+Or we can keep the same interface as before and use an auxiliary definition:
+        int fact_aux (int n,int accu)
+        { return (n == 0) ? accu : fact_aux(n-1,n*accu); }
+        int factorial(int n) { return fact_aux(n,1); }
+A modern optimizing compiler will turn this version into machine code equivalent to the iterative version.
+How do we know that this second version is correct? We prove it by induction. You will notice that there is a strong connection between recursion and induction. They are really two aspects of the same fundamental idea.
+
+Notice that, for n>0, fact_aux(n,a) = fact_aux(n-1,n*a). On the right-hand side of the equation, the first argument has decreased by 1. As long as n is sufficiently large, we can iterate the process:
