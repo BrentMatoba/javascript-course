@@ -520,3 +520,10 @@ We are going to introduce the auxiliary function fib2 which is exactly like fib,
           }
         }
         int fib1 (int n) { return fib2(n).first; }
+
+        How do we know this code is correct? First we verify the two base cases:
+fib1(0) = 1 = fib(0)
+fib1(1) = 1 = fib(1)
+Then we proceed by induction, and show that for n>1
+fib2(n) = {fib(n),fib(n-1)}
+therefore: fib1(n) = fib2(n).first = fib(n)
