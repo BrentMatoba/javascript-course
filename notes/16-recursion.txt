@@ -500,3 +500,23 @@ which we can directly implement by:
 int fib(int n)
 { return (n == 0 || n == 1) ? 1 : fib(n-2)+fib(n-1); }
 Unfortunately, there are two sources of inefficiency. Firstly, this algorithm is not tail recursive. Secondly, it spends a lot of time recomputing the same values over and over again. To wit, in order to compute fib(n):
+
+First we compute fib(n-2), which in particular involves computing fib(n-3).
+Then we compute fib(n-1), which requires recomputing both fib(n-2) and fib(n-3).
+We can improve the algorithm as follows: we notice that the computation of fib(n-2) involves computing fib(n-3); therefore, if we could only save these two results, we could subsequently just add them together to produce fib(n-1). This the basis for our first optimization.
+We are going to introduce the auxiliary function fib2 which is exactly like fib, but returns a compound value containing the two aforementioned results: i.e. fib2(n) contains both fib(n) and fib(n-1). Then, we shall write the function fib1 which computes the same value as fib, but does it more efficiently by calling fib2.
+
+        typedef struct { int first,second; } Pair;
+        Pair fib2 (int n) {
+          if (n == 0) { Pair p = {1,0}; return p; }
+          else {
+            Pair p1 = fib2(n-1);
+            Pair p2;
+
+            p2.first  = p1.first + p1.second;
+            p2.second = p1.first;
+
+            return p2;
+          }
+        }
+        int fib1 (int n) { return fib2(n).first; }
