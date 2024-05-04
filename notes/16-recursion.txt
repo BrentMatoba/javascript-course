@@ -478,3 +478,15 @@ A modern optimizing compiler will turn this version into machine code equivalent
 How do we know that this second version is correct? We prove it by induction. You will notice that there is a strong connection between recursion and induction. They are really two aspects of the same fundamental idea.
 
 Notice that, for n>0, fact_aux(n,a) = fact_aux(n-1,n*a). On the right-hand side of the equation, the first argument has decreased by 1. As long as n is sufficiently large, we can iterate the process:
+
+fact_aux(n,a) = fact_aux(n-1,n*a)
+              = fact_aux(n-2,(n-1)*n*a)
+              = fact_aux(n-3,(n-2)*(n-1)*n*a)
+             ...
+              = fact_aux(n-k,(n-k+1)*...*(n-2)*(n-1)*n*a)
+in particular for k=n, we have:
+fact_aux(n,a) = fact_aux(0,1*2*...*(n-2)*(n-1)*n*a)
+              = 1*2*...*(n-2)*(n-1)*n*a
+because when its 1st argument is 0, fact_aux simply returns its 2nd argument. By definition of factorial:
+factorial(n) = fact_aux(n,1) = 1*2*...*(n-2)*(n-1)*n*1
+This result is precisely `n!'.
