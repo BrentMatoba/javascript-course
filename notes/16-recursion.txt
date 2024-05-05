@@ -569,3 +569,20 @@ function recurse() {
         recurse();
     }
 }
+
+JavaScript recursive function examples
+Let’s take some examples of using recursive functions.
+
+1) A simple JavaScript recursive function example
+Suppose that you need to develop a function that counts down from a specified number to 1. For example, to count down from 3 to 1:
+
+3
+2
+1
+The following shows the countDown() function:
+
+function countDown(fromNumber) {
+    console.log(fromNumber);
+}
+
+countDown(3);
