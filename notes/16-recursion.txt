@@ -557,3 +557,15 @@ function recurse() {
     // ...
 }
 Code language: JavaScript (javascript)
+
+
+A recursive function always has a condition to stop calling itself. Otherwise, it will call itself indefinitely. So a recursive function typically looks like the following:
+
+function recurse() {
+    if(condition) {
+        // stop calling itself
+        //...
+    } else {
+        recurse();
+    }
+}
