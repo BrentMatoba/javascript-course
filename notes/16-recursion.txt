@@ -586,3 +586,19 @@ function countDown(fromNumber) {
 }
 
 countDown(3);
+
+This countDown(3) shows only the number 3.
+
+To count down from the number 3 to 1, you can:
+
+show the number 3.
+and call the countDown(2) that shows the number 2.
+and call the countDown(1) that shows the number 1.
+The following changes the countDown() to a recursive function:
+
+function countDown(fromNumber) {
+    console.log(fromNumber);
+    countDown(fromNumber-1);
+}
+
+countDown(3);
