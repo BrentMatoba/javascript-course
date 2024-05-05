@@ -544,3 +544,16 @@ You may convince yourself that the recursive algorithm above is essentially equi
                fib_next = fib+fib_prev,
                fib_prev = fib,
                fib      = fib_next,       i++);
+
+
+               Introduction to the JavaScript recursive functions
+A recursive function is a function that calls itself until it doesn’t. This technique is called recursion.
+
+Suppose that you have a function called recurse(). The recurse() is a recursive function if it calls itself inside its body, like this:
+
+function recurse() {
+    // ...
+    recurse();
+    // ...
+}
+Code language: JavaScript (javascript)
