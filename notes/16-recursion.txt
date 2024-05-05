@@ -527,3 +527,20 @@ fib1(1) = 1 = fib(1)
 Then we proceed by induction, and show that for n>1
 fib2(n) = {fib(n),fib(n-1)}
 therefore: fib1(n) = fib2(n).first = fib(n)
+
+The above improvement no longer spends time recomputing the same values. However, it is not tail recursive and consequently consumes stack space. It is possible to do better by using a bottom-up algorithm instead of a top-down algorithm. This time, we need to introduce 2 accumulators - they correspond to the pair of values of our first improvement.
+
+        int fib3(int n,int i,int j) { return (n==0)?i:fib3(n-1,i+j,i); }
+        int fib1(int n) { return fib3(n,1,0); }
+How do we know this code is correct? Again, we proceed by induction:
+fib1(n) = fib3(n,1,0) = fib3(n-k,fib(k),fib(k-1))
+in particular for k=n: fib1(n) = fib3(0,fib(n),fib(n-1)) = fib(n)
+You may convince yourself that the recursive algorithm above is essentially equivalent to the following iterative version:
+
+        int fib1(int n)
+        { int fib, fib_prev, fib_next, i;
+
+          for (fib=1, fib_prev=0, i=0;    i<n;
+               fib_next = fib+fib_prev,
+               fib_prev = fib,
+               fib      = fib_next,       i++);
