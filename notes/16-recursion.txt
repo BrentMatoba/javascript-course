@@ -651,3 +651,11 @@ let countDown = function f(fromNumber) {
 let newYearCountDown = countDown;
 countDown = null;
 newYearCountDown(10);
+
+2) Calculate the sum of n natural numbers example
+Suppose you need to calculate the sum of natural numbers from 1 to n using the recursion technique. To do that, you need to define the sum() recursively as follows:
+
+sum(n) = n + sum(n-1)
+sum(n-1) = n - 1 + sum(n-2)
+...
+sum(1) = 1
