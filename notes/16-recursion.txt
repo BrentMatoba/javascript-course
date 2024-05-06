@@ -602,3 +602,22 @@ function countDown(fromNumber) {
 }
 
 countDown(3);
+
+This countDown(3) will run until the call stack size is exceeded, like this:
+
+Uncaught RangeError: Maximum call stack size exceeded.
+Code language: JavaScript (javascript)
+… because it doesn’t have the condition to stop calling itself.
+
+The countdown will stop when the next number is zero. Therefore, you add an if condition as follows:
+
+function countDown(fromNumber) {
+    console.log(fromNumber);
+
+    let nextNumber = fromNumber - 1;
+
+    if (nextNumber > 0) {
+        countDown(nextNumber);
+    }
+}
+countDown(3);
