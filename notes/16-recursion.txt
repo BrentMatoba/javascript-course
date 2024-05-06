@@ -659,3 +659,8 @@ sum(n) = n + sum(n-1)
 sum(n-1) = n - 1 + sum(n-2)
 ...
 sum(1) = 1
+
+Base Case:
+
+The function starts with an “if” statement that checks if n is less than or equal to 1.
+If n is 1 or less, the function simply returns n. This is the base case, which serves as the stopping condition for the recursi
