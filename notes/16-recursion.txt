@@ -677,3 +677,8 @@ Since it’s not the base case, it calculates 3 + sum(2). Now, it calls itself w
 In the next recursive call with sum(2), it calculates 2 + sum(1).
 Again, in the next recursive call with sum(1), it reaches the base case and returns 1.
 Now, the previous calls are resolved: 2 + 1 gives 3, and 3 + 3 gives the final result of 6.
+
+Termination:
+
+The recursion keeps happening, reducing the problem to smaller subproblems until it reaches the base case.
+Once the base case is reached, the function starts to unwind, combining the results from each level of recursion until the final result is obtained.
