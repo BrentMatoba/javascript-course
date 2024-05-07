@@ -682,3 +682,8 @@ Termination:
 
 The recursion keeps happening, reducing the problem to smaller subproblems until it reaches the base case.
 Once the base case is reached, the function starts to unwind, combining the results from each level of recursion until the final result is obtained.
+
+
+Summary
+A recursive function is a function that calls itself until it doesn’t
+A recursive function always has a condition that stops the function from calling itself.
