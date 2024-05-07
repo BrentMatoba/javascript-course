@@ -777,3 +777,12 @@ F(n)=F(n−1)+F(n−2)
 where two numbers are fixed i.e. F(0) = 0 and F(1) = 1.
 
 Refer to the picture shown below for better visualization.
+
+fib(1) = 0
+fib(2) = 1
+fib(3) = fib(2) + fib(1)
+fib(4) = fib(3) + fib(2)
+fib(5) = fib(4) + fib(3)
+...
+fib(n) = fib(n-1) + fib(n-2)
+
