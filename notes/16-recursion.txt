@@ -664,3 +664,8 @@ Base Case:
 
 The function starts with an “if” statement that checks if n is less than or equal to 1.
 If n is 1 or less, the function simply returns n. This is the base case, which serves as the stopping condition for the recursi
+
+Recursive Case:
+
+If the base case is not met (i.e., n is greater than 1), the function enters the block after the if statement.
+The function returns the sum of n and the result of calling itself with the argument (n - 1). This is where the recursion happens.
