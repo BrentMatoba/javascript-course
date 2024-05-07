@@ -687,3 +687,12 @@ Once the base case is reached, the function starts to unwind, combining the resu
 Summary
 A recursive function is a function that calls itself until it doesn’t
 A recursive function always has a condition that stops the function from calling itself.
+
+1	function calcFactorial(num) {
+2	    if (num === 1) {
+3	        return 1;
+4	    }
+5	    return num * calcFactorial(num - 1);
+6	}
+7	
+8	calcFactorial(5);
