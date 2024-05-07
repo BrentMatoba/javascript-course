@@ -711,3 +711,11 @@ Merge sort
 A significant part of computer science is dedicated to sorting data. An algorithm which uses the ‘divide and conquer’ approach of recursion is able to reduce a sorting problem to smaller and smaller sub-problems.
 
 Merge sort is one such sorting algorithm, and can be much faster than other algorithms such as bubble sort on the right data sets. Essentially merge sort recurses through an array of unsorted data until it reaches its smallest sub-set, a single item. Of course an array with a single item is considered sorted. Merge sort then merges the single items back together in sorted order. Pretty clever!
+
+Representation of the Fibonacci series in JavaScript
+As we have seen in the introduction section, the Fibonacci series in JavaScript is nothing but a mathematical sequence in which the current element is the sum of its previous two elements.
+
+Note: The first two terms of the Fibonacci series in JavaScript are 0 and 1. The first two terms, i.e., 0 and 1, are always fixed.
+
+So, we can generate the Fibonacci series using the sum concept. The order of the Fibonacci series is :
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...
