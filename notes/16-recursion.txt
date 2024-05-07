@@ -719,3 +719,61 @@ Note: The first two terms of the Fibonacci series in JavaScript are 0 and 1. The
 
 So, we can generate the Fibonacci series using the sum concept. The order of the Fibonacci series is :
 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ...
+
+As we can see that a term (say 
+𝑛
+𝑡
+ℎ
+n 
+th
+  term) can be calculated using the last two terms. The 
+𝑛
+𝑡
+ℎ
+n 
+th
+  term can be calculated using the last two terms i.e. 
+(
+𝑛
+−
+1
+)
+𝑡
+ℎ
+(n−1) 
+th
+  and 
+(
+𝑛
+−
+2
+)
+𝑡
+ℎ
+(n−2) 
+th
+  term.
+
+We can formulate this sequence as:
+𝐹
+(
+𝑛
+)
+=
+𝐹
+(
+𝑛
+−
+1
+)
++
+𝐹
+(
+𝑛
+−
+2
+)
+F(n)=F(n−1)+F(n−2)
+where two numbers are fixed i.e. F(0) = 0 and F(1) = 1.
+
+Refer to the picture shown below for better visualization.
