@@ -801,3 +801,9 @@ Step 4: Display the value of x and y.
 
 Step 5: Repeat the process i.e., adding the previous two terms to generate the Fibonacci series until i > n. As:
 
+z = x+ y
+Print the value of the current term i.e. z.
+x = y, y = z
+i = i + 1
+Step 6: Stop the process as i becomes equivalent to n. So, we have generated n terms of the Fibonacci series in JavaScript.
+
