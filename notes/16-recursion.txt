@@ -786,3 +786,9 @@ fib(5) = fib(4) + fib(3)
 ...
 fib(n) = fib(n-1) + fib(n-2)
 
+Steps to Find the Fibonacci Series of n Numbers
+Now, that we have a good understanding of what is Fibonacci series in JavaScript, let us now learn about the steps to generate the Fibonacci series in JavaScript.
+
+The flow chart of the Fibonacci Series can be represented as:
+
+Step 1: Declare variables x, y, z, n, i. x, and y are storing the first two terms. n is the value of the term that needs to be calculated. z will store the sum of the previous two terms i.e. x and y. i is the number that will track the number of Fibonacci terms generated.
