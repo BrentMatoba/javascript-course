@@ -792,3 +792,12 @@ Now, that we have a good understanding of what is Fibonacci series in JavaScript
 The flow chart of the Fibonacci Series can be represented as:
 
 Step 1: Declare variables x, y, z, n, i. x, and y are storing the first two terms. n is the value of the term that needs to be calculated. z will store the sum of the previous two terms i.e. x and y. i is the number that will track the number of Fibonacci terms generated.
+
+Step 2: Initialize variables as x = 1, y = 1, i = 2.
+
+Step 3: Take the value of n from the user.
+
+Step 4: Display the value of x and y.
+
+Step 5: Repeat the process i.e., adding the previous two terms to generate the Fibonacci series until i > n. As:
+
