@@ -807,3 +807,15 @@ x = y, y = z
 i = i + 1
 Step 6: Stop the process as i becomes equivalent to n. So, we have generated n terms of the Fibonacci series in JavaScript.
 
+Get the Fibonacci series up to n terms using for loop
+A loop like for and while can be used to generate the Fibonacci series. We can run a loop from 2 to N, and in each iteration, the sum of the previous two elements is calculated and stored.
+
+So, at the end of the nth iteration, we will have the nth Fibonacci term in front of us.
+
+Let us code the above approach using for loop. Suppose we want to generate the 
+7
+𝑡
+ℎ
+7 
+th
+  term of the Fibonacci series in JavaScript.
