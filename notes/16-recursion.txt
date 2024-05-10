@@ -873,3 +873,9 @@ console.log("The 9th term of the Fibonacci series is: ", answer);
 Output:
 
 The 9th term of the Fibonacci series is: 21
+
+Time and Space Complexities
+Since we are not storing the vales, the printing of the nth term is taking O(1) time, on the other hand, the loop is running for (n-2) times which is equivalent to O(n). So, the overall time complexity of the above approach is O(n).
+
+The space complexity is O(1) as we are not taking any extra space(except some variables that takes O(1) space).
+
