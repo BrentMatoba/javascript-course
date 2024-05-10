@@ -864,3 +864,12 @@ function fibonacci(num) {
   }
   return y;
 }
+
+var num = 9;
+answer = fibonacci(num);
+
+console.log("The 9th term of the Fibonacci series is: ", answer);
+
+Output:
+
+The 9th term of the Fibonacci series is: 21
