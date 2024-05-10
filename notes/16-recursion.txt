@@ -879,3 +879,13 @@ Since we are not storing the vales, the printing of the nth term is taking O(1) 
 
 The space complexity is O(1) as we are not taking any extra space(except some variables that takes O(1) space).
 
+Implementation:
+
+function fibonacci(num) {
+  // x is representing the first term,
+  // y is representing the second term, and
+  // z is representing the sum of x and y.
+  var answer = [];
+  var x = 0;
+  var y = 1;
+  var z;
