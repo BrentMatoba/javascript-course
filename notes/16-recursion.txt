@@ -956,3 +956,8 @@ function function2(<parameters>) {
 // Driver Code
 function1();
 function2();
+
+Memory Allocation of Recursive Functions
+A recursive function calls itself, therefore, the memory for a called function is allocated on top of memory allocated for calling function.
+
+Remember, a different copy of local variables is created for each function call. When the base case is reached, the child function returns its value to the function from which it was called. Then, this child function’s stack frame is removed. This process continues until the parent function is returned.
