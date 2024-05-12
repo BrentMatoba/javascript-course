@@ -961,3 +961,69 @@ Memory Allocation of Recursive Functions
 A recursive function calls itself, therefore, the memory for a called function is allocated on top of memory allocated for calling function.
 
 Remember, a different copy of local variables is created for each function call. When the base case is reached, the child function returns its value to the function from which it was called. Then, this child function’s stack frame is removed. This process continues until the parent function is returned.
+
+Calculating the Factorial of a Number
+Let’s have a look at a recursive function that calculates factorial of a number.
+
+A factorial is the product of an integer and all the positive integers less than it. It is denoted by the symbol: !
+
+For example, 
+4
+!
+4!
+ (read as four factorial) is denoted as follows: 
+4
+!
+=
+4
+×
+3
+×
+2
+×
+1
+=
+24
+4!=4×3×2×1=24
+
+Therefore, if 
+𝑡
+𝑎
+𝑟
+𝑔
+𝑒
+𝑡
+𝑁
+𝑢
+𝑚
+𝑏
+𝑒
+𝑟
+=
+𝑛
+targetNumber=n
+
+𝑛
+!
+=
+𝑛
+×
+(
+𝑛
+−
+1
+)
+×
+(
+𝑛
+−
+2
+)
+×
+.
+.
+.
+.
+×
+1
+n!=n×(n−1)×(n−2)×....×1
