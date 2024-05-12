@@ -935,3 +935,6 @@ while i <= m and j <= n,
 while i <= m,
     a[k++] = b[i++]
     → invariant: a[1..k] in final position
+
+    Memory Allocation in Recursion
+When a function is called, its memory is allocated on the stack. Stacks in computing architectures are regions of memory where data is added or removed in a last-in-first-out (LIFO) manner, where the last element that is pushed is also the first element that is removed.
