@@ -1140,3 +1140,7 @@ For the first
 4
 4
  recursive calls, each call to factorial() function is added at the top of the stack, i.e., on top of the previous function call. For the last recursive call, the base case is satisfied and therefore, each child function call then returns the value to its parent call.
+
+ Code readability and maintainability are super important. After all, you will likely spend as much, if not more, time reading code than writing it. You need to make sure new features are integrated with ease.
+
+However, there is another consideration that can be just as important when writing code. Efficiency! You need to understand how the code you write will perform. You also need to understand how the choices you make impact performance so that you can choose the right data structure and algorithm for your requirement.
