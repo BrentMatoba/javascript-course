@@ -1135,3 +1135,8 @@ unction factorial(targetNumber) {
 var targetNumber = 5;
 var result = factorial(targetNumber);
 console.log("The factorial of " + targetNumber + " is: " + result);
+
+For the first 
+4
+4
+ recursive calls, each call to factorial() function is added at the top of the stack, i.e., on top of the previous function call. For the last recursive call, the base case is satisfied and therefore, each child function call then returns the value to its parent call.
