@@ -1239,3 +1239,15 @@ O(n²) - Quadratic Complexity
 O(n³) - Cubic Complexity
 O(2ⁿ) - Exponential Complexity
 O(N!) - Factorial Complexity
+
+O(1) - Constant complexity
+To understand Constant Complexity, let’s use an array.
+
+arr = [1, 2, 3, 4, 5];
+If we want to look up what is at index 2, we can get to the element using arr[2] which would give us back 3. This takes just one step. If we double our array…
+
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+We can still access any element in just one step. arr[7] gives us 8 in a single step. Our array can keep growing and we can always access any element in a single step. It’s constant. Hence we have O(1).
+
+Looking up something in one step is as good as it gets for time complexity.
+
