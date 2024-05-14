@@ -1174,3 +1174,15 @@ If you were to run this in your terminal, you should get the numbers 1, 3, 5, 7 
 So how do we measure it?
 
 The way to measure code efficiency is to evaluate how many ‘steps’ it takes to complete. If you know that one algorithm you write takes 5 steps and another one takes 20 steps to accomplish the same task, then you can say that the 5-step algorithm will always run faster than the 20-step algorithm on the same computer.
+
+Let’s go back to our oddNumbersLessThanTen function. How many steps does our algorithm take?
+
+We assign the number 1 to a variable. That’s one step.
+
+We have a loop. For each iteration of the loop, we do the following:
+
+Compare currentNumber to see if it is less than 10. That is 1 step.
+We then check if currentNumber is odd. That is 1 step.
+If it is then we output it to the terminal. That’s 1 step every 2 iterations.
+We increase currentNumber by 1. That is 1 step.
+To exit the loop, we need to compare currentNumber one last time to see that it is not less than ten any more. That is one last step.
