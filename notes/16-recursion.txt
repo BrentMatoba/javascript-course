@@ -1204,3 +1204,9 @@ function oddNumbers(maxNumber) {
     currentNumber += 1;
   }
 }
+
+You’ve probably realised the answer is it depends. If you set maxNumber to be 10, like we did before, the number of steps is 34, but if you enter another number then the number of steps changes. There is no concrete number we can use to measure the efficiency of our code because it changes based on an external input.
+
+So what we really want to be able to measure is how the number of steps of our algorithm changes when the data changes. This helps us answer the question of whether the code we write will scale.
+
+To do that, we need to delve into a new concept: Asymptotic Notations and, in particular, Big O.
