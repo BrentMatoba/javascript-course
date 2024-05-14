@@ -1217,3 +1217,9 @@ Asymptotic Notations are used to describe the running time of an algorithm. Beca
 Big O Notation - represents the upper bound of an algorithm. This means the worst-case scenario for how the algorithm will perform.
 Omega Notation - represents the lower bound of an algorithm. This is the best-case scenario.
 Theta Notation - represents both the upper bound and lower bound and therefore analyses the average case complexity of an algorithm.
+
+
+Big O is the one you’ll most commonly see referenced because you need to be sure the worst-case scenario for any code you write is scalable as the inputs grow in your application.
+
+It’s also worth noting that the Notations given below for Big O also apply to Omega and Theta notations. The differences are in how they look to measure the efficiency of the algorithm and therefore which Notation should apply. This should become clearer as you read on.
+
