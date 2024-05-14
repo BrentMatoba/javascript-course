@@ -1223,3 +1223,8 @@ Big O is the one you’ll most commonly see referenced because you need to be su
 
 It’s also worth noting that the Notations given below for Big O also apply to Omega and Theta notations. The differences are in how they look to measure the efficiency of the algorithm and therefore which Notation should apply. This should become clearer as you read on.
 
+What is Big O?
+Big O gives us a consistent way to measure the efficiency of an algorithm. It gives us a measurement for the time it takes for an algorithm to run as the input grows so that you can directly compare the performance of two algorithms and pick the best one.
+
+Big O is not a piece of code you can put your algorithm into and it tells you how efficient it is. You will need to measure how the number of steps changes as the data grows, and using this you can apply a Big O Notation to it and measure it against other algorithms. In many cases you’ll be using a data structure in which the ways you interact with it are well known, and in that case it’s easier to judge how it will scale as the input changes.
+
