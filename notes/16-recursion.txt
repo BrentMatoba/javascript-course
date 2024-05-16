@@ -1269,3 +1269,10 @@ arr = [6, 7, 8, -, -]
 
 O(N) - Linear complexity
 This one is pretty easy to wrap your head around. Linear Complexity just tells us that as the number of items grows, the number of steps grows at exactly the same rate. Every time you iterate over an array is an example of Linear Complexity. If you have an array of 5 items, then we can iterate every element in 5 steps. An array of 10 items can be iterated in 10 steps. If you come across any algorithm with a Big O efficiency of O(N), you know that the number of steps will increase in line with the number of elements in your data structure.
+
+O(N log N) - N x log N complexity
+You can’t say this one isn’t appropriately named. This notation usually implies we have an algorithm which initially is O(log N) such as our example earlier of Binary Search where it repeatedly breaks an array in half, but with O(N log N) each of those array halves is processed by another algorithm with a complexity of O(N).
+
+One such algorithm is the merge sort algorithm from our previous lesson. :)
+
+However, not all O(N log N) situations are built this way. There are special cases, like constructing a Cartesian tree, where the algorithm naturally behaves like O(N log N) without using smaller parts with O(N) or O(log N) complexities inside. The keen amongst you may wish to have a peek at how this algorithm works. This shows that while nested complexities can be common, they’re not the only way an algorithm can achieve a particular time complexity.
