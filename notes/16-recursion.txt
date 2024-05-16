@@ -1259,3 +1259,10 @@ Logarithmic Complexity tells us that the numbers of steps an algorithm takes inc
 One such algorithm that does this is Binary Search. It only works on sorted arrays, but if you have an array of 10 items in sorted order
 
 arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+and wanted to know if it had the number 7, Binary Search would guess the middle item of the array and see what is there. Because the array is sorted, if the number at the middle index was 6, then we know anything to the left of that index cannot be the number 7, as those items must be lower than 6 in a sorted array.
+
+arr = [-, -, -, -, -, 6, 7, 8, 9, 10]
+Therefore in just one step, we’ve eliminated half of the array. We can do the same with the remaining half. We can guess the middle index and see if it’s 7. Half of that (half of an array) array eliminated again. In this case, the middle index would be 8, and we know that 7 is less than 8 so we can eliminate anything to the right of the number 8.
+
+arr = [6, 7, 8, -, -]
