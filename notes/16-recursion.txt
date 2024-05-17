@@ -1276,3 +1276,6 @@ You can’t say this one isn’t appropriately named. This notation usually impl
 One such algorithm is the merge sort algorithm from our previous lesson. :)
 
 However, not all O(N log N) situations are built this way. There are special cases, like constructing a Cartesian tree, where the algorithm naturally behaves like O(N log N) without using smaller parts with O(N) or O(log N) complexities inside. The keen amongst you may wish to have a peek at how this algorithm works. This shows that while nested complexities can be common, they’re not the only way an algorithm can achieve a particular time complexity.
+
+O(n²) - Quadratic complexity
+You’ve probably written code with a Quadratic Complexity on your programming journey. It’s commonly seen when you loop over a data set and within each loop you loop over it again. For example, if our array has 3 items, the nested loops require 3² = 9 sub-steps. Adding just one more item to the array almost doubles this number to 4² = 16. Adding a 5th item takes us to 5² = 25 sub-steps. Then doubling the array size to 10 items increases the sub-steps from 25 to 100, so 4 times as much work needed! We hope you can see where we’re going with this…
