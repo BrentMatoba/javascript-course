@@ -1356,3 +1356,9 @@ What is Big O Notation and why is it useful?
 Big O Notation is used in computer science to analyse the performance of an algorithm (an algorithm is just another name for a function – a set of instructions).
 
 Big O specifically looks at the worst-case scenario of an algorithm – looking at the big picture. It tells us how long a function will take to execute (execution time) or how much space (e.g., in memory or disk) the function takes up as the input to that function approaches infinity (i.e. becomes very large).
+
+Now, there are tools that can measure the execution time of an algorithm; however, the execution time will depend on the computer being used and the size of the inputs. This might be useful, but it doesn’t give us an idea of the scalability of an algorithm.
+
+The scalability of an algorithm refers to how much the algorithm slows down when we increase the size of the input to the algorithm.
+
+For example, the algorithm may compute very quicky with an input array of length of 10. But what if the array length increased to 1000. How much longer will the algorithm take? This is where Big O Notation comes in very handy.
