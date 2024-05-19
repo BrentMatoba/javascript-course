@@ -1375,3 +1375,12 @@ But say we had a function with two operations, like the one below, where we inpu
 
 The algorithms above had constant space complexity. The function timesTwo didn’t store any values in memory. manyTimes only stored one value in memory: total. No matter what the input, both of these algorithms have a constant space complexity because if we increase the size of the input, the space in memory remains the same.
 
+function reverseArray(arr) {
+  let newArr = []
+  for (let i = arr.length - 1; i >= 0; i--) {
+    newArr.push(arr[i])
+  }
+  return newArr
+}
+const reversedArray1 = reverseArray([1, 2, 3]) // [3, 2, 1]
+const reversedArray2 = reverseArray([1, 2, 3, 4, 5, 6]) // [6, 5, 4, 3, 2, 1]
