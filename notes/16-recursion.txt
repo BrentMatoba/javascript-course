@@ -1370,3 +1370,8 @@ In JavaScript, both take the same time. It’s just one operation (one multiplic
 No matter what number we input into this function, it takes the same amount of time to compute. The algorithm is said to have a Big O(1) – pronounced “Big O of 1” - which is known as constant time complexity; no matter the size of the input, the function takes the same amount of time to compute.
 
 But say we had a function with two operations, like the one below, where we input a number, multiply it by 4, save it to a variable called total, and return total times 3. So, all together, we have two multiplications in this function.
+
+“Space complexity” (aka auxiliary space complexity): The space required by the algorithm, not including inputs.
+
+The algorithms above had constant space complexity. The function timesTwo didn’t store any values in memory. manyTimes only stored one value in memory: total. No matter what the input, both of these algorithms have a constant space complexity because if we increase the size of the input, the space in memory remains the same.
+
