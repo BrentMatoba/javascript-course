@@ -1397,3 +1397,5 @@ A Big O(1) is as good as it gets for algorithms. It’s like, algorithm paradise
 
 The best Big O we can achieve when reversing an array is Big O(n), where we can see from the blue line, the execution time (or number of operations the function has to do) increases linearly with input size.
 
+Example 3 – Quadratic time complexity: Big O(n^2)
+Here’s a function called multiplyAll which accepts two arrays. It first makes sure they’re of equal length; if they are then it will continue down and multiply every number in the first array with every number in the second array and return the sum of all these products.
