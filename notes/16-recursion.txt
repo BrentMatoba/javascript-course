@@ -1399,3 +1399,17 @@ The best Big O we can achieve when reversing an array is Big O(n), where we can 
 
 Example 3 – Quadratic time complexity: Big O(n^2)
 Here’s a function called multiplyAll which accepts two arrays. It first makes sure they’re of equal length; if they are then it will continue down and multiply every number in the first array with every number in the second array and return the sum of all these products.
+
+
+function multiplyAll(arr1, arr2) {
+  if (arr1.length !== arr2.length) return undefined
+  let total = 0
+  for (let i of arr1) {
+    for (let j of arr2) {
+      total += i * j
+    }
+  }
+  return total
+}
+let result1 = multiplyAll([1, 2], [5, 6]) // 33
+let result2 = multiplyAll([1, 2, 3, 4], [5, 3, 1, 8]) // 170
