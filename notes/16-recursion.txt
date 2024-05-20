@@ -1387,4 +1387,6 @@ const reversedArray2 = reverseArray([1, 2, 3, 4, 5, 6]) // [6, 5, 4, 3, 2, 1]
 
  we input an array with the elements 1, 2, 3, it returns [3,2,1]. And if we input [1, 2 , 3 ,4 ,5, 6], it returns [6, 5, 4, 3, 2, 1]. Now, which of these do you think will take longer to compute – if we input an array 3 items long, or an array 6 items long?
 
-This time, you are correct if you said the longer array of 6 elements. And that is because in this algorithm, we are looping over each element in the array, and then pushing that element onto a new array. That’s 2 extra operations for every extra element we have in the array.
+This time, you are correct if you said the longer array of 6 elements. And that is because in this algorithm, we are looping over each element in the array, and then pushing that element onto a new array. That’s 2 extra operations for every extra element we have in the array.So, if we pass in the array with 3 elements, there will be 6 operations in total. If we pass in an array of 6 elements, there will be 12 operations. If we double the array length, we double the number of operations.
+
+This technically has a Big O(2n), where n is the length of the input. But remember, Big O looks at the big picture – the worst-case scenario where the input size approaches infinity. If we pass in an array infinity items long, then here, there would be 2 * infinity operations. 2 * infinity is still just infinity – it’s just a very large number, so we can just ignore the 2 because in the grand scheme of things, that two isn’t all that significant.
