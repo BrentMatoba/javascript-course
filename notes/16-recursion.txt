@@ -1440,3 +1440,10 @@ If we use a sorting algorithm with linear time, a Big O(n), where n is the input
 But if you use a sorting algorithm with a Big O(n^2), then there will be roughly 1000 * 1000 operations. That’s 1 MILLION OPERATIONS!
 
 That’s 999,000 more operations, just because you used a bad algorithm at an inappropriate time. This is why it’s important to understand Big O notation!
+
+In the code snippet below, we have a 4-item array, arr. If we push 5 onto the end of this array, then all we have to do is create a new place at the end of the array, give it an index, and put the value of 5 there. It doesn’t matter what the length of the array is, it will always be constant time - Big O(1). The number of operations is always the same – constant.
+
+let arr = [1, 2, 3, 4]
+// Adding and removing to the end of the array => Big (1) - constant time
+arr.push(5) // [1, 2, 3, 4, 5]
+arr.pop() // [1, 2, 3]
