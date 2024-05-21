@@ -1424,3 +1424,10 @@ Then we get to the end of that loop, so we go back to the outer loop, and increm
 As we can see, for every item in the first array, we have to loop over every single item in the second array and perform a multiplication. So the total number of operations will be the length of the first array, which is n, times the length of the second array, which is also n, because we checked to make sure they are the same length. This results in a Big O(n^2) - quadratic time complexity.
 
 If you are incredibly astute, you may have noticed that technically this algorithm would have a Big O(3 * n^2), because for every item in arr1, we:
+
+loop over every item in arr2 (n^2 operations)
+multiply two numbers (another n^2 operations)
+add to the total (another n^2 operations).
+Therefore, the total number of operations is n^2 + n^2 + n^2 which equals 3n^2 .
+
+But remember again, with Big O Notation, we are looking at the big picture, the worst-case scenario as the input length approaches infinity, and 3 times infinity is still infinity – a humungous number. So as the input size grows, this 3 becomes insignificant in the grand scheme of things and we simplify to say that this algorithm has a Big O(n^2) - “quadratic time-complexity”.x
