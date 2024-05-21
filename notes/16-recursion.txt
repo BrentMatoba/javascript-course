@@ -1451,3 +1451,7 @@ arr.pop() // [1, 2, 3]
 But say we want to add 0 to the front of the array with unshift(0). We would have to re-index every item in the array, as the first index (index 0) would now point to our newly added value (0). We’d have to add 1 to every index in the array as the old first item is now the second, the old second index is now the third and so on…
 
 So unshifting and shifting have linear time complexities - Big O(n) - because the longer the input array, the more items have to be re-indexed.
+
+// Adding and removing to front of array => Big O(n) - linear time
+arr.unshift(0) // [0, 1, 2, 3, 4]
+arr.shift() // [2, 3, 4]
