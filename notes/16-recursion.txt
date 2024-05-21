@@ -1455,3 +1455,17 @@ So unshifting and shifting have linear time complexities - Big O(n) - because th
 // Adding and removing to front of array => Big O(n) - linear time
 arr.unshift(0) // [0, 1, 2, 3, 4]
 arr.shift() // [2, 3, 4]
+
+Example 4 – Logarithmic time complexity: Big O(log(n))
+What are Logarithms?
+Logarithms are a mathematical concept that many of you reading this article will have either forgotten from school, or have never studied at all. Let me briefly explain what a logarithm is…
+
+First, here is the definition of “logarithm” from Oxford Languages:
+
+“a quantity representing the power to which a fixed number (the base) must be raised to produce a given number.”
+
+Let’s now walk through an example to make things clear:
+
+Find the value of x:
+
+Log2(16) = x
