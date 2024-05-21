@@ -1431,3 +1431,12 @@ add to the total (another n^2 operations).
 Therefore, the total number of operations is n^2 + n^2 + n^2 which equals 3n^2 .
 
 But remember again, with Big O Notation, we are looking at the big picture, the worst-case scenario as the input length approaches infinity, and 3 times infinity is still infinity – a humungous number. So as the input size grows, this 3 becomes insignificant in the grand scheme of things and we simplify to say that this algorithm has a Big O(n^2) - “quadratic time-complexity”.x
+
+Using Big O to compare algorithms
+Let’s talk through a scenario that you could encounter. Say you need to pull in some data from an API or a database. An array of 1000 users comes back and you now need to sort this array into alphabetical order e.g. [Adam, Andrew, Becky, …etc.].
+
+If we use a sorting algorithm with linear time, a Big O(n), where n is the input size, then there will be around 1000 operations.
+
+But if you use a sorting algorithm with a Big O(n^2), then there will be roughly 1000 * 1000 operations. That’s 1 MILLION OPERATIONS!
+
+That’s 999,000 more operations, just because you used a bad algorithm at an inappropriate time. This is why it’s important to understand Big O notation!
