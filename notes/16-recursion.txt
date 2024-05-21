@@ -1469,3 +1469,17 @@ Let’s now walk through an example to make things clear:
 Find the value of x:
 
 Log2(16) = x
+
+ this example, 2 is known as the “base” of the logarithm. I remember it’s called the base because it’s at the base (bottom) of the word “log”. From our definition, we know that we need to find what power to raise the base by in order to get 16.
+
+So, we can rewrite our equation, Log2(16) = x, to the following:
+
+2x = 16
+
+From this, we can see that x = 4, because 24 = 16:
+
+24 = 2 * 2 * 2 * 2 = 16
+
+Therefore:
+
+Log2(16) = 4
