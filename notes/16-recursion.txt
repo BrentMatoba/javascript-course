@@ -1413,3 +1413,10 @@ function multiplyAll(arr1, arr2) {
 }
 let result1 = multiplyAll([1, 2], [5, 6]) // 33
 let result2 = multiplyAll([1, 2, 3, 4], [5, 3, 1, 8]) // 170
+
+
+It does this using two for-loops. The first for-loop loops over the first array. Then inside this for-loop, we have a second, nested for loop, which loops over every item in the second array. So, for every item we loop over in the first array, we have to loop over every item in the second array.
+
+If we pass in two arrays of length two ([1, 2] and [5, 6]), then for the first run through the outer loop, i will point at 1. It will then loop through the second array starting with 5, and 1 * 5 will be added to the total. It will then go to the second element in the second array and do 1 * 6 and add it to the total.
+
+Then we get to the end of that loop, so we go back to the outer loop, and increment to the second element which is 2. We then do 2 * 5 and add it to the total, then, finally, 2 * 6 and add it to the total.
