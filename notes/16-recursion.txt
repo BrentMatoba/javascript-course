@@ -1523,3 +1523,10 @@ Back to our graph of Big O Notation and looking at the yellow line, you can see 
 The Binary Search algorithm has a Big O (log(n)). If we input a sorted array of length 16 (i.e. the bottom level in the tree above), it would only take 4 steps (count to the top tree node) to find the number we were looking for.
 
 Algorithms with logarithmic time are often “divide and conquer” style, meaning the data set is cut down/reduced upon each loop iteration. The algorithm has less data to deal with on each loop and so can find or sort things quickly.
+
+Example 5 – Linearithmic time complexity: Big O(n log(n))
+Linearithmic time is simply a combination of linear time (n) and logarithmic time (log(n)).
+
+n * log(n) = n log(n)
+
+You can easily spot if an algorithm has n log(n) time. Look for an outer loop that iterates through a list (n operations). Then look to see if there is an inner loop; If the inner loop is cutting down/reducing the data set on each iteration (log(n) operations), then the overall algorithm has a Big O (n log(n)).
