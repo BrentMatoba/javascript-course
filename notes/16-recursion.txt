@@ -1513,3 +1513,9 @@ For the loopsA example, the input length is 1 ([1]), so:
 log(1) = 0 operations (or 0 loops)
 
 For the loopsE example, the input length is 16:
+
+Log(16) = 4 operations
+
+To conclude this example, if we increase the input length from 1 to 16, the number of operations (loops) only increases from 0 to 4. To increase the number of operations by 1, we have to double the size of the input.
+
+Back to our graph of Big O Notation and looking at the yellow line, you can see that logarithmic time complexity is the second best performing Big O. It’s better than linear time (blue), but not quite as good as constant time (green).
