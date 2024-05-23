@@ -1496,3 +1496,20 @@ let loopsB = logTime([1, 2]) // 1 loop
 let loopsC = logTime([1, 2, 3, 4]) // 2 loops
 let loopsD = logTime([1, 2, 3, 4, 5, 6, 7, 8]) // 3 loops
 let loopsE = logTime(Array(16)) // 4 loops
+
+
+Notice that the post-operation of the for-loop multiplies the current value of i by 2, so i goes from 1 to 2 to 4 to 8 to 16 to 32 …
+
+In other words, it doubles with each loop.
+
+As we can see from the examples (loopsA, loopsB, etc…), every time we double the length of the input array, the number of operations increases linearly (by 1 each time).
+
+In simple terms, the number of operations doesn’t increase very much when we increase the size of the input.
+
+Stating it mathematically:
+
+For the loopsA example, the input length is 1 ([1]), so:
+
+log(1) = 0 operations (or 0 loops)
+
+For the loopsE example, the input length is 16:
