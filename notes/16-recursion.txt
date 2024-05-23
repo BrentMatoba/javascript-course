@@ -1530,3 +1530,11 @@ Linearithmic time is simply a combination of linear time (n) and logarithmic tim
 n * log(n) = n log(n)
 
 You can easily spot if an algorithm has n log(n) time. Look for an outer loop that iterates through a list (n operations). Then look to see if there is an inner loop; If the inner loop is cutting down/reducing the data set on each iteration (log(n) operations), then the overall algorithm has a Big O (n log(n)).
+
+function linearithmic(n) {
+  for (let i = 0; i < n; i++) {
+    for (let j = 1; j < n; j = j * 2) {
+      console.log("Hello")
+    }
+  }
+}
