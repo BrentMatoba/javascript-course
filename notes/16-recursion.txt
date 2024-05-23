@@ -1519,3 +1519,7 @@ Log(16) = 4 operations
 To conclude this example, if we increase the input length from 1 to 16, the number of operations (loops) only increases from 0 to 4. To increase the number of operations by 1, we have to double the size of the input.
 
 Back to our graph of Big O Notation and looking at the yellow line, you can see that logarithmic time complexity is the second best performing Big O. It’s better than linear time (blue), but not quite as good as constant time (green).
+
+The Binary Search algorithm has a Big O (log(n)). If we input a sorted array of length 16 (i.e. the bottom level in the tree above), it would only take 4 steps (count to the top tree node) to find the number we were looking for.
+
+Algorithms with logarithmic time are often “divide and conquer” style, meaning the data set is cut down/reduced upon each loop iteration. The algorithm has less data to deal with on each loop and so can find or sort things quickly.
