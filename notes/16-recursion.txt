@@ -1554,3 +1554,7 @@ For example:
 
 If the input size is 1, then 2^1 = 2 operations
 If the input size is 2, then 2^2 = 4 operations
+
+With the following function, we pass in an index number to return the nth Fibonacci number in the sequence, using recursion. E.g. if we want to find the 4th number in the sequence, we say fibonacci(4) which returns 3.
+
+Note: This is not the optimal solution to this problem (the Big O can be improved) but it’s a nice example to show exponential time.
