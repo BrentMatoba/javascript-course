@@ -1546,3 +1546,11 @@ Looking at it another way, if we double the size of our input, n, the outer loop
 Linearithmic time is worse than linear time, O(n), but better than quadratic time, O(n^2). It’s kinda like the worst of the best.
 
 A common, practical example of a linearithmic time complexity algorithm is the sorting algorithm Merge Sort - a divide and conquer style algorithm.
+
+Exponential time complexity: Big O(2^n)
+An algorithm with exponential time complexity is one where the number of operations doubles every time we increase the input by one.
+
+For example:
+
+If the input size is 1, then 2^1 = 2 operations
+If the input size is 2, then 2^2 = 4 operations
