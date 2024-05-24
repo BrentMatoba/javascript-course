@@ -1538,3 +1538,11 @@ function linearithmic(n) {
     }
   }
 }
+
+The outer loop iterates through 0 to n linearly (n) and the inner loop is log(n) because j is getting doubled on each loop.
+
+Looking at it another way, if we double the size of our input, n, the outer loop will have twice as many iterations, whereas the inner loop would only have 1 extra iteration.
+
+Linearithmic time is worse than linear time, O(n), but better than quadratic time, O(n^2). It’s kinda like the worst of the best.
+
+A common, practical example of a linearithmic time complexity algorithm is the sorting algorithm Merge Sort - a divide and conquer style algorithm.
