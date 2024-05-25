@@ -1585,3 +1585,10 @@ A factorial is just the product of every number up to that number. So 5! (“fiv
 6! = 1 x 2 x 3 x 4 x 5 x 6 = 720.
 
 As you can see already, things can quickly get out of hand!
+
+The Traveling Salesman Problem
+The usual example of an algorithm with factorial growth is the Travelling Salesman Problem: Given a list of cities and the distances between each pair of cities, what is the shortest possible route that visits each city exactly once and returns to the origin city? The brute force method would be to check every possible configuration between each city, which would be a factorial, and quickly get crazy!
+
+Say we have 3 cities: A, B and C.
+
+How many permutations are there? Permutations is a maths term meaning how many ways can we order a set of items.
