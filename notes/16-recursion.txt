@@ -1606,3 +1606,12 @@ C -> B -> A
 With 3 cities, we have 3! permutations. That’s 1 x 2 x 3 = 6 permutations.
 
 Why? If we have three possible starting points, then for each starting point, we have two possible routes to the final destination.
+
+function factorial(n) {
+  let num = n
+  if (n === 0) return 1
+  for (let i = 0; i < n; i++) {
+    num = n * factorial(n - 1)
+  }
+  return num
+}
