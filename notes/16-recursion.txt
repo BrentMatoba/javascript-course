@@ -1615,3 +1615,7 @@ function factorial(n) {
   }
   return num
 }
+
+Every digit in our factorial will run its own function until it reaches 0, with each recursive layer adding its product to our original number. So, 3 is multiplied by 2, that runs the function to be multiplied by 1, that runs it again to be stopped at 0, returning 6. Actually, this is pretty confusing! I had to go over this function many times (very slowly) with a debugger just to get a feel for it, so don’t worry if you don’t fully understand it.
+
+I measured how long it took for the factorial function to run with the following code:
