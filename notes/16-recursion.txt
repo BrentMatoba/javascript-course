@@ -1575,3 +1575,13 @@ fibonacci(5) // 5
 Basically, our Fibonacci function will continue to recursively call itself, creating more and more branches until it hits the base case, from which it will start summing up each branch’s return values bottom up, until it finally sums them all up and returns a final integer.
 
 The tree below shows all of the recursive function calls. At each step, the amount of calculations double!
+
+
+Example 7 – Factorial time complexity: Big O(n!)
+And finally, the worst kind of algorithm – to be avoided at ALL costs: factorial growth.
+
+A factorial is just the product of every number up to that number. So 5! (“five factorial”) is 1 x 2 x 3 x 4 x 5 = 120.
+
+6! = 1 x 2 x 3 x 4 x 5 x 6 = 720.
+
+As you can see already, things can quickly get out of hand!
