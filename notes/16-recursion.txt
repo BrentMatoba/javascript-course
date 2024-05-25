@@ -1592,3 +1592,17 @@ The usual example of an algorithm with factorial growth is the Travelling Salesm
 Say we have 3 cities: A, B and C.
 
 How many permutations are there? Permutations is a maths term meaning how many ways can we order a set of items.
+
+Say we have 3 cities: A, B and C.
+
+How many permutations are there? Permutations is a maths term meaning how many ways can we order a set of items.
+
+A -> B -> C
+A -> C -> B
+B -> A -> C
+B -> C -> A
+C -> A -> B
+C -> B -> A
+With 3 cities, we have 3! permutations. That’s 1 x 2 x 3 = 6 permutations.
+
+Why? If we have three possible starting points, then for each starting point, we have two possible routes to the final destination.
