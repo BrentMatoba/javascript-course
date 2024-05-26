@@ -1637,3 +1637,24 @@ Summary - Big O comparison table
 The Big O of an algorithm tells us about the worst-case scenario: how will the algorithm perform as the size of the input approaches infinity (becomes very large).
 
 Here’s a table to summarise our discussion on the relationship between input size, the Big O of the algorithm, and the resulting number of operations:
+
+The main goal is no matter how many complexity types a method includes - we always want to reduce everything into one end result.
+
+How can we simplify this? By using an approach that includes 3 main steps:
+
+1 - Analyse and break your function into individual operations.
+
+2 - Calculate the Big O of each operation one step at a time.
+
+3 - Add Big O of each operation together and calculate the end result.
+
+And while going through those steps, we will keep 4 rules in mind:
+
+1 - Always assume the worst case.
+
+2 - Each input should have a unique variable.
+
+3 - Drop the constants.
+
+4 - Drop non-dominant terms.
+
