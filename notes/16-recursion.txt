@@ -1632,3 +1632,8 @@ factorial(10) // 42.08 ms
 factorial(12) // 5231.54 ms => 5 seconds
 factorial(13) // 69565.01 ms => 70 SECONDS!
 factorial(14) // SMOKE & FLAMES!!
+
+Summary - Big O comparison table
+The Big O of an algorithm tells us about the worst-case scenario: how will the algorithm perform as the size of the input approaches infinity (becomes very large).
+
+Here’s a table to summarise our discussion on the relationship between input size, the Big O of the algorithm, and the resulting number of operations:
