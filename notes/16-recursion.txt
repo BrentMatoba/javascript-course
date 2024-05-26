@@ -1658,3 +1658,10 @@ And while going through those steps, we will keep 4 rules in mind:
 
 4 - Drop non-dominant terms.
 
+
+
+Always assume the worst case
+Big O notation can be used to find best, average and worst cases. But when it comes to programming, we are more interested on the worst case part. Because we want to know what could be the worst case when it comes to scaling. When we know the worst case, we can optimize our algorithms further if it is needed.
+
+Let’s take a look at an example. We have a store which has about 10000+ unique products. We need a simple function just to check price of a product with a given name in the list. So here we have a function that handles product lookup:
+
