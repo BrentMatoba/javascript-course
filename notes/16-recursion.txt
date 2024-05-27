@@ -1691,3 +1691,9 @@ What is happening in the code?
 lookupPrice function iterates each element in the list until it finds the product with target name.
 When it finds the target - prints it’s name & price, then stops the execution.
 On this example, we choosed a product that was at the index[2]. In other words, we got done with the operation at the 3rd step. Pretty good, right?
+
+But we can’t assume this function will always work with the same level of speed by it’s nature. Because we just want to lookup to a product price by using it’s name in the list, which can be any of them. We should also take the number of products into account, they can change in future. For example today we have 10000+, maybe tomorrow we will have 50000+ products. What can be the worst case here?
+
+It would be choosing a product name which happens to be at the last index in the array. In that case function must iterate through all unmatching indexes to find the result - and that would be the worst case.
+
+In other words, we can confidently say the worst case depends on the array length here - which translates into Linear time O(n)
