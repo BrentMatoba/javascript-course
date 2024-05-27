@@ -1685,3 +1685,9 @@ function lookupPrice (name, list) {
 
 lookupPrice('Monitor', productList) 
 // => OUTPUT: "Price of 'Monitor' is: 8345"
+
+What is happening in the code?
+
+lookupPrice function iterates each element in the list until it finds the product with target name.
+When it finds the target - prints it’s name & price, then stops the execution.
+On this example, we choosed a product that was at the index[2]. In other words, we got done with the operation at the 3rd step. Pretty good, right?
