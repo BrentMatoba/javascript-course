@@ -1665,3 +1665,10 @@ Big O notation can be used to find best, average and worst cases. But when it co
 
 Let’s take a look at an example. We have a store which has about 10000+ unique products. We need a simple function just to check price of a product with a given name in the list. So here we have a function that handles product lookup:
 
+const productList = [
+  { name: 'Laptop', price: 18487 },
+  { name: 'Keyboard', price: 356 },
+  { name: 'Monitor', price: 8345 },
+  // ...assuming 10000 more items here in between
+  { name: 'Tablet', price: 9875 },
+]
