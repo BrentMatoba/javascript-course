@@ -1697,3 +1697,16 @@ But we can’t assume this function will always work with the same level of spee
 It would be choosing a product name which happens to be at the last index in the array. In that case function must iterate through all unmatching indexes to find the result - and that would be the worst case.
 
 In other words, we can confidently say the worst case depends on the array length here - which translates into Linear time O(n)
+
+const numbers = [1, 2, 3, 4]
+const letters = ['a', 'b']
+
+function printLists (listOne, listTwo) {
+  for (let i = 0; i < listOne.length; i++) {
+    console.log(listOne[i])
+  }
+
+  for (let i = 0; i < listTwo.length; i++) {
+    console.log(listTwo[i])
+  }
+}
