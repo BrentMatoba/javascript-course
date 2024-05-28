@@ -1746,3 +1746,12 @@ Now this may seem like a bit confusing. What does O(a + b) mean? Let me explain 
 
 At the end, this function runs linear times, but the detail here is we can’t just call this out as O(n) . Don’t forget the second list have to wait until the looping first list is done. Therefore this can be translated as:
 
+O (a) -> linear time to finish execution on first input
+
+O (b) -> linear time to finish execution on second input
+
+O (a + b) -> It takes both linear times to completely finish the execution.
+
+You may have 2 elements on the first list, but second list maybe have a million items. We don’t know since they are used as variables and we don’t want to focus on that. All we want to focus here is to see the scaling patterns.
+
+Okay, now you may ask “What if we have a nested loop with 2 different inputs?”
