@@ -1710,3 +1710,7 @@ function printLists (listOne, listTwo) {
     console.log(listTwo[i])
   }
 }
+
+What would be the Big O of printLists function here? You maybe thinking, at the first look I am seeing for loops there, it has something to do with Linear time O(n), right?
+
+While we are on the right track with Linear time, let’s not forget dealing with 2 different inputs situation. In terms of Big O, the ’n’ always must have a meaning. When we have a single input, ’n’ is a common naming convention for it.
