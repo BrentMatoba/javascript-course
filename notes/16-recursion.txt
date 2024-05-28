@@ -1722,3 +1722,16 @@ If you have 2 different inputs, you can name them ‘a’ and ‘b’
 If you have 3 inputs, you can name them ‘a’, ‘b’ and ‘c’, and so on.
 
 Let’s calculate the Big O of the printLists function:
+// function recieves 2 different inputs, let's call them 'a' and 'b'
+function printLists (listOne, listTwo) {
+// iterates through input 'listOne' -> O(a) Linear time
+  for (let i = 0; i < listOne.length; i++) {
+    console.log(listOne[i])
+  }
+// iterates through input 'listTwo' -> O(b) Linear time
+  for (let i = 0; i < listTwo.length; i++) {
+    console.log(listTwo[i])
+  }
+}
+
+// End result for Big O => O(a + b)
