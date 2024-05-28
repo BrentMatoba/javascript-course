@@ -1735,3 +1735,14 @@ function printLists (listOne, listTwo) {
 }
 
 // End result for Big O => O(a + b)
+
+Now this may seem like a bit confusing. What does O(a + b) mean? Let me explain with steps:
+
+- printLists takes 2 different inputs (lists)
+
+- Loops through the first list - This part has a linear time complexity
+
+- Loops through the second list - This part has a linear time complexity
+
+At the end, this function runs linear times, but the detail here is we can’t just call this out as O(n) . Don’t forget the second list have to wait until the looping first list is done. Therefore this can be translated as:
+
